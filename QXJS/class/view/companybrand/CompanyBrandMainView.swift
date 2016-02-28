@@ -8,28 +8,22 @@
 
 import UIKit
 
-class CompanyBrandMainView: UIView {
+protocol CompanyBrandDelegate
+{
+    func navBtnClick(navBtn : UIButton)
+}
 
+class CompanyBrandMainView: UIView {
+    
+    var companyBrandDelegate : CompanyBrandDelegate?
+    
     override func drawRect(rect: CGRect)
     {
-        print("12122")
+        
     }
     
-    @IBAction func cultureBtnClick(sender: UIButton) {
-    }
-    
-    @IBAction func progressBtnClick(sender: UIButton) {
-    }
-    
-    @IBAction func stuffBtnClick(sender: UIButton) {
-    }
-    
-    @IBAction func honourBtnClick(sender: UIButton) {
-    }
-    
-    @IBAction func brandBtnClick(sender: UIButton) {
-    }
-    
-    @IBAction func contactBtnClick(sender: UIButton) {
+    @IBAction func navBtnClick(sender: UIButton)
+    {
+       companyBrandDelegate?.navBtnClick(sender)
     }
 }

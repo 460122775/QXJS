@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CompanyBrandView" customModule="QXJS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="703"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqO-Zu-xYL" userLabel="brand_11">
+                    <rect key="frame" x="38" y="85" width="300" height="228"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="DvA-o4-V20"/>
+                        <constraint firstAttribute="height" constant="228" id="iJ3-Ex-4ck"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="brand_11"/>
+                    <connections>
+                        <action selector="btn11Click:" destination="iN0-l3-epB" eventType="touchUpInside" id="xfg-io-fmk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7Z-JE-RnZ" userLabel="brand_12">
+                    <rect key="frame" x="362" y="85" width="300" height="228"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="V6y-2o-pE6"/>
+                        <constraint firstAttribute="height" constant="228" id="VHq-Au-nHE"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="brand_12"/>
+                    <connections>
+                        <action selector="btn12Click:" destination="iN0-l3-epB" eventType="touchUpInside" id="xcg-4f-m49"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMA-tc-OTH" userLabel="brand_13">
+                    <rect key="frame" x="686" y="85" width="300" height="228"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="1O3-l5-o6M"/>
+                        <constraint firstAttribute="height" constant="228" id="FHE-zj-Xc4"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="brand_13"/>
+                    <connections>
+                        <action selector="btn13Click:" destination="iN0-l3-epB" eventType="touchUpInside" id="fmI-dx-Cja"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gI6-4x-rOm" userLabel="brand_21">
+                    <rect key="frame" x="38" y="341" width="300" height="228"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="228" id="A3b-09-9UV"/>
+                        <constraint firstAttribute="width" constant="300" id="gjH-lg-VAS"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="brand_21"/>
+                    <connections>
+                        <action selector="btn21Click:" destination="iN0-l3-epB" eventType="touchUpInside" id="xIv-Kb-1SH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JL8-NH-NIt" userLabel="brand_22">
+                    <rect key="frame" x="362" y="341" width="300" height="228"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="228" id="RKG-Xh-HbV"/>
+                        <constraint firstAttribute="width" constant="300" id="dWO-WW-R0o"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="brand_22"/>
+                    <connections>
+                        <action selector="btn22Click:" destination="iN0-l3-epB" eventType="touchUpInside" id="XfB-xS-yMb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="gI6-4x-rOm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="341" id="06U-4T-0iU"/>
+                <constraint firstItem="aMA-tc-OTH" firstAttribute="baseline" secondItem="J7Z-JE-RnZ" secondAttribute="baseline" id="GIt-1f-n2a"/>
+                <constraint firstItem="JL8-NH-NIt" firstAttribute="leading" secondItem="gI6-4x-rOm" secondAttribute="trailing" constant="24" id="H2W-iM-T27"/>
+                <constraint firstItem="NqO-Zu-xYL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="85" id="PhJ-FW-7Ok"/>
+                <constraint firstItem="gI6-4x-rOm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="38" id="hL9-bx-8Et"/>
+                <constraint firstItem="J7Z-JE-RnZ" firstAttribute="leading" secondItem="NqO-Zu-xYL" secondAttribute="trailing" constant="24" id="j7Y-t7-Hnu"/>
+                <constraint firstItem="aMA-tc-OTH" firstAttribute="leading" secondItem="J7Z-JE-RnZ" secondAttribute="trailing" constant="24" id="mlx-dy-ybH"/>
+                <constraint firstItem="J7Z-JE-RnZ" firstAttribute="baseline" secondItem="NqO-Zu-xYL" secondAttribute="baseline" id="mm3-By-A3z"/>
+                <constraint firstItem="NqO-Zu-xYL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="38" id="y1N-VX-wGP"/>
+                <constraint firstItem="JL8-NH-NIt" firstAttribute="baseline" secondItem="gI6-4x-rOm" secondAttribute="baseline" id="yCv-Jf-Tmo"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="brand_11" width="174" height="80"/>
+        <image name="brand_12" width="174" height="80"/>
+        <image name="brand_13" width="174" height="80"/>
+        <image name="brand_21" width="174" height="80"/>
+        <image name="brand_22" width="174" height="80"/>
+    </resources>
+</document>

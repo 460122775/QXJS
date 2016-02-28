@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CompanyInfoView" customModule="QXJS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="703"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ncD-06-HHw">
+                    <rect key="frame" x="0.0" y="666" width="1024" height="37"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </pageControl>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sq-Lk-VPl">
+                    <rect key="frame" x="42" y="13" width="940" height="645"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="1Sq-Lk-VPl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="AhF-a1-a3o"/>
+                <constraint firstItem="ncD-06-HHw" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="PbA-jU-2gD"/>
+                <constraint firstItem="1Sq-Lk-VPl" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" constant="-58" id="Uaf-Kz-heX"/>
+                <constraint firstItem="1Sq-Lk-VPl" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" constant="-84" id="VYs-qv-H9e"/>
+                <constraint firstItem="ncD-06-HHw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dMG-68-tMf"/>
+                <constraint firstItem="1Sq-Lk-VPl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="42" id="xHg-CA-sNg"/>
+                <constraint firstAttribute="bottom" secondItem="ncD-06-HHw" secondAttribute="bottom" id="ySv-Ip-d1Q"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imgContainer" destination="1Sq-Lk-VPl" id="cq0-i9-IT1"/>
+                <outlet property="pageControl" destination="ncD-06-HHw" id="0FW-FW-W5k"/>
+            </connections>
+        </view>
+    </objects>
+</document>

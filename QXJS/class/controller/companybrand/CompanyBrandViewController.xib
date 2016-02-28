@@ -18,11 +18,11 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucx-5P-cw9">
-                    <rect key="frame" x="0.0" y="20" width="90" height="748"/>
+                    <rect key="frame" x="0.0" y="0.0" width="90" height="768"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnL-Pg-rbX">
-                    <rect key="frame" x="90" y="20" width="934" height="748"/>
+                    <rect key="frame" x="90" y="0.0" width="934" height="768"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
@@ -30,7 +30,7 @@
             <constraints>
                 <constraint firstItem="ucx-5P-cw9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0cn-Q2-ncq"/>
                 <constraint firstItem="mnL-Pg-rbX" firstAttribute="leading" secondItem="ucx-5P-cw9" secondAttribute="trailing" id="9BF-yK-EeS"/>
-                <constraint firstItem="ucx-5P-cw9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="BLP-cG-h5P"/>
+                <constraint firstItem="ucx-5P-cw9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="BLP-cG-h5P"/>
                 <constraint firstItem="mnL-Pg-rbX" firstAttribute="height" secondItem="ucx-5P-cw9" secondAttribute="height" id="Ig8-tT-jnx"/>
                 <constraint firstItem="mnL-Pg-rbX" firstAttribute="top" secondItem="ucx-5P-cw9" secondAttribute="top" id="Myf-mt-gw2"/>
                 <constraint firstItem="mnL-Pg-rbX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="TgD-UO-uKF"/>

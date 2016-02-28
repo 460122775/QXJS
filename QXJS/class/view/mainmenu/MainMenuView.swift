@@ -127,6 +127,9 @@ class MainMenuView: UIView {
             setNormalState()
             customBtn.tag = 1
             customBtn.setBackgroundImage(UIImage(named: "icon7_highlight_menu"), forState: UIControlState.Normal)
+            let customViewController = SettingViewController(nibName: "CustomViewController", bundle: nil)
+            (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController?.presentViewController(customViewController, animated: false, completion: nil)
+            (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController = customViewController
         }
     }
     
@@ -137,6 +140,9 @@ class MainMenuView: UIView {
             setNormalState()
             settingBtn.tag = 1
             settingBtn.setBackgroundImage(UIImage(named: "icon8_highlight_menu"), forState: UIControlState.Normal)
+            let settingViewController = SettingViewController(nibName: "SettingViewController", bundle: nil)
+            (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController?.presentViewController(settingViewController, animated: false, completion: nil)
+            (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController = settingViewController
         }
     }
     

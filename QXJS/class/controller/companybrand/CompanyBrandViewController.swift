@@ -8,13 +8,14 @@
 
 import UIKit
 
-class CompanyBrandViewController: UIViewController
+class CompanyBrandViewController: UIViewController, CompanyBrandDelegate
 {
     
     @IBOutlet var mainMenuContainer : UIView!
     @IBOutlet var mainContainer : UIView!
     var companyBrandMainView : CompanyBrandMainView!
     var mainMenuView : MainMenuView!
+    var companyBrandNavView : CompanyBrandNavView?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
     {
@@ -39,11 +40,41 @@ class CompanyBrandViewController: UIViewController
         if companyBrandMainView == nil
         {
             companyBrandMainView = ((NSBundle.mainBundle().loadNibNamed("CompanyBrandMainView", owner: self, options: nil) as NSArray).lastObject as? CompanyBrandMainView)!
+            companyBrandMainView.companyBrandDelegate = self
         }
         companyBrandMainView.removeFromSuperview()
         mainContainer.addSubview(companyBrandMainView)
     }
-
+    
+    // CompanyBrandDelegate.
+    func navBtnClick(navBtn: UIButton)
+    {
+        if companyBrandNavView == nil
+        {
+            companyBrandNavView = ((NSBundle.mainBundle().loadNibNamed("CompanyBrandNavView", owner: self, options: nil) as NSArray).lastObject as? CompanyBrandNavView)!
+            companyBrandNavView?.companyBrandDelegate = self
+        }
+        
+        if navBtn.tag == 0
+        {
+            companyBrandNavView!.removeFromSuperview()
+            return
+        }else if navBtn.tag == 1{
+            companyBrandNavView?.cultureBtnClick(navBtn)
+        }else if navBtn.tag == 2{
+            companyBrandNavView?.progressBtnClick(navBtn)
+        }else if navBtn.tag == 3{
+            companyBrandNavView?.stuffBtnClick(navBtn)
+        }else if navBtn.tag == 4{
+            companyBrandNavView?.honourBtnClick(navBtn)
+        }else if navBtn.tag == 5{
+            companyBrandNavView?.brandBtnClick(navBtn)
+        }else if navBtn.tag == 6{
+            companyBrandNavView?.contactBtnClick(navBtn)
+        }
+        self.view.addSubview(companyBrandNavView!)
+    }
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
