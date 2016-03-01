@@ -91,17 +91,6 @@
                     <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5i0-gR-mkQ" userLabel="contact">
-                    <rect key="frame" x="395" y="513" width="144" height="28"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="144" id="Ab0-uf-SKX"/>
-                        <constraint firstAttribute="height" constant="28" id="KSu-ql-y0b"/>
-                    </constraints>
-                    <state key="normal" backgroundImage="company_menubutton"/>
-                    <connections>
-                        <action selector="navBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="tOe-H4-MJk"/>
-                    </connections>
-                </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtZ-UU-Hig" userLabel="culture">
                     <rect key="frame" x="65" y="549" width="115" height="115"/>
                     <constraints>
@@ -111,6 +100,17 @@
                     <state key="normal" backgroundImage="company_menu1"/>
                     <connections>
                         <action selector="navBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="ECm-YI-yh7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5i0-gR-mkQ" userLabel="contact">
+                    <rect key="frame" x="376" y="513" width="181" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="181" id="Ab0-uf-SKX"/>
+                        <constraint firstAttribute="height" constant="34" id="KSu-ql-y0b"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="contact_btn"/>
+                    <connections>
+                        <action selector="navBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="tOe-H4-MJk"/>
                     </connections>
                 </button>
             </subviews>
@@ -134,9 +134,9 @@
                 <constraint firstAttribute="bottom" secondItem="geM-fI-j6m" secondAttribute="bottom" id="U7h-bJ-OP1"/>
                 <constraint firstItem="bp6-Hf-yZ0" firstAttribute="leading" secondItem="SsI-SF-dIQ" secondAttribute="trailing" constant="104" id="Upw-Oh-Bv0"/>
                 <constraint firstItem="JZw-03-atm" firstAttribute="leading" secondItem="C72-mm-lKa" secondAttribute="trailing" constant="57" id="XoV-xF-5PD"/>
-                <constraint firstAttribute="trailing" secondItem="5i0-gR-mkQ" secondAttribute="trailing" constant="395" id="aZe-SQ-It6"/>
+                <constraint firstAttribute="trailing" secondItem="5i0-gR-mkQ" secondAttribute="trailing" constant="377" id="aZe-SQ-It6"/>
                 <constraint firstItem="6YW-hr-ftk" firstAttribute="top" secondItem="5Lx-Tl-qmc" secondAttribute="bottom" constant="20" id="bcc-3k-Lxk"/>
-                <constraint firstAttribute="bottom" secondItem="5i0-gR-mkQ" secondAttribute="bottom" constant="227" id="dHt-Y8-wAy"/>
+                <constraint firstAttribute="bottom" secondItem="5i0-gR-mkQ" secondAttribute="bottom" constant="221" id="dHt-Y8-wAy"/>
                 <constraint firstItem="65T-Rj-WWm" firstAttribute="leading" secondItem="JZw-03-atm" secondAttribute="trailing" constant="57" id="f6i-jB-lqw"/>
                 <constraint firstAttribute="bottom" secondItem="SsI-SF-dIQ" secondAttribute="bottom" constant="63" id="fs4-lo-3WV"/>
                 <constraint firstAttribute="bottom" secondItem="bp6-Hf-yZ0" secondAttribute="bottom" constant="36" id="jnf-tf-g0K"/>
@@ -162,6 +162,6 @@
         <image name="company_menu3" width="77" height="77"/>
         <image name="company_menu4" width="77" height="77"/>
         <image name="company_menu5" width="77" height="77"/>
-        <image name="company_menubutton" width="144" height="28"/>
+        <image name="contact_btn" width="144" height="28"/>
     </resources>
 </document>

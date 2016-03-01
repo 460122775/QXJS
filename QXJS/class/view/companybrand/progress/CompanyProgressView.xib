@@ -11,33 +11,49 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="703"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jm8-mg-wPI">
-                    <rect key="frame" x="0.0" y="0.0" width="1024" height="703"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm8-mg-wPI">
+                    <rect key="frame" x="0.0" y="127" width="1024" height="450"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HISTORY" translatesAutoresizingMaskIntoConstraints="NO" id="lq0-Bk-t7g">
+                            <rect key="frame" x="50" y="0.0" width="2600" height="450"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="2600" id="cEl-oI-fAd"/>
+                                <constraint firstAttribute="height" constant="450" id="dkk-eT-S5M"/>
+                                <constraint firstAttribute="height" constant="450" id="dxD-14-BTF"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="dxD-14-BTF"/>
+                                </mask>
+                            </variation>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="lq0-Bk-t7g" secondAttribute="trailing" id="6j0-rP-MEa"/>
+                        <constraint firstAttribute="bottom" secondItem="lq0-Bk-t7g" secondAttribute="bottom" id="Sza-dZ-7Tc"/>
+                        <constraint firstItem="lq0-Bk-t7g" firstAttribute="centerY" secondItem="jm8-mg-wPI" secondAttribute="centerY" id="bMU-IC-QYQ"/>
+                        <constraint firstItem="lq0-Bk-t7g" firstAttribute="leading" secondItem="jm8-mg-wPI" secondAttribute="leading" constant="50" id="ucd-LG-EKS"/>
+                    </constraints>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="jm8-mg-wPI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DpL-cz-tzo"/>
                 <constraint firstItem="jm8-mg-wPI" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="bh4-SE-lU2"/>
-                <constraint firstItem="jm8-mg-wPI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="iaE-HX-nPg"/>
-                <constraint firstItem="jm8-mg-wPI" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="kw3-Xa-OgU"/>
+                <constraint firstItem="jm8-mg-wPI" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" constant="-253" id="chs-rP-8AQ"/>
+                <constraint firstItem="jm8-mg-wPI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="0.5" id="iaE-HX-nPg"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="scrollContainer" destination="jm8-mg-wPI" id="tnD-WE-Dj8"/>
+            </connections>
         </view>
-        <viewController id="vl9-Sz-EhW">
-            <layoutGuides>
-                <viewControllerLayoutGuide type="top" id="uoW-5I-Nr6"/>
-                <viewControllerLayoutGuide type="bottom" id="NFS-7k-KR1"/>
-            </layoutGuides>
-            <view key="view" contentMode="scaleToFill" id="tpm-U2-vXn">
-                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            </view>
-        </viewController>
     </objects>
+    <resources>
+        <image name="HISTORY" width="1733" height="300"/>
+    </resources>
 </document>

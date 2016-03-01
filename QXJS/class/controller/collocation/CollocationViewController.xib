@@ -2,10 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9532"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductListViewController" customModule="QXJS" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CollocationViewController" customModule="QXJS" customModuleProvider="target">
             <connections>
                 <outlet property="mainContainer" destination="0AE-7R-ljl" id="mow-c7-SXH"/>
                 <outlet property="mainMenuContainer" destination="Og6-1R-a1x" id="TkS-IC-rJS"/>
@@ -18,12 +18,29 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Og6-1R-a1x" userLabel="mainMenuContainer">
-                    <rect key="frame" x="0.0" y="20" width="90" height="748"/>
+                    <rect key="frame" x="0.0" y="0.0" width="90" height="768"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0AE-7R-ljl" userLabel="mainViewContainer">
-                    <rect key="frame" x="90" y="20" width="934" height="748"/>
+                    <rect key="frame" x="90" y="0.0" width="934" height="768"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collocation_test" translatesAutoresizingMaskIntoConstraints="NO" id="jxq-r8-4Fk">
+                            <rect key="frame" x="0.0" y="0.0" width="934" height="768"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8h-42-KD1" userLabel="detailBtn">
+                            <rect key="frame" x="780" y="678" width="109" height="37"/>
+                            <connections>
+                                <action selector="detailBtnClick:" destination="-1" eventType="touchUpInside" id="GG3-HA-V7z"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="jxq-r8-4Fk" firstAttribute="width" secondItem="0AE-7R-ljl" secondAttribute="width" id="Hmn-ql-eTe"/>
+                        <constraint firstItem="jxq-r8-4Fk" firstAttribute="top" secondItem="0AE-7R-ljl" secondAttribute="top" id="Uba-JQ-9nj"/>
+                        <constraint firstAttribute="trailing" secondItem="jxq-r8-4Fk" secondAttribute="trailing" id="t5G-gT-hqh"/>
+                        <constraint firstItem="jxq-r8-4Fk" firstAttribute="height" secondItem="0AE-7R-ljl" secondAttribute="height" id="xre-RW-ScR"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -32,12 +49,12 @@
                 <constraint firstAttribute="bottom" secondItem="Og6-1R-a1x" secondAttribute="bottom" id="Hmz-Xs-2aJ"/>
                 <constraint firstItem="0AE-7R-ljl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="IZU-DU-D4d"/>
                 <constraint firstItem="0AE-7R-ljl" firstAttribute="height" secondItem="Og6-1R-a1x" secondAttribute="height" id="JwI-CU-UA8"/>
-                <constraint firstItem="Og6-1R-a1x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Vee-hm-YCa"/>
+                <constraint firstItem="Og6-1R-a1x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Vee-hm-YCa"/>
                 <constraint firstItem="0AE-7R-ljl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="419" id="flg-fM-I01"/>
                 <constraint firstItem="0AE-7R-ljl" firstAttribute="leading" secondItem="Og6-1R-a1x" secondAttribute="trailing" id="j6t-fr-gqC"/>
                 <constraint firstAttribute="bottom" secondItem="Og6-1R-a1x" secondAttribute="bottom" id="mYF-Km-BHJ"/>
-                <constraint firstItem="Og6-1R-a1x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="pVb-Zy-sDh"/>
-                <constraint firstItem="0AE-7R-ljl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="qa2-LK-ebW"/>
+                <constraint firstItem="Og6-1R-a1x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pVb-Zy-sDh"/>
+                <constraint firstItem="0AE-7R-ljl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qa2-LK-ebW"/>
                 <constraint firstItem="Og6-1R-a1x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rN0-eu-2qf"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
@@ -51,4 +68,7 @@
             </variation>
         </view>
     </objects>
+    <resources>
+        <image name="collocation_test" width="951" height="781"/>
+    </resources>
 </document>

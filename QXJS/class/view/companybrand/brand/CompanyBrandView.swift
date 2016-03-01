@@ -11,7 +11,7 @@ import UIKit
 class CompanyBrandView: UIView {
     
     var companyBrandNavDelegate : CompanyBrandNavDelegate?
-    var brandDetail11 : BrandDetail11?
+    var currentDetailView : UIView?
 
     override func drawRect(rect: CGRect)
     {
@@ -20,19 +20,31 @@ class CompanyBrandView: UIView {
     
     @IBAction func btn11Click(sender: UIButton)
     {
-        brandDetail11 = ((NSBundle.mainBundle().loadNibNamed("BrandDetail11", owner: self, options: nil) as NSArray).lastObject as? BrandDetail11)!
-        companyBrandNavDelegate?.gotoThirdClassView(brandDetail11!)
+        currentDetailView = ((NSBundle.mainBundle().loadNibNamed("BrandDetail11", owner: self, options: nil) as NSArray).lastObject as? UIView)!
+        companyBrandNavDelegate?.gotoThirdClassView(currentDetailView!)
     }
     
-    @IBAction func btn12Click(sender: UIButton) {
+    @IBAction func btn12Click(sender: UIButton)
+    {
+        currentDetailView = ((NSBundle.mainBundle().loadNibNamed("BrandDetail12", owner: self, options: nil) as NSArray).lastObject as? UIView)!
+        companyBrandNavDelegate?.gotoThirdClassView(currentDetailView!)
     }
     
-    @IBAction func btn13Click(sender: UIButton) {
+    @IBAction func btn13Click(sender: UIButton)
+    {
+        currentDetailView = ((NSBundle.mainBundle().loadNibNamed("BrandDetail13", owner: self, options: nil) as NSArray).lastObject as? UIView)!
+        companyBrandNavDelegate?.gotoThirdClassView(currentDetailView!)
     }
     
-    @IBAction func btn21Click(sender: UIButton) {
+    @IBAction func btn21Click(sender: UIButton)
+    {
+        currentDetailView = ((NSBundle.mainBundle().loadNibNamed("BrandDetail21", owner: self, options: nil) as NSArray).lastObject as? UIView)!
+        companyBrandNavDelegate?.gotoThirdClassView(currentDetailView!)
     }
 
-    @IBAction func btn22Click(sender: UIButton) {
+    @IBAction func btn22Click(sender: UIButton)
+    {
+        currentDetailView = ((NSBundle.mainBundle().loadNibNamed("BrandDetail22", owner: self, options: nil) as NSArray).lastObject as? UIView)!
+        companyBrandNavDelegate?.gotoThirdClassView(currentDetailView!)
     }
 }

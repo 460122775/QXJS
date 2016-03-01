@@ -87,6 +87,9 @@ class MainMenuView: UIView {
             setNormalState()
             newsBtn.tag = 1
             newsBtn.setBackgroundImage(UIImage(named: "icon3_highlight_menu"), forState: UIControlState.Normal)
+            let newsViewController = NewsViewController(nibName: "NewsViewController", bundle: nil)
+            (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController?.presentViewController(newsViewController, animated: false, completion: nil)
+            (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController = newsViewController
         }
     }
 
@@ -97,6 +100,9 @@ class MainMenuView: UIView {
             setNormalState()
             collocationBtn.tag = 1
             collocationBtn.setBackgroundImage(UIImage(named: "icon4_highlight_menu"), forState: UIControlState.Normal)
+            let collocationViewController = CollocationViewController(nibName: "CollocationViewController", bundle: nil)
+            (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController?.presentViewController(collocationViewController, animated: false, completion: nil)
+            (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController = collocationViewController
         }
     }
     
@@ -108,6 +114,9 @@ class MainMenuView: UIView {
             technologyBtn.tag = 1
             technologyBtn.setBackgroundImage(UIImage(named: "icon5_highlight_menu"), forState: UIControlState.Normal)
         }
+        let technologyViewController = TechnologyViewController(nibName: "TechnologyViewController", bundle: nil)
+        (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController?.presentViewController(technologyViewController, animated: false, completion: nil)
+        (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController = technologyViewController
     }
     
     @IBAction func storesBtnClick(sender: UIButton?)
@@ -117,6 +126,9 @@ class MainMenuView: UIView {
             setNormalState()
             storesBtn.tag = 1
             storesBtn.setBackgroundImage(UIImage(named: "icon6_highlight_menu"), forState: UIControlState.Normal)
+            let storeViewController = StoreViewController(nibName: "StoreViewController", bundle: nil)
+            (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController?.presentViewController(storeViewController, animated: false, completion: nil)
+            (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController = storeViewController
         }
     }
     
@@ -127,7 +139,7 @@ class MainMenuView: UIView {
             setNormalState()
             customBtn.tag = 1
             customBtn.setBackgroundImage(UIImage(named: "icon7_highlight_menu"), forState: UIControlState.Normal)
-            let customViewController = SettingViewController(nibName: "CustomViewController", bundle: nil)
+            let customViewController = CustomViewController(nibName: "CustomViewController", bundle: nil)
             (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController?.presentViewController(customViewController, animated: false, completion: nil)
             (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController = customViewController
         }

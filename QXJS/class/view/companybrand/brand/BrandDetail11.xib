@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BrandDetail11" customModule="QXJS" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="1024" height="703"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -21,24 +21,24 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H7x-wh-1zR">
                     <rect key="frame" x="118" y="440" width="786" height="263"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brand_12" translatesAutoresizingMaskIntoConstraints="NO" id="gYz-Rx-IlE">
-                            <rect key="frame" x="288" y="58" width="209" height="36"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brand_11" translatesAutoresizingMaskIntoConstraints="NO" id="gYz-Rx-IlE">
+                            <rect key="frame" x="272" y="29" width="243" height="112"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="36" id="Bul-dR-obo"/>
-                                <constraint firstAttribute="width" constant="209" id="OoQ-gg-Xhx"/>
+                                <constraint firstAttribute="height" constant="112" id="Bul-dR-obo"/>
+                                <constraint firstAttribute="width" constant="243" id="OoQ-gg-Xhx"/>
                             </constraints>
                         </imageView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dhz-GA-MnT">
-                            <rect key="frame" x="108" y="124" width="570" height="55"/>
+                            <rect key="frame" x="187" y="149" width="412" height="63"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="55" id="IbO-u5-pBZ"/>
-                                <constraint firstAttribute="width" constant="570" id="bwl-pZ-Q5J"/>
+                                <constraint firstAttribute="height" constant="63" id="IbO-u5-pBZ"/>
+                                <constraint firstAttribute="width" constant="412" id="bwl-pZ-Q5J"/>
                             </constraints>
                             <attributedString key="attributedText">
-                                <fragment content="完美的结合了休闲布艺沙发舒适柔软的坐感和欧式沙发的精美雕花。多元素的搭配手法，使得诺爱系列拥有了与众不同的气息。">
+                                <fragment content="奢华大气的真皮大款沙发，精选用意大利进口小黄牛皮子，纯手工精精心打造">
                                     <attributes>
-                                        <color key="NSColor" red="0.76470588235294112" green="0.050980392156862744" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="NSColor" red="0.8901960784313725" green="0.24313725490196078" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                         <font key="NSFont" size="20" name="PingFangSC-Regular"/>
                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="19" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0"/>
                                     </attributes>
@@ -49,8 +49,8 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="gYz-Rx-IlE" firstAttribute="top" secondItem="H7x-wh-1zR" secondAttribute="top" constant="58" id="5rD-Kq-bmT"/>
-                        <constraint firstItem="Dhz-GA-MnT" firstAttribute="top" secondItem="gYz-Rx-IlE" secondAttribute="bottom" constant="30" id="I5s-S5-WJR"/>
+                        <constraint firstItem="gYz-Rx-IlE" firstAttribute="top" secondItem="H7x-wh-1zR" secondAttribute="top" constant="29" id="5rD-Kq-bmT"/>
+                        <constraint firstItem="Dhz-GA-MnT" firstAttribute="top" secondItem="gYz-Rx-IlE" secondAttribute="bottom" constant="8" id="I5s-S5-WJR"/>
                         <constraint firstItem="Dhz-GA-MnT" firstAttribute="centerX" secondItem="H7x-wh-1zR" secondAttribute="centerX" id="XaK-Zo-9l5"/>
                         <constraint firstItem="gYz-Rx-IlE" firstAttribute="centerX" secondItem="H7x-wh-1zR" secondAttribute="centerX" id="aIO-2r-nyK"/>
                         <constraint firstAttribute="height" constant="263" id="s1o-Qe-XkJ"/>
@@ -74,7 +74,7 @@
         </view>
     </objects>
     <resources>
+        <image name="brand_11" width="174" height="80"/>
         <image name="brand_11_bg" width="524" height="260"/>
-        <image name="brand_12" width="174" height="80"/>
     </resources>
 </document>

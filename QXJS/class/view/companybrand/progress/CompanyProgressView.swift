@@ -10,6 +10,7 @@ import UIKit
 
 class CompanyProgressView: UIView {
 
+    @IBOutlet var scrollContainer: UIScrollView!
     
     override func drawRect(rect: CGRect)
     {

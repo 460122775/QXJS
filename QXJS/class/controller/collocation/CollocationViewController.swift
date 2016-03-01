@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductListViewController: UIViewController
+class CollocationViewController: UIViewController
 {
 
     @IBOutlet var mainMenuContainer : UIView!
@@ -33,11 +33,16 @@ class ProductListViewController: UIViewController
         mainMenuView = MainMenuView.sharedInstance()
         mainMenuView.removeFromSuperview()
         mainMenuContainer.addSubview(mainMenuView)
-        productListMainView = ((NSBundle.mainBundle().loadNibNamed("ProductListMainView", owner: self, options: nil) as NSArray).lastObject as? ProductListMainView)!
-        productListMainView.removeFromSuperview()
-        mainContainer.addSubview(productListMainView)
+//        productListMainView = ((NSBundle.mainBundle().loadNibNamed("ProductListMainView", owner: self, options: nil) as NSArray).lastObject as? ProductListMainView)!
+//        productListMainView.removeFromSuperview()
+//        mainContainer.addSubview(productListMainView)
     }
 
+    @IBAction func detailBtnClick(sender: UIButton)
+    {
+        
+    }
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()

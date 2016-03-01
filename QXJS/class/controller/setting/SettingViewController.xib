@@ -33,7 +33,7 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="系统设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6U-JT-Mwk">
                                     <rect key="frame" x="433" y="34" width="68" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" red="0.56862745100000001" green="0.56470588239999997" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -57,7 +57,7 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RAK-h1-dxL">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting_header" translatesAutoresizingMaskIntoConstraints="NO" id="RAK-h1-dxL">
                                     <rect key="frame" x="120" y="74" width="140" height="105"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="140" id="sAw-CL-Ezr"/>
@@ -253,50 +253,11 @@
                                         <constraint firstAttribute="width" constant="180" id="xiX-qW-Ff5"/>
                                     </constraints>
                                     <attributedString key="attributedText">
-                                        <fragment content="千禧家私条款声明条款声明千禧家私条款声明条款声明">
+                                        <fragment content="本网站及APP的各项内容和服务的所有权归本公司拥有...">
                                             <attributes>
-                                                <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="12" name="PingFangSC-Regular"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                    <tabStops>
-                                                        <textTab alignment="left" location="28">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="56">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="84">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="112">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="140">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="168">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="196">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="224">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="252">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="280">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="308">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="336">
-                                                            <options/>
-                                                        </textTab>
-                                                    </tabStops>
-                                                </paragraphStyle>
+                                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="13" name="PingFangSC-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -343,57 +304,18 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Meg-Il-R3P">
-                                    <rect key="frame" x="35" y="56" width="180" height="30"/>
+                                    <rect key="frame" x="35" y="56" width="330" height="30"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="180" id="8uu-Fu-zeS"/>
+                                        <constraint firstAttribute="width" constant="330" id="8uu-Fu-zeS"/>
                                         <constraint firstAttribute="height" constant="30" id="MVo-36-oqv"/>
                                     </constraints>
                                     <attributedString key="attributedText">
-                                        <fragment content="千禧家私关于我们千禧家私关于我们千禧家私关于我们千禧家私关于我们">
+                                        <fragment content="我们尊崇“踏实、拼搏、责任”的企业精神，并以诚信、共赢、开创经营理念，创造良好的办公环境，以全...">
                                             <attributes>
                                                 <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="13" name="PingFangSC-Regular"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                    <tabStops>
-                                                        <textTab alignment="left" location="28">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="56">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="84">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="112">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="140">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="168">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="196">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="224">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="252">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="280">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="308">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="336">
-                                                            <options/>
-                                                        </textTab>
-                                                    </tabStops>
-                                                </paragraphStyle>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -444,50 +366,11 @@
                                         <constraint firstAttribute="width" constant="180" id="vY4-eq-B5E"/>
                                     </constraints>
                                     <attributedString key="attributedText">
-                                        <fragment content="千禧家私法律法规千禧家私法律法规千禧家私法律法规千禧家私法律法规">
+                                        <fragment content="网站所有权，使用条款协议。本使用条款和条件 (“使用条款”...">
                                             <attributes>
-                                                <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="12" name="PingFangSC-Regular"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                    <tabStops>
-                                                        <textTab alignment="left" location="28">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="56">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="84">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="112">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="140">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="168">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="196">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="224">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="252">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="280">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="308">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="336">
-                                                            <options/>
-                                                        </textTab>
-                                                    </tabStops>
-                                                </paragraphStyle>
+                                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="13" name="PingFangSC-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -529,35 +412,47 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3j3-R7-rsM" userLabel="QRCode">
                             <rect key="frame" x="466" y="558" width="443" height="156"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信二维码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zcv-mv-edc">
-                                    <rect key="frame" x="35" y="81" width="72" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信二维码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uoz-Sj-fMb">
+                                    <rect key="frame" x="35" y="118" width="199" height="21"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="72" id="CQl-58-gr1"/>
+                                        <constraint firstAttribute="height" constant="21" id="bij-wt-pTS"/>
+                                        <constraint firstAttribute="width" constant="199" id="pEJ-EZ-HtC"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_DARK" translatesAutoresizingMaskIntoConstraints="NO" id="J6C-U3-V9b">
+                                    <rect key="frame" x="35" y="18" width="199" height="43"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="199" id="ETh-f6-H01"/>
+                                        <constraint firstAttribute="height" constant="43" id="XRX-xx-eKD"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="erweima" translatesAutoresizingMaskIntoConstraints="NO" id="oLo-8k-NaX">
+                                    <rect key="frame" x="299" y="20" width="114" height="119"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信号 ： QIANXI-SOFA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zcv-mv-edc">
+                                    <rect key="frame" x="35" y="81" width="199" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="199" id="CQl-58-gr1"/>
                                         <constraint firstAttribute="height" constant="21" id="btC-JO-kdy"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_menu" translatesAutoresizingMaskIntoConstraints="NO" id="J6C-U3-V9b">
-                                    <rect key="frame" x="35" y="18" width="165" height="43"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="165" id="ETh-f6-H01"/>
-                                        <constraint firstAttribute="height" constant="43" id="XRX-xx-eKD"/>
-                                    </constraints>
-                                </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oLo-8k-NaX">
-                                    <rect key="frame" x="299" y="20" width="114" height="119"/>
-                                </imageView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="Zcv-mv-edc" firstAttribute="leading" secondItem="3j3-R7-rsM" secondAttribute="leading" constant="35" id="Wvr-01-GH7"/>
+                                <constraint firstItem="Uoz-Sj-fMb" firstAttribute="leading" secondItem="3j3-R7-rsM" secondAttribute="leading" constant="35" id="XQz-iT-NHB"/>
                                 <constraint firstAttribute="height" constant="156" id="e2Y-hv-SE9"/>
                                 <constraint firstAttribute="width" constant="443" id="fXL-th-GT8"/>
                                 <constraint firstItem="J6C-U3-V9b" firstAttribute="leading" secondItem="3j3-R7-rsM" secondAttribute="leading" constant="35" id="iKS-Vs-YWh"/>
                                 <constraint firstItem="J6C-U3-V9b" firstAttribute="top" secondItem="3j3-R7-rsM" secondAttribute="top" constant="18" id="ofd-d8-pVR"/>
                                 <constraint firstItem="Zcv-mv-edc" firstAttribute="top" secondItem="J6C-U3-V9b" secondAttribute="bottom" constant="20" id="r9b-su-ae0"/>
+                                <constraint firstItem="Uoz-Sj-fMb" firstAttribute="top" secondItem="3j3-R7-rsM" secondAttribute="top" constant="118" id="wUQ-o9-lj1"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -600,9 +495,11 @@
     </objects>
     <resources>
         <image name="edit" width="48" height="48"/>
+        <image name="erweima" width="87" height="87"/>
         <image name="falv" width="88" height="104"/>
-        <image name="logo_menu" width="60" height="23"/>
+        <image name="logo_DARK" width="110" height="20"/>
         <image name="logout" width="48" height="48"/>
+        <image name="setting_header" width="712" height="533"/>
         <image name="tiaokuan" width="88" height="104"/>
         <image name="update" width="48" height="48"/>
     </resources>

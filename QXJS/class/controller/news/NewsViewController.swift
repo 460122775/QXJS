@@ -8,14 +8,16 @@
 
 import UIKit
 
-class ProductListViewController: UIViewController
+class NewsViewController: UIViewController
 {
 
     @IBOutlet var mainMenuContainer : UIView!
     @IBOutlet var mainContainer : UIView!
     
-    var productListMainView : ProductListMainView!
+    @IBOutlet var subViewContainer: UIView!
+    var newsMainView : NewsMainView!
     var mainMenuView : MainMenuView!
+    var currentView : UIView?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
     {
@@ -33,11 +35,20 @@ class ProductListViewController: UIViewController
         mainMenuView = MainMenuView.sharedInstance()
         mainMenuView.removeFromSuperview()
         mainMenuContainer.addSubview(mainMenuView)
-        productListMainView = ((NSBundle.mainBundle().loadNibNamed("ProductListMainView", owner: self, options: nil) as NSArray).lastObject as? ProductListMainView)!
-        productListMainView.removeFromSuperview()
-        mainContainer.addSubview(productListMainView)
+        newsMainView = ((NSBundle.mainBundle().loadNibNamed("NewsMainView", owner: self, options: nil) as NSArray).lastObject as? NewsMainView)!
+        currentView = newsMainView
+        subViewContainer.addSubview(newsMainView)
     }
 
+    @IBAction func segValueChanged(sender: UISegmentedControl)
+    {
+        if sender.selectedSegmentIndex == 0
+        {
+            
+        }else{
+            
+        }
+    }
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()

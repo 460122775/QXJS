@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductListMainView: UIView {
+class NewsMainView: UIView {
 
     /*
     // Only override drawRect: if you perform custom drawing.

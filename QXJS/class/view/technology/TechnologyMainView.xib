@@ -7,15 +7,143 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProductListMainView" customModule="QXJS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TechnologyMainView" customModule="QXJS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="934" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="technology_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Hj9-fF-aa3">
+                    <rect key="frame" x="0.0" y="0.0" width="934" height="768"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="934" id="T0q-KV-4yn"/>
+                        <constraint firstAttribute="height" constant="768" id="ZY4-fP-MMw"/>
+                    </constraints>
+                </imageView>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="technology_sofa" translatesAutoresizingMaskIntoConstraints="NO" id="QL2-ux-Mja">
+                    <rect key="frame" x="187" y="178" width="560" height="413"/>
+                </imageView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PDt-7T-jt9">
+                    <rect key="frame" x="187" y="178" width="560" height="413"/>
+                    <subviews>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="technology_sofa2" translatesAutoresizingMaskIntoConstraints="NO" id="lg8-cn-55b" userLabel="Sofa Detail Img">
+                            <rect key="frame" x="0.0" y="0.0" width="560" height="413"/>
+                        </imageView>
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgZ-Ko-cra" userLabel="绷带">
+                            <rect key="frame" x="349" y="19" width="52" height="21"/>
+                            <connections>
+                                <action selector="detailBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Sd8-D2-ahg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ug-Md-5LL" userLabel="蛇形簧">
+                            <rect key="frame" x="402" y="75" width="70" height="21"/>
+                            <connections>
+                                <action selector="detailBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="6Tr-g5-l0J"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VN-lq-1Oo" userLabel="座垫海绵">
+                            <rect key="frame" x="417" y="136" width="70" height="21"/>
+                            <connections>
+                                <action selector="detailBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="qW4-Na-Lqk"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxs-Ld-KFE" userLabel="贴心小物件">
+                            <rect key="frame" x="402" y="190" width="72" height="21"/>
+                            <connections>
+                                <action selector="detailBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="MXK-JI-D8T"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVw-DT-2g9" userLabel="隐形钉枪">
+                            <rect key="frame" x="204" y="322" width="70" height="21"/>
+                            <connections>
+                                <action selector="detailBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="lX0-6u-fdb"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WuV-a3-KXx" userLabel="沙发脚">
+                            <rect key="frame" x="34" y="261" width="70" height="21"/>
+                            <connections>
+                                <action selector="detailBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="9H2-R1-yVQ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bs9-vy-wwU" userLabel="弹力拉扣">
+                            <rect key="frame" x="59" y="188" width="70" height="21"/>
+                            <connections>
+                                <action selector="detailBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="1H4-HN-hwt"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0O0-Do-X9h" userLabel="平衡网">
+                            <rect key="frame" x="38" y="102" width="70" height="21"/>
+                            <connections>
+                                <action selector="detailBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="DJg-4k-NpI"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3i-Uz-T6o" userLabel="YKK拉链">
+                            <rect key="frame" x="67" y="31" width="70" height="21"/>
+                            <connections>
+                                <action selector="detailBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="9eP-XF-lgH"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEY-Uy-Dgc" userLabel="松木内架">
+                            <rect key="frame" x="214" y="-1" width="70" height="21"/>
+                            <connections>
+                                <action selector="detailBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="PVh-gD-T28"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KF-hW-DsG" userLabel="实木地板">
+                            <rect key="frame" x="429" y="275" width="70" height="21"/>
+                            <connections>
+                                <action selector="detailBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Tcs-hV-qcR"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="lg8-cn-55b" firstAttribute="width" secondItem="PDt-7T-jt9" secondAttribute="width" id="0DI-T4-2pF"/>
+                        <constraint firstItem="lg8-cn-55b" firstAttribute="height" secondItem="PDt-7T-jt9" secondAttribute="height" id="UNa-T2-ats"/>
+                        <constraint firstItem="lg8-cn-55b" firstAttribute="top" secondItem="PDt-7T-jt9" secondAttribute="top" id="b5B-0G-Ior"/>
+                        <constraint firstItem="lg8-cn-55b" firstAttribute="leading" secondItem="PDt-7T-jt9" secondAttribute="leading" id="slK-w8-hge"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击沙发显示细节图" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6U-s5-Zmg">
+                    <rect key="frame" x="391" y="663" width="153" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="GD9-bQ-CsT"/>
+                        <constraint firstAttribute="width" constant="153" id="Q0R-b6-lA2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="PDt-7T-jt9" firstAttribute="height" secondItem="QL2-ux-Mja" secondAttribute="height" id="DPH-kW-bpf"/>
+                <constraint firstItem="QL2-ux-Mja" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Dbu-w1-N27"/>
+                <constraint firstItem="PDt-7T-jt9" firstAttribute="width" secondItem="QL2-ux-Mja" secondAttribute="width" id="GiV-7A-L00"/>
+                <constraint firstItem="d6U-s5-Zmg" firstAttribute="top" secondItem="PDt-7T-jt9" secondAttribute="bottom" constant="72" id="UbB-im-bG4"/>
+                <constraint firstItem="PDt-7T-jt9" firstAttribute="top" secondItem="QL2-ux-Mja" secondAttribute="bottom" constant="-413" id="ZLR-xx-5Pg"/>
+                <constraint firstItem="QL2-ux-Mja" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="fit-RC-Yc7"/>
+                <constraint firstItem="Hj9-fF-aa3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kmB-g9-3Xf"/>
+                <constraint firstItem="d6U-s5-Zmg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rHq-aI-QLP"/>
+                <constraint firstItem="Hj9-fF-aa3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rIX-RH-9kt"/>
+                <constraint firstItem="QL2-ux-Mja" firstAttribute="leading" secondItem="PDt-7T-jt9" secondAttribute="trailing" constant="-560" id="wgf-LB-Tt3"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="detailLabel" destination="d6U-s5-Zmg" id="ZUr-6m-E3Z"/>
+                <outlet property="sofaBgImgView" destination="Hj9-fF-aa3" id="XXi-pG-Acs"/>
+                <outlet property="sofaDetailImgView" destination="lg8-cn-55b" id="v14-8K-XLH"/>
+                <outlet property="sofaDetailView" destination="PDt-7T-jt9" id="Toy-3D-k9t"/>
+                <outlet property="sofaNormalImg" destination="QL2-ux-Mja" id="Jg6-xD-lbT"/>
+            </connections>
+            <point key="canvasLocation" x="824" y="313"/>
         </view>
     </objects>
+    <resources>
+        <image name="technology_bg" width="2048" height="1536"/>
+        <image name="technology_sofa" width="560" height="413"/>
+        <image name="technology_sofa2" width="560" height="413"/>
+    </resources>
 </document>

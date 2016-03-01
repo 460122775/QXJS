@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HonourView" customModule="QXJS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="703"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ahelf" translatesAutoresizingMaskIntoConstraints="NO" id="rpG-IO-cWC">
+                    <rect key="frame" x="92" y="175" width="840" height="195"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="840" id="CC7-eN-UAH"/>
+                        <constraint firstAttribute="height" constant="195" id="UMg-EQ-Fd8"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ahelf" translatesAutoresizingMaskIntoConstraints="NO" id="niY-cA-7ol">
+                    <rect key="frame" x="92" y="432" width="840" height="195"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="195" id="FM5-hQ-F6R"/>
+                        <constraint firstAttribute="width" constant="840" id="l8F-wC-lcB"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book1" translatesAutoresizingMaskIntoConstraints="NO" id="BkH-yA-aqj">
+                    <rect key="frame" x="199" y="110" width="105" height="141"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="105" id="cya-FL-mjR"/>
+                        <constraint firstAttribute="height" constant="141" id="x6L-wl-ZbY"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book2" translatesAutoresizingMaskIntoConstraints="NO" id="fe0-Td-abe">
+                    <rect key="frame" x="374" y="110" width="105" height="141"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="141" id="DeU-Xd-uFF"/>
+                        <constraint firstAttribute="width" constant="105" id="uBn-04-Nq5"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book3" translatesAutoresizingMaskIntoConstraints="NO" id="Ndu-50-hNx">
+                    <rect key="frame" x="549" y="110" width="105" height="141"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="105" id="c37-ks-4fm"/>
+                        <constraint firstAttribute="height" constant="141" id="pYk-uN-6NA"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book4" translatesAutoresizingMaskIntoConstraints="NO" id="XqE-le-Bcf">
+                    <rect key="frame" x="724" y="110" width="105" height="141"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="105" id="Id6-al-iqR"/>
+                        <constraint firstAttribute="height" constant="141" id="uUb-tj-uxM"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book6" translatesAutoresizingMaskIntoConstraints="NO" id="r4u-VZ-Wey">
+                    <rect key="frame" x="374" y="370" width="105" height="141"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="105" id="5b3-gT-NdH"/>
+                        <constraint firstAttribute="height" constant="141" id="zhk-bq-OXh"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book7" translatesAutoresizingMaskIntoConstraints="NO" id="bEd-LY-xIB">
+                    <rect key="frame" x="549" y="370" width="105" height="141"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="141" id="2hT-px-D2I"/>
+                        <constraint firstAttribute="width" constant="105" id="oZX-98-Slj"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book8" translatesAutoresizingMaskIntoConstraints="NO" id="m7N-x6-U1T">
+                    <rect key="frame" x="724" y="370" width="105" height="141"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="141" id="CQ2-eo-Bnv"/>
+                        <constraint firstAttribute="width" constant="105" id="XPZ-U8-NVl"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book5" translatesAutoresizingMaskIntoConstraints="NO" id="tV0-w6-xNe">
+                    <rect key="frame" x="199" y="370" width="105" height="141"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="141" id="URe-Zb-VtS"/>
+                        <constraint firstAttribute="width" constant="105" id="s65-O0-Yf7"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="tV0-w6-xNe" firstAttribute="baseline" secondItem="r4u-VZ-Wey" secondAttribute="baseline" id="0pf-PH-xN0"/>
+                <constraint firstItem="niY-cA-7ol" firstAttribute="top" secondItem="rpG-IO-cWC" secondAttribute="bottom" constant="62" id="499-wc-wvn"/>
+                <constraint firstItem="niY-cA-7ol" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="C1B-nz-W7d"/>
+                <constraint firstItem="bEd-LY-xIB" firstAttribute="leading" secondItem="r4u-VZ-Wey" secondAttribute="trailing" constant="70" id="E5D-7u-qM1"/>
+                <constraint firstItem="fe0-Td-abe" firstAttribute="baseline" secondItem="BkH-yA-aqj" secondAttribute="baseline" id="K2x-xC-pdF"/>
+                <constraint firstItem="m7N-x6-U1T" firstAttribute="baseline" secondItem="bEd-LY-xIB" secondAttribute="baseline" id="OHd-Nm-nhC"/>
+                <constraint firstItem="XqE-le-Bcf" firstAttribute="baseline" secondItem="Ndu-50-hNx" secondAttribute="baseline" id="RbB-qU-ueD"/>
+                <constraint firstItem="r4u-VZ-Wey" firstAttribute="leading" secondItem="tV0-w6-xNe" secondAttribute="trailing" constant="70" id="XFg-uf-fYb"/>
+                <constraint firstItem="tV0-w6-xNe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="199" id="Yux-wL-2gQ"/>
+                <constraint firstItem="Ndu-50-hNx" firstAttribute="baseline" secondItem="fe0-Td-abe" secondAttribute="baseline" id="a8V-ne-xxT"/>
+                <constraint firstItem="Ndu-50-hNx" firstAttribute="leading" secondItem="fe0-Td-abe" secondAttribute="trailing" constant="70" id="dxz-5V-SP6"/>
+                <constraint firstItem="bEd-LY-xIB" firstAttribute="baseline" secondItem="tV0-w6-xNe" secondAttribute="baseline" id="e3m-Gh-kqx"/>
+                <constraint firstItem="tV0-w6-xNe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="370" id="f19-e9-VFd"/>
+                <constraint firstItem="BkH-yA-aqj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="199" id="fvU-DM-6XV"/>
+                <constraint firstItem="rpG-IO-cWC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="175" id="jur-R7-k8U"/>
+                <constraint firstItem="bEd-LY-xIB" firstAttribute="leading" secondItem="tV0-w6-xNe" secondAttribute="trailing" constant="70" id="moh-aD-qi6"/>
+                <constraint firstItem="XqE-le-Bcf" firstAttribute="leading" secondItem="Ndu-50-hNx" secondAttribute="trailing" constant="70" id="qHt-xg-amN"/>
+                <constraint firstItem="rpG-IO-cWC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="qSA-J1-cQi"/>
+                <constraint firstItem="tV0-w6-xNe" firstAttribute="leading" secondItem="r4u-VZ-Wey" secondAttribute="trailing" constant="70" id="v1i-Hj-HiU"/>
+                <constraint firstItem="fe0-Td-abe" firstAttribute="leading" secondItem="BkH-yA-aqj" secondAttribute="trailing" constant="70" id="vId-RS-MVW"/>
+                <constraint firstItem="m7N-x6-U1T" firstAttribute="leading" secondItem="bEd-LY-xIB" secondAttribute="trailing" constant="70" id="yYQ-0A-lzw"/>
+                <constraint firstItem="BkH-yA-aqj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="110" id="yko-Zz-cH0"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="v1i-Hj-HiU"/>
+                    <exclude reference="moh-aD-qi6"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="ahelf" width="560" height="130"/>
+        <image name="book1" width="70" height="94"/>
+        <image name="book2" width="70" height="94"/>
+        <image name="book3" width="70" height="94"/>
+        <image name="book4" width="70" height="94"/>
+        <image name="book5" width="70" height="94"/>
+        <image name="book6" width="70" height="94"/>
+        <image name="book7" width="70" height="94"/>
+        <image name="book8" width="70" height="94"/>
+    </resources>
+</document>

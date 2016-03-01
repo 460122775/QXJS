@@ -22,8 +22,11 @@
 		01438A3E1C51224E00B0ECEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01438A3D1C51224E00B0ECEF /* AppDelegate.swift */; };
 		01438A461C51224E00B0ECEF /* QXJS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01438A441C51224E00B0ECEF /* QXJS.xcdatamodeld */; };
 		01438A4B1C51224E00B0ECEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01438A491C51224E00B0ECEF /* LaunchScreen.storyboard */; };
-		01438A551C51233300B0ECEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01438A541C51233300B0ECEF /* Images.xcassets */; };
 		01438A5D1C51264400B0ECEF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01438A5C1C51264400B0ECEF /* MapKit.framework */; };
+		0174D4171C82EE66009F366A /* HonourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174D4161C82EE66009F366A /* HonourView.swift */; };
+		0174D4191C82EE96009F366A /* HonourView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0174D4181C82EE96009F366A /* HonourView.xib */; };
+		0174D41C1C82FB3F009F366A /* StuffView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0174D41B1C82FB3F009F366A /* StuffView.xib */; };
+		0174D41E1C82FB5A009F366A /* StuffView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174D41D1C82FB5A009F366A /* StuffView.swift */; };
 		019B6CFB1C7E6D1800F90D1A /* ContactInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B6CFA1C7E6D1800F90D1A /* ContactInfoView.swift */; };
 		019B6CFE1C7E8F1000F90D1A /* CompanyBrandNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B6CFD1C7E8F1000F90D1A /* CompanyBrandNavView.swift */; };
 		019B6D001C7E8F2B00F90D1A /* CompanyBrandNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 019B6CFF1C7E8F2B00F90D1A /* CompanyBrandNavView.xib */; };
@@ -34,13 +37,44 @@
 		019B6D0C1C7FF96000F90D1A /* CompanyBrandView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 019B6D0B1C7FF96000F90D1A /* CompanyBrandView.xib */; };
 		019B6D0E1C7FFD7E00F90D1A /* CompanyBrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B6D0D1C7FFD7E00F90D1A /* CompanyBrandView.swift */; };
 		019B6D101C801D7D00F90D1A /* BrandDetail11.xib in Resources */ = {isa = PBXBuildFile; fileRef = 019B6D0F1C801D7D00F90D1A /* BrandDetail11.xib */; };
-		019B6D121C8023AC00F90D1A /* BrandDetail11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B6D111C8023AC00F90D1A /* BrandDetail11.swift */; };
 		019B6D171C8026C500F90D1A /* SettingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B6D151C8026C500F90D1A /* SettingMainView.swift */; };
 		019B6D181C8026C500F90D1A /* SettingMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 019B6D161C8026C500F90D1A /* SettingMainView.xib */; };
 		019B6D1B1C8026D300F90D1A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B6D191C8026D300F90D1A /* SettingViewController.swift */; };
 		019B6D1C1C8026D300F90D1A /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 019B6D1A1C8026D300F90D1A /* SettingViewController.xib */; };
 		019B6D201C8053C600F90D1A /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B6D1E1C8053C600F90D1A /* CustomViewController.swift */; };
 		019B6D211C8053C600F90D1A /* CustomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 019B6D1F1C8053C600F90D1A /* CustomViewController.xib */; };
+		019B6D2A1C82C7C100F90D1A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019B6D291C82C7C100F90D1A /* Images.xcassets */; };
+		01A5759F1C83AFBF00334190 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5759D1C83AFBF00334190 /* StoreViewController.swift */; };
+		01A575A01C83AFBF00334190 /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A5759E1C83AFBF00334190 /* StoreViewController.xib */; };
+		01A575A41C83F18B00334190 /* TechnologyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A575A21C83F18B00334190 /* TechnologyViewController.swift */; };
+		01A575A51C83F18B00334190 /* TechnologyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575A31C83F18B00334190 /* TechnologyViewController.xib */; };
+		01A575A91C83F1CF00334190 /* TechnologyMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A575A71C83F1CF00334190 /* TechnologyMainView.swift */; };
+		01A575AA1C83F1CF00334190 /* TechnologyMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575A81C83F1CF00334190 /* TechnologyMainView.xib */; };
+		01A575AC1C842F5800334190 /* TechnologyDetail11View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575AB1C842F5800334190 /* TechnologyDetail11View.xib */; };
+		01A575AE1C84305100334190 /* TechnologyDetail9View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575AD1C84305100334190 /* TechnologyDetail9View.xib */; };
+		01A575BA1C8434D500334190 /* TechnologyDetail1View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575B11C8434D500334190 /* TechnologyDetail1View.xib */; };
+		01A575BB1C8434D500334190 /* TechnologyDetail2View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575B21C8434D500334190 /* TechnologyDetail2View.xib */; };
+		01A575BC1C8434D500334190 /* TechnologyDetail3View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575B31C8434D500334190 /* TechnologyDetail3View.xib */; };
+		01A575BD1C8434D500334190 /* TechnologyDetail4View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575B41C8434D500334190 /* TechnologyDetail4View.xib */; };
+		01A575BE1C8434D500334190 /* TechnologyDetail5View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575B51C8434D500334190 /* TechnologyDetail5View.xib */; };
+		01A575BF1C8434D500334190 /* TechnologyDetail6View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575B61C8434D500334190 /* TechnologyDetail6View.xib */; };
+		01A575C01C8434D500334190 /* TechnologyDetail7View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575B71C8434D500334190 /* TechnologyDetail7View.xib */; };
+		01A575C11C8434D500334190 /* TechnologyDetail8View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575B81C8434D500334190 /* TechnologyDetail8View.xib */; };
+		01A575C21C8434D500334190 /* TechnologyDetail10View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575B91C8434D500334190 /* TechnologyDetail10View.xib */; };
+		01A575C61C843DF600334190 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A575C41C843DF600334190 /* NewsViewController.swift */; };
+		01A575C71C843DF600334190 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575C51C843DF600334190 /* NewsViewController.xib */; };
+		01A575CB1C843E7000334190 /* CollocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A575C91C843E7000334190 /* CollocationViewController.swift */; };
+		01A575CC1C843E7000334190 /* CollocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575CA1C843E7000334190 /* CollocationViewController.xib */; };
+		01A575D21C84428A00334190 /* NewsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A575D01C84428A00334190 /* NewsMainView.swift */; };
+		01A575D31C84428A00334190 /* NewsMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575D11C84428A00334190 /* NewsMainView.xib */; };
+		01A575D71C846CB700334190 /* CollocationMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A575D51C846CB700334190 /* CollocationMainView.swift */; };
+		01A575D81C846CB700334190 /* CollocationMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575D61C846CB700334190 /* CollocationMainView.xib */; };
+		01A575DB1C8473FF00334190 /* CollocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A575D91C8473FF00334190 /* CollocationDetailView.swift */; };
+		01A575DC1C8473FF00334190 /* CollocationDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575DA1C8473FF00334190 /* CollocationDetailView.xib */; };
+		01A575E11C85434A00334190 /* BrandDetail12.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575DD1C85434A00334190 /* BrandDetail12.xib */; };
+		01A575E21C85434A00334190 /* BrandDetail13.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575DE1C85434A00334190 /* BrandDetail13.xib */; };
+		01A575E31C85434A00334190 /* BrandDetail21.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575DF1C85434A00334190 /* BrandDetail21.xib */; };
+		01A575E41C85434A00334190 /* BrandDetail22.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575E01C85434A00334190 /* BrandDetail22.xib */; };
 		01F963141C7B06BB00FD7775 /* ContactInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F963131C7B06BB00FD7775 /* ContactInfoView.xib */; };
 /* End PBXBuildFile section */
 
@@ -63,8 +97,11 @@
 		01438A4A1C51224E00B0ECEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01438A4C1C51224E00B0ECEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01438A531C5122B200B0ECEF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		01438A541C51233300B0ECEF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		01438A5C1C51264400B0ECEF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0174D4161C82EE66009F366A /* HonourView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HonourView.swift; path = class/view/companybrand/honour/HonourView.swift; sourceTree = "<group>"; };
+		0174D4181C82EE96009F366A /* HonourView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HonourView.xib; path = class/view/companybrand/honour/HonourView.xib; sourceTree = "<group>"; };
+		0174D41B1C82FB3F009F366A /* StuffView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StuffView.xib; path = class/view/companybrand/stuff/StuffView.xib; sourceTree = "<group>"; };
+		0174D41D1C82FB5A009F366A /* StuffView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StuffView.swift; path = class/view/companybrand/stuff/StuffView.swift; sourceTree = "<group>"; };
 		019B6CFA1C7E6D1800F90D1A /* ContactInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactInfoView.swift; path = class/view/companybrand/contact/ContactInfoView.swift; sourceTree = "<group>"; };
 		019B6CFD1C7E8F1000F90D1A /* CompanyBrandNavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompanyBrandNavView.swift; path = class/view/companybrand/companyinfo/CompanyBrandNavView.swift; sourceTree = "<group>"; };
 		019B6CFF1C7E8F2B00F90D1A /* CompanyBrandNavView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CompanyBrandNavView.xib; path = class/view/companybrand/companyinfo/CompanyBrandNavView.xib; sourceTree = "<group>"; };
@@ -75,13 +112,44 @@
 		019B6D0B1C7FF96000F90D1A /* CompanyBrandView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CompanyBrandView.xib; path = class/view/companybrand/brand/CompanyBrandView.xib; sourceTree = "<group>"; };
 		019B6D0D1C7FFD7E00F90D1A /* CompanyBrandView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompanyBrandView.swift; path = class/view/companybrand/brand/CompanyBrandView.swift; sourceTree = "<group>"; };
 		019B6D0F1C801D7D00F90D1A /* BrandDetail11.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BrandDetail11.xib; path = class/view/companybrand/brand/BrandDetail11.xib; sourceTree = "<group>"; };
-		019B6D111C8023AC00F90D1A /* BrandDetail11.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrandDetail11.swift; path = class/view/companybrand/brand/BrandDetail11.swift; sourceTree = "<group>"; };
 		019B6D151C8026C500F90D1A /* SettingMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingMainView.swift; path = class/view/setting/SettingMainView.swift; sourceTree = "<group>"; };
 		019B6D161C8026C500F90D1A /* SettingMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingMainView.xib; path = class/view/setting/SettingMainView.xib; sourceTree = "<group>"; };
 		019B6D191C8026D300F90D1A /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = class/controller/setting/SettingViewController.swift; sourceTree = "<group>"; };
 		019B6D1A1C8026D300F90D1A /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingViewController.xib; path = class/controller/setting/SettingViewController.xib; sourceTree = "<group>"; };
 		019B6D1E1C8053C600F90D1A /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomViewController.swift; path = class/controller/custom/CustomViewController.swift; sourceTree = "<group>"; };
 		019B6D1F1C8053C600F90D1A /* CustomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomViewController.xib; path = class/controller/custom/CustomViewController.xib; sourceTree = "<group>"; };
+		019B6D291C82C7C100F90D1A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = QXJS/Images.xcassets; sourceTree = "<group>"; };
+		01A5759D1C83AFBF00334190 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreViewController.swift; path = class/controller/store/StoreViewController.swift; sourceTree = "<group>"; };
+		01A5759E1C83AFBF00334190 /* StoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StoreViewController.xib; path = class/controller/store/StoreViewController.xib; sourceTree = "<group>"; };
+		01A575A21C83F18B00334190 /* TechnologyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TechnologyViewController.swift; path = class/controller/technology/TechnologyViewController.swift; sourceTree = "<group>"; };
+		01A575A31C83F18B00334190 /* TechnologyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TechnologyViewController.xib; path = class/controller/technology/TechnologyViewController.xib; sourceTree = "<group>"; };
+		01A575A71C83F1CF00334190 /* TechnologyMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TechnologyMainView.swift; path = class/view/technology/TechnologyMainView.swift; sourceTree = "<group>"; };
+		01A575A81C83F1CF00334190 /* TechnologyMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TechnologyMainView.xib; path = class/view/technology/TechnologyMainView.xib; sourceTree = "<group>"; };
+		01A575AB1C842F5800334190 /* TechnologyDetail11View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TechnologyDetail11View.xib; path = class/view/technology/TechnologyDetail11View.xib; sourceTree = "<group>"; };
+		01A575AD1C84305100334190 /* TechnologyDetail9View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TechnologyDetail9View.xib; path = class/view/technology/TechnologyDetail9View.xib; sourceTree = "<group>"; };
+		01A575B11C8434D500334190 /* TechnologyDetail1View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TechnologyDetail1View.xib; path = class/view/technology/TechnologyDetail1View.xib; sourceTree = "<group>"; };
+		01A575B21C8434D500334190 /* TechnologyDetail2View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TechnologyDetail2View.xib; path = class/view/technology/TechnologyDetail2View.xib; sourceTree = "<group>"; };
+		01A575B31C8434D500334190 /* TechnologyDetail3View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TechnologyDetail3View.xib; path = class/view/technology/TechnologyDetail3View.xib; sourceTree = "<group>"; };
+		01A575B41C8434D500334190 /* TechnologyDetail4View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TechnologyDetail4View.xib; path = class/view/technology/TechnologyDetail4View.xib; sourceTree = "<group>"; };
+		01A575B51C8434D500334190 /* TechnologyDetail5View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TechnologyDetail5View.xib; path = class/view/technology/TechnologyDetail5View.xib; sourceTree = "<group>"; };
+		01A575B61C8434D500334190 /* TechnologyDetail6View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TechnologyDetail6View.xib; path = class/view/technology/TechnologyDetail6View.xib; sourceTree = "<group>"; };
+		01A575B71C8434D500334190 /* TechnologyDetail7View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TechnologyDetail7View.xib; path = class/view/technology/TechnologyDetail7View.xib; sourceTree = "<group>"; };
+		01A575B81C8434D500334190 /* TechnologyDetail8View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TechnologyDetail8View.xib; path = class/view/technology/TechnologyDetail8View.xib; sourceTree = "<group>"; };
+		01A575B91C8434D500334190 /* TechnologyDetail10View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TechnologyDetail10View.xib; path = class/view/technology/TechnologyDetail10View.xib; sourceTree = "<group>"; };
+		01A575C41C843DF600334190 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsViewController.swift; path = class/controller/news/NewsViewController.swift; sourceTree = "<group>"; };
+		01A575C51C843DF600334190 /* NewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewsViewController.xib; path = class/controller/news/NewsViewController.xib; sourceTree = "<group>"; };
+		01A575C91C843E7000334190 /* CollocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollocationViewController.swift; path = class/controller/collocation/CollocationViewController.swift; sourceTree = "<group>"; };
+		01A575CA1C843E7000334190 /* CollocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollocationViewController.xib; path = class/controller/collocation/CollocationViewController.xib; sourceTree = "<group>"; };
+		01A575D01C84428A00334190 /* NewsMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsMainView.swift; path = class/view/news/NewsMainView.swift; sourceTree = "<group>"; };
+		01A575D11C84428A00334190 /* NewsMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewsMainView.xib; path = class/view/news/NewsMainView.xib; sourceTree = "<group>"; };
+		01A575D51C846CB700334190 /* CollocationMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollocationMainView.swift; path = class/view/collocation/CollocationMainView.swift; sourceTree = "<group>"; };
+		01A575D61C846CB700334190 /* CollocationMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollocationMainView.xib; path = class/view/collocation/CollocationMainView.xib; sourceTree = "<group>"; };
+		01A575D91C8473FF00334190 /* CollocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollocationDetailView.swift; path = class/view/collocation/CollocationDetailView.swift; sourceTree = "<group>"; };
+		01A575DA1C8473FF00334190 /* CollocationDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollocationDetailView.xib; path = class/view/collocation/CollocationDetailView.xib; sourceTree = "<group>"; };
+		01A575DD1C85434A00334190 /* BrandDetail12.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BrandDetail12.xib; path = class/view/companybrand/brand/BrandDetail12.xib; sourceTree = "<group>"; };
+		01A575DE1C85434A00334190 /* BrandDetail13.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BrandDetail13.xib; path = class/view/companybrand/brand/BrandDetail13.xib; sourceTree = "<group>"; };
+		01A575DF1C85434A00334190 /* BrandDetail21.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BrandDetail21.xib; path = class/view/companybrand/brand/BrandDetail21.xib; sourceTree = "<group>"; };
+		01A575E01C85434A00334190 /* BrandDetail22.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BrandDetail22.xib; path = class/view/companybrand/brand/BrandDetail22.xib; sourceTree = "<group>"; };
 		01F963131C7B06BB00FD7775 /* ContactInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContactInfoView.xib; path = class/view/companybrand/contact/ContactInfoView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +191,8 @@
 				019B6CFD1C7E8F1000F90D1A /* CompanyBrandNavView.swift */,
 				019B6CFF1C7E8F2B00F90D1A /* CompanyBrandNavView.xib */,
 				019B6CFC1C7E8D5900F90D1A /* culture */,
+				0174D4151C82EE41009F366A /* honour */,
+				0174D41A1C82FB11009F366A /* stuff */,
 				019B6D051C7FF1E200F90D1A /* progress */,
 				019B6D0A1C7FF92100F90D1A /* brand */,
 				01F963121C7B04E200FD7775 /* contact */,
@@ -161,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				01438A3C1C51224E00B0ECEF /* QXJS */,
+				019B6D291C82C7C100F90D1A /* Images.xcassets */,
 				01438A3B1C51224E00B0ECEF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -179,7 +250,6 @@
 				01438A561C51253400B0ECEF /* class */,
 				01438A571C51254B00B0ECEF /* supporting files */,
 				018A31321C7CBB390071898C /* library */,
-				01438A541C51233300B0ECEF /* Images.xcassets */,
 			);
 			path = QXJS;
 			sourceTree = "<group>";
@@ -216,6 +286,10 @@
 		01438A591C5125AA00B0ECEF /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				01A575C81C843E1700334190 /* collocation */,
+				01A575C31C843DE300334190 /* news */,
+				01A575A11C83F16800334190 /* technology */,
+				01A5759C1C83AFAC00334190 /* store */,
 				0118F35F1C61CA41003C9EFD /* login */,
 				0118F3581C61C9A3003C9EFD /* companybrand */,
 				0118F3691C626935003C9EFD /* productlist */,
@@ -235,13 +309,33 @@
 		01438A5B1C5125BF00B0ECEF /* view */ = {
 			isa = PBXGroup;
 			children = (
+				01A575D41C846CA200334190 /* collocation */,
+				01A575CD1C84426000334190 /* news */,
+				01A575A61C83F1BC00334190 /* technology */,
 				0118F3641C61CE83003C9EFD /* productlist */,
 				0118F35A1C61C9D9003C9EFD /* companybrand */,
 				019B6D131C8024E900F90D1A /* setting */,
-				019B6D221C8053CA00F90D1A /* custom */,
 				0118F3521C61C6D4003C9EFD /* mainmenu */,
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		0174D4151C82EE41009F366A /* honour */ = {
+			isa = PBXGroup;
+			children = (
+				0174D4161C82EE66009F366A /* HonourView.swift */,
+				0174D4181C82EE96009F366A /* HonourView.xib */,
+			);
+			name = honour;
+			sourceTree = "<group>";
+		};
+		0174D41A1C82FB11009F366A /* stuff */ = {
+			isa = PBXGroup;
+			children = (
+				0174D41D1C82FB5A009F366A /* StuffView.swift */,
+				0174D41B1C82FB3F009F366A /* StuffView.xib */,
+			);
+			name = stuff;
 			sourceTree = "<group>";
 		};
 		018A31321C7CBB390071898C /* library */ = {
@@ -273,10 +367,13 @@
 		019B6D0A1C7FF92100F90D1A /* brand */ = {
 			isa = PBXGroup;
 			children = (
+				019B6D0F1C801D7D00F90D1A /* BrandDetail11.xib */,
+				01A575DD1C85434A00334190 /* BrandDetail12.xib */,
+				01A575DE1C85434A00334190 /* BrandDetail13.xib */,
+				01A575DF1C85434A00334190 /* BrandDetail21.xib */,
+				01A575E01C85434A00334190 /* BrandDetail22.xib */,
 				019B6D0D1C7FFD7E00F90D1A /* CompanyBrandView.swift */,
 				019B6D0B1C7FF96000F90D1A /* CompanyBrandView.xib */,
-				019B6D111C8023AC00F90D1A /* BrandDetail11.swift */,
-				019B6D0F1C801D7D00F90D1A /* BrandDetail11.xib */,
 			);
 			name = brand;
 			sourceTree = "<group>";
@@ -308,11 +405,80 @@
 			name = custom;
 			sourceTree = "<group>";
 		};
-		019B6D221C8053CA00F90D1A /* custom */ = {
+		01A5759C1C83AFAC00334190 /* store */ = {
 			isa = PBXGroup;
 			children = (
+				01A5759D1C83AFBF00334190 /* StoreViewController.swift */,
+				01A5759E1C83AFBF00334190 /* StoreViewController.xib */,
 			);
-			name = custom;
+			name = store;
+			sourceTree = "<group>";
+		};
+		01A575A11C83F16800334190 /* technology */ = {
+			isa = PBXGroup;
+			children = (
+				01A575A21C83F18B00334190 /* TechnologyViewController.swift */,
+				01A575A31C83F18B00334190 /* TechnologyViewController.xib */,
+			);
+			name = technology;
+			sourceTree = "<group>";
+		};
+		01A575A61C83F1BC00334190 /* technology */ = {
+			isa = PBXGroup;
+			children = (
+				01A575A71C83F1CF00334190 /* TechnologyMainView.swift */,
+				01A575A81C83F1CF00334190 /* TechnologyMainView.xib */,
+				01A575B11C8434D500334190 /* TechnologyDetail1View.xib */,
+				01A575B21C8434D500334190 /* TechnologyDetail2View.xib */,
+				01A575B31C8434D500334190 /* TechnologyDetail3View.xib */,
+				01A575B41C8434D500334190 /* TechnologyDetail4View.xib */,
+				01A575B51C8434D500334190 /* TechnologyDetail5View.xib */,
+				01A575B61C8434D500334190 /* TechnologyDetail6View.xib */,
+				01A575B71C8434D500334190 /* TechnologyDetail7View.xib */,
+				01A575B81C8434D500334190 /* TechnologyDetail8View.xib */,
+				01A575AD1C84305100334190 /* TechnologyDetail9View.xib */,
+				01A575B91C8434D500334190 /* TechnologyDetail10View.xib */,
+				01A575AB1C842F5800334190 /* TechnologyDetail11View.xib */,
+			);
+			name = technology;
+			sourceTree = "<group>";
+		};
+		01A575C31C843DE300334190 /* news */ = {
+			isa = PBXGroup;
+			children = (
+				01A575C41C843DF600334190 /* NewsViewController.swift */,
+				01A575C51C843DF600334190 /* NewsViewController.xib */,
+			);
+			name = news;
+			sourceTree = "<group>";
+		};
+		01A575C81C843E1700334190 /* collocation */ = {
+			isa = PBXGroup;
+			children = (
+				01A575C91C843E7000334190 /* CollocationViewController.swift */,
+				01A575CA1C843E7000334190 /* CollocationViewController.xib */,
+			);
+			name = collocation;
+			sourceTree = "<group>";
+		};
+		01A575CD1C84426000334190 /* news */ = {
+			isa = PBXGroup;
+			children = (
+				01A575D01C84428A00334190 /* NewsMainView.swift */,
+				01A575D11C84428A00334190 /* NewsMainView.xib */,
+			);
+			name = news;
+			sourceTree = "<group>";
+		};
+		01A575D41C846CA200334190 /* collocation */ = {
+			isa = PBXGroup;
+			children = (
+				01A575D91C8473FF00334190 /* CollocationDetailView.swift */,
+				01A575DA1C8473FF00334190 /* CollocationDetailView.xib */,
+				01A575D51C846CB700334190 /* CollocationMainView.swift */,
+				01A575D61C846CB700334190 /* CollocationMainView.xib */,
+			);
+			name = collocation;
 			sourceTree = "<group>";
 		};
 		01F963121C7B04E200FD7775 /* contact */ = {
@@ -356,7 +522,7 @@
 				TargetAttributes = {
 					01438A391C51224E00B0ECEF = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 55PPLS7LLN;
+						DevelopmentTeam = VNWAX3B458;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -388,23 +554,48 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01A575E21C85434A00334190 /* BrandDetail13.xib in Resources */,
 				019B6D001C7E8F2B00F90D1A /* CompanyBrandNavView.xib in Resources */,
+				01A575C71C843DF600334190 /* NewsViewController.xib in Resources */,
 				0118F3681C61CEF6003C9EFD /* CompanyBrandMainView.xib in Resources */,
 				0118F3541C61C701003C9EFD /* MainMenuView.xib in Resources */,
-				01438A551C51233300B0ECEF /* Images.xcassets in Resources */,
 				019B6D0C1C7FF96000F90D1A /* CompanyBrandView.xib in Resources */,
 				0118F36D1C62697E003C9EFD /* ProductListViewController.xib in Resources */,
 				019B6D101C801D7D00F90D1A /* BrandDetail11.xib in Resources */,
+				01A575E41C85434A00334190 /* BrandDetail22.xib in Resources */,
 				019B6D1C1C8026D300F90D1A /* SettingViewController.xib in Resources */,
+				01A575AC1C842F5800334190 /* TechnologyDetail11View.xib in Resources */,
+				0174D4191C82EE96009F366A /* HonourView.xib in Resources */,
+				01A575A01C83AFBF00334190 /* StoreViewController.xib in Resources */,
+				01A575D81C846CB700334190 /* CollocationMainView.xib in Resources */,
 				01F963141C7B06BB00FD7775 /* ContactInfoView.xib in Resources */,
 				0118F3631C61CA8B003C9EFD /* LoginViewController.xib in Resources */,
+				01A575CC1C843E7000334190 /* CollocationViewController.xib in Resources */,
+				01A575C11C8434D500334190 /* TechnologyDetail8View.xib in Resources */,
+				01A575BF1C8434D500334190 /* TechnologyDetail6View.xib in Resources */,
 				019B6D091C7FF23A00F90D1A /* CompanyProgressView.xib in Resources */,
+				01A575AE1C84305100334190 /* TechnologyDetail9View.xib in Resources */,
+				01A575C21C8434D500334190 /* TechnologyDetail10View.xib in Resources */,
 				019B6D021C7F4DD300F90D1A /* CompanyInfoView.xib in Resources */,
+				019B6D2A1C82C7C100F90D1A /* Images.xcassets in Resources */,
+				01A575E31C85434A00334190 /* BrandDetail21.xib in Resources */,
 				0118F3711C626B9A003C9EFD /* ProductListMainView.xib in Resources */,
 				01438A4B1C51224E00B0ECEF /* LaunchScreen.storyboard in Resources */,
 				0118F35E1C61CA3C003C9EFD /* CompanyBrandViewController.xib in Resources */,
+				01A575AA1C83F1CF00334190 /* TechnologyMainView.xib in Resources */,
+				01A575BD1C8434D500334190 /* TechnologyDetail4View.xib in Resources */,
+				01A575D31C84428A00334190 /* NewsMainView.xib in Resources */,
+				01A575BA1C8434D500334190 /* TechnologyDetail1View.xib in Resources */,
+				0174D41C1C82FB3F009F366A /* StuffView.xib in Resources */,
 				019B6D211C8053C600F90D1A /* CustomViewController.xib in Resources */,
+				01A575BC1C8434D500334190 /* TechnologyDetail3View.xib in Resources */,
+				01A575E11C85434A00334190 /* BrandDetail12.xib in Resources */,
+				01A575A51C83F18B00334190 /* TechnologyViewController.xib in Resources */,
+				01A575BE1C8434D500334190 /* TechnologyDetail5View.xib in Resources */,
+				01A575C01C8434D500334190 /* TechnologyDetail7View.xib in Resources */,
+				01A575BB1C8434D500334190 /* TechnologyDetail2View.xib in Resources */,
 				019B6D181C8026C500F90D1A /* SettingMainView.xib in Resources */,
+				01A575DC1C8473FF00334190 /* CollocationDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,16 +606,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01A5759F1C83AFBF00334190 /* StoreViewController.swift in Sources */,
 				0118F3621C61CA8B003C9EFD /* LoginViewController.swift in Sources */,
+				01A575C61C843DF600334190 /* NewsViewController.swift in Sources */,
 				0118F36F1C626B72003C9EFD /* ProductListMainView.swift in Sources */,
-				019B6D121C8023AC00F90D1A /* BrandDetail11.swift in Sources */,
 				019B6D1B1C8026D300F90D1A /* SettingViewController.swift in Sources */,
+				01A575DB1C8473FF00334190 /* CollocationDetailView.swift in Sources */,
 				019B6D0E1C7FFD7E00F90D1A /* CompanyBrandView.swift in Sources */,
+				0174D4171C82EE66009F366A /* HonourView.swift in Sources */,
+				01A575CB1C843E7000334190 /* CollocationViewController.swift in Sources */,
 				01438A461C51224E00B0ECEF /* QXJS.xcdatamodeld in Sources */,
 				0118F36C1C62697E003C9EFD /* ProductListViewController.swift in Sources */,
+				01A575A91C83F1CF00334190 /* TechnologyMainView.swift in Sources */,
+				01A575D21C84428A00334190 /* NewsMainView.swift in Sources */,
 				019B6CFE1C7E8F1000F90D1A /* CompanyBrandNavView.swift in Sources */,
 				0118F35D1C61CA3C003C9EFD /* CompanyBrandViewController.swift in Sources */,
+				0174D41E1C82FB5A009F366A /* StuffView.swift in Sources */,
 				019B6CFB1C7E6D1800F90D1A /* ContactInfoView.swift in Sources */,
+				01A575D71C846CB700334190 /* CollocationMainView.swift in Sources */,
 				019B6D201C8053C600F90D1A /* CustomViewController.swift in Sources */,
 				019B6D171C8026C500F90D1A /* SettingMainView.swift in Sources */,
 				019B6D071C7FF21A00F90D1A /* CompanyProgressView.swift in Sources */,
@@ -432,6 +631,7 @@
 				019B6D041C7F4DF400F90D1A /* CompanyInfoView.swift in Sources */,
 				01438A3E1C51224E00B0ECEF /* AppDelegate.swift in Sources */,
 				0118F3661C61CED8003C9EFD /* CompanyBrandMainView.swift in Sources */,
+				01A575A41C83F18B00334190 /* TechnologyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

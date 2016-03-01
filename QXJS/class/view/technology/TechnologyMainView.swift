@@ -8,14 +8,53 @@
 
 import UIKit
 
-class ProductListMainView: UIView {
+protocol TechnologyViewDelegate
+{
+    func showDetailViewByTag(tag : Int)
+}
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
+class TechnologyMainView: UIView {
+
+    @IBOutlet var sofaNormalImg: UIImageView!
+    @IBOutlet var sofaBgImgView: UIImageView!
+    @IBOutlet var sofaDetailView: UIView!
+    @IBOutlet var detailLabel: UILabel!
+    @IBOutlet var sofaDetailImgView: UIImageView!
+    
+    var technologyViewDelegate : TechnologyViewDelegate?
+    
+    override func drawRect(rect: CGRect)
+    {
         // Drawing code
+        let tapNormalImgRecognizer = UITapGestureRecognizer(target: self, action: "onNormalImgTapped:")
+        sofaNormalImg.addGestureRecognizer(tapNormalImgRecognizer)
+        
+        let tapDetailImgRecognizer = UITapGestureRecognizer(target: self, action: "onDetailImgTapped:")
+        sofaDetailImgView.addGestureRecognizer(tapDetailImgRecognizer)
     }
-    */
 
+    func onNormalImgTapped(recognizer:UITapGestureRecognizer)
+    {
+        sofaNormalImg.hidden = true
+        sofaDetailView.hidden = false
+        detailLabel.text = "点击沙发返回效果图"
+    }
+    
+    func onDetailImgTapped(recognizer:UITapGestureRecognizer)
+    {
+        sofaDetailView.hidden = true
+        sofaNormalImg.hidden = false
+        detailLabel.text = "点击沙发显示细节图"
+    }
+    
+    @IBAction func detailBtnClick(sender: UIButton)
+    {
+        technologyViewDelegate?.showDetailViewByTag(sender.tag)
+        detailLabel.hidden = true
+    }
+    
+    func showDetailLabel()
+    {
+        detailLabel.hidden = false
+    }
 }

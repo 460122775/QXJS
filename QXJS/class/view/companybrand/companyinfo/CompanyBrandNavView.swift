@@ -17,12 +17,16 @@ class CompanyBrandNavView: UIView, CompanyBrandNavDelegate{
    
     @IBOutlet var navView: UIView!
     @IBOutlet var navBtnView: UIView!
+    @IBOutlet var selectedView: UIView!
     
     
     var companyBrandDelegate : CompanyBrandDelegate?
     var companyInfoView : CompanyInfoView?
+    var companyProgressView : CompanyProgressView?
     var contactInfoView : ContactInfoView?
     var companyBrandView : CompanyBrandView?
+    var honourView : HonourView?
+    var stuffView : StuffView?
     var thirdClassView : UIView?
     
     @IBOutlet var mainView: UIView!
@@ -47,6 +51,7 @@ class CompanyBrandNavView: UIView, CompanyBrandNavDelegate{
     
     @IBAction func cultureBtnClick(sender: UIButton)
     {
+        selectedView.frame.origin.x = sender.frame.origin.x
         self.mainView.subviews.map { $0.removeFromSuperview() }
         if companyInfoView == nil
         {
@@ -57,21 +62,40 @@ class CompanyBrandNavView: UIView, CompanyBrandNavDelegate{
     
     @IBAction func progressBtnClick(sender: UIButton)
     {
+        selectedView.frame.origin.x = sender.frame.origin.x
         self.mainView.subviews.map { $0.removeFromSuperview() }
+        if companyProgressView == nil
+        {
+            companyProgressView = ((NSBundle.mainBundle().loadNibNamed("CompanyProgressView", owner: self, options: nil) as NSArray).lastObject as? CompanyProgressView)!
+        }
+        self.mainView.addSubview(companyProgressView!)
     }
     
     @IBAction func stuffBtnClick(sender: UIButton)
     {
+        selectedView.frame.origin.x = sender.frame.origin.x
         self.mainView.subviews.map { $0.removeFromSuperview() }
+        if stuffView == nil
+        {
+            stuffView = ((NSBundle.mainBundle().loadNibNamed("StuffView", owner: self, options: nil) as NSArray).lastObject as? StuffView)!
+        }
+        self.mainView.addSubview(stuffView!)
     }
     
     @IBAction func honourBtnClick(sender: UIButton)
     {
+        selectedView.frame.origin.x = sender.frame.origin.x
         self.mainView.subviews.map { $0.removeFromSuperview() }
+        if honourView == nil
+        {
+            honourView = ((NSBundle.mainBundle().loadNibNamed("HonourView", owner: self, options: nil) as NSArray).lastObject as? HonourView)!
+        }
+        self.mainView.addSubview(honourView!)
     }
     
     @IBAction func brandBtnClick(sender: UIButton)
     {
+        selectedView.frame.origin.x = sender.frame.origin.x
         self.mainView.subviews.map { $0.removeFromSuperview() }
         if companyBrandView == nil
         {
@@ -83,6 +107,7 @@ class CompanyBrandNavView: UIView, CompanyBrandNavDelegate{
     
     @IBAction func contactBtnClick(sender: UIButton)
     {
+        selectedView.frame.origin.x = sender.frame.origin.x
         self.mainView.subviews.map { $0.removeFromSuperview() }
         if contactInfoView == nil
         {

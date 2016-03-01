@@ -5,8 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9532"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductListViewController" customModule="QXJS" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TechnologyViewController" customModule="QXJS" customModuleProvider="target">
             <connections>
+                <outlet property="detailViewContainer" destination="xCn-ZY-YNa" id="kt3-oc-KTE"/>
                 <outlet property="mainContainer" destination="0AE-7R-ljl" id="mow-c7-SXH"/>
                 <outlet property="mainMenuContainer" destination="Og6-1R-a1x" id="TkS-IC-rJS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -18,26 +19,52 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Og6-1R-a1x" userLabel="mainMenuContainer">
-                    <rect key="frame" x="0.0" y="20" width="90" height="748"/>
+                    <rect key="frame" x="0.0" y="0.0" width="90" height="768"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0AE-7R-ljl" userLabel="mainViewContainer">
-                    <rect key="frame" x="90" y="20" width="934" height="748"/>
+                    <rect key="frame" x="90" y="0.0" width="934" height="768"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xCn-ZY-YNa" userLabel="detailView">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <subviews>
+                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6CE-Ej-Vrh" userLabel="bgView">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="6CE-Ej-Vrh" firstAttribute="width" secondItem="xCn-ZY-YNa" secondAttribute="width" id="gHE-P3-q4k"/>
+                        <constraint firstItem="6CE-Ej-Vrh" firstAttribute="height" secondItem="xCn-ZY-YNa" secondAttribute="height" id="jGh-f8-Zng"/>
+                        <constraint firstItem="6CE-Ej-Vrh" firstAttribute="leading" secondItem="xCn-ZY-YNa" secondAttribute="leading" id="x7Z-EG-y4a"/>
+                        <constraint firstAttribute="trailing" secondItem="6CE-Ej-Vrh" secondAttribute="trailing" constant="784" id="yXn-kZ-bGj"/>
+                        <constraint firstItem="6CE-Ej-Vrh" firstAttribute="top" secondItem="xCn-ZY-YNa" secondAttribute="top" id="zrI-WJ-Zla"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="yXn-kZ-bGj"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="xCn-ZY-YNa" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="6eg-yP-5mV"/>
                 <constraint firstAttribute="trailing" secondItem="0AE-7R-ljl" secondAttribute="trailing" id="Bs8-WG-bdr"/>
                 <constraint firstAttribute="bottom" secondItem="Og6-1R-a1x" secondAttribute="bottom" id="Hmz-Xs-2aJ"/>
                 <constraint firstItem="0AE-7R-ljl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="IZU-DU-D4d"/>
                 <constraint firstItem="0AE-7R-ljl" firstAttribute="height" secondItem="Og6-1R-a1x" secondAttribute="height" id="JwI-CU-UA8"/>
-                <constraint firstItem="Og6-1R-a1x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Vee-hm-YCa"/>
+                <constraint firstItem="xCn-ZY-YNa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PkM-i2-Dfy"/>
+                <constraint firstItem="xCn-ZY-YNa" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="R3j-At-TjU"/>
+                <constraint firstItem="Og6-1R-a1x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Vee-hm-YCa"/>
                 <constraint firstItem="0AE-7R-ljl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="419" id="flg-fM-I01"/>
+                <constraint firstItem="xCn-ZY-YNa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iuU-vT-To0"/>
                 <constraint firstItem="0AE-7R-ljl" firstAttribute="leading" secondItem="Og6-1R-a1x" secondAttribute="trailing" id="j6t-fr-gqC"/>
                 <constraint firstAttribute="bottom" secondItem="Og6-1R-a1x" secondAttribute="bottom" id="mYF-Km-BHJ"/>
-                <constraint firstItem="Og6-1R-a1x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="pVb-Zy-sDh"/>
-                <constraint firstItem="0AE-7R-ljl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="qa2-LK-ebW"/>
+                <constraint firstItem="Og6-1R-a1x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pVb-Zy-sDh"/>
+                <constraint firstItem="0AE-7R-ljl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qa2-LK-ebW"/>
                 <constraint firstItem="Og6-1R-a1x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rN0-eu-2qf"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>

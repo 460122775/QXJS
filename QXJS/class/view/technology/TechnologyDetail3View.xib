@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="560" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6C-cG-WYA" userLabel="detailView3">
+                    <rect key="frame" x="0.0" y="0.0" width="560" height="600"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="千禧工艺" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33H-JE-y4R">
+                            <rect key="frame" x="0.0" y="29" width="132" height="34"/>
+                            <color key="backgroundColor" red="1" green="0.23921568630000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="132" id="hn3-z6-Aeo"/>
+                                <constraint firstAttribute="height" constant="34" id="i31-3V-W5k"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="technology_5" translatesAutoresizingMaskIntoConstraints="NO" id="ob5-WQ-q3g" userLabel="technology_9">
+                            <rect key="frame" x="334" y="90" width="215" height="230"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="230" id="G6c-vu-PrQ"/>
+                                <constraint firstAttribute="width" constant="215" id="vbY-gn-Fwr"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.德国进口OKE静音拉簧扣件。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTU-pV-8UT">
+                            <rect key="frame" x="49" y="140" width="221" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="7G4-OP-fpV"/>
+                                <constraint firstAttribute="width" constant="221" id="c7q-OK-JB9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="technology_5_2" translatesAutoresizingMaskIntoConstraints="NO" id="2OX-7I-dZl">
+                            <rect key="frame" x="45" y="402" width="235" height="165"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="165" id="OMP-tX-ukd"/>
+                                <constraint firstAttribute="width" constant="235" id="sW1-Ck-v3d"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="对比工艺" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yN8-i0-bOA">
+                            <rect key="frame" x="0.0" y="346" width="132" height="34"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="9vf-g5-Jsy"/>
+                                <constraint firstAttribute="width" constant="132" id="W19-Mz-opF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="弹力拉扣" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tha-5D-TS4">
+                            <rect key="frame" x="49" y="90" width="154" height="33"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="154" id="rQx-vd-YrP"/>
+                                <constraint firstAttribute="height" constant="33" id="ucq-se-jWY"/>
+                            </constraints>
+                            <color key="textColor" red="1" green="0.4941176471" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="2.宝马汽车都用此扣，此设计在沙发行业中独一无二。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aPg-x5-I6Y">
+                            <rect key="frame" x="45" y="179" width="196" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="196" id="bw4-Rm-ury"/>
+                                <constraint firstAttribute="height" constant="50" id="tgL-jV-7wm"/>
+                            </constraints>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="3.具有静音作用，也可以使受力更加均匀，韧性更强，使用次数更多。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="36r-CQ-KEg">
+                            <rect key="frame" x="45" y="248" width="196" height="67"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="67" id="nOW-3C-Z4o"/>
+                                <constraint firstAttribute="width" constant="196" id="qTx-ev-SBT"/>
+                            </constraints>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mD8-km-Cyi">
+                            <rect key="frame" x="324" y="447" width="220" height="47"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="220" id="jpc-lU-T0E"/>
+                                <constraint firstAttribute="height" constant="47" id="vxc-LO-huQ"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="有异响、不牢固、木头易拉裂">
+                                    <attributes>
+                                        <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <font key="NSFont" size="15" name="PingFangSC-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="mD8-km-Cyi" firstAttribute="leading" secondItem="y6C-cG-WYA" secondAttribute="leading" constant="324" id="0pW-RA-icB"/>
+                        <constraint firstItem="Tha-5D-TS4" firstAttribute="leading" secondItem="y6C-cG-WYA" secondAttribute="leading" constant="49" id="7km-wJ-wEK"/>
+                        <constraint firstItem="36r-CQ-KEg" firstAttribute="top" secondItem="y6C-cG-WYA" secondAttribute="top" constant="248" id="8qI-0D-GMP"/>
+                        <constraint firstItem="33H-JE-y4R" firstAttribute="top" secondItem="y6C-cG-WYA" secondAttribute="top" constant="29" id="AQ3-fM-CB7"/>
+                        <constraint firstItem="yN8-i0-bOA" firstAttribute="top" secondItem="y6C-cG-WYA" secondAttribute="top" constant="346" id="GZz-CM-Cln"/>
+                        <constraint firstItem="33H-JE-y4R" firstAttribute="leading" secondItem="y6C-cG-WYA" secondAttribute="leading" id="JjZ-Yz-ake"/>
+                        <constraint firstItem="aPg-x5-I6Y" firstAttribute="leading" secondItem="y6C-cG-WYA" secondAttribute="leading" constant="45" id="Lgv-F8-KeD"/>
+                        <constraint firstItem="2OX-7I-dZl" firstAttribute="leading" secondItem="y6C-cG-WYA" secondAttribute="leading" constant="45" id="NFf-BD-KJa"/>
+                        <constraint firstItem="36r-CQ-KEg" firstAttribute="leading" secondItem="y6C-cG-WYA" secondAttribute="leading" constant="45" id="OMt-Ye-5hU"/>
+                        <constraint firstItem="2OX-7I-dZl" firstAttribute="top" secondItem="y6C-cG-WYA" secondAttribute="top" constant="402" id="Q6Z-EV-iG3"/>
+                        <constraint firstItem="ob5-WQ-q3g" firstAttribute="leading" secondItem="y6C-cG-WYA" secondAttribute="leading" constant="334" id="Re9-eM-b5d"/>
+                        <constraint firstAttribute="width" constant="695" id="Zwe-Gh-yh1"/>
+                        <constraint firstItem="Tha-5D-TS4" firstAttribute="top" secondItem="y6C-cG-WYA" secondAttribute="top" constant="90" id="aAe-j2-Mv2"/>
+                        <constraint firstItem="ob5-WQ-q3g" firstAttribute="top" secondItem="y6C-cG-WYA" secondAttribute="top" constant="90" id="c30-5x-cI8"/>
+                        <constraint firstItem="yN8-i0-bOA" firstAttribute="leading" secondItem="y6C-cG-WYA" secondAttribute="leading" id="kk7-Dy-H2r"/>
+                        <constraint firstItem="mD8-km-Cyi" firstAttribute="top" secondItem="y6C-cG-WYA" secondAttribute="top" constant="447" id="nbl-Jh-WXV"/>
+                        <constraint firstItem="XTU-pV-8UT" firstAttribute="leading" secondItem="y6C-cG-WYA" secondAttribute="leading" constant="49" id="p22-yk-nLp"/>
+                        <constraint firstItem="XTU-pV-8UT" firstAttribute="top" secondItem="y6C-cG-WYA" secondAttribute="top" constant="140" id="pTf-TT-CS6"/>
+                        <constraint firstAttribute="height" constant="500" id="v1J-PG-in4"/>
+                        <constraint firstItem="aPg-x5-I6Y" firstAttribute="top" secondItem="y6C-cG-WYA" secondAttribute="top" constant="179" id="yae-Sh-8uv"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Zwe-Gh-yh1"/>
+                            <exclude reference="v1J-PG-in4"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="y6C-cG-WYA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2zt-TI-T5j"/>
+                <constraint firstItem="y6C-cG-WYA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="TC3-Wa-aEX"/>
+                <constraint firstItem="y6C-cG-WYA" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="d9h-TR-Ykw"/>
+                <constraint firstItem="y6C-cG-WYA" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="nkL-kS-xXs"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="338" y="341"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="technology_5" width="150" height="180"/>
+        <image name="technology_5_2" width="150" height="68"/>
+    </resources>
+</document>
