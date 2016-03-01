@@ -14,7 +14,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDJ-ay-Ouz" userLabel="View11">
                     <rect key="frame" x="38" y="85" width="300" height="228"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqO-Zu-xYL" userLabel="brand_11">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqO-Zu-xYL" userLabel="brand_11">
                             <rect key="frame" x="0.0" y="33" width="299" height="162"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="299" id="DvA-o4-V20"/>
@@ -37,7 +37,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MzT-dS-NjQ" userLabel="View12">
                     <rect key="frame" x="362" y="85" width="300" height="228"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7Z-JE-RnZ" userLabel="brand_12">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7Z-JE-RnZ" userLabel="brand_12">
                             <rect key="frame" x="28" y="58" width="244" height="112"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="244" id="V6y-2o-pE6"/>
@@ -60,7 +60,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWL-Fj-Ha3" userLabel="View13">
                     <rect key="frame" x="686" y="85" width="300" height="228"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMA-tc-OTH" userLabel="brand_13">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMA-tc-OTH" userLabel="brand_13">
                             <rect key="frame" x="7" y="35" width="286" height="158"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="286" id="1O3-l5-o6M"/>
@@ -81,7 +81,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCL-mS-0PP">
                     <rect key="frame" x="38" y="341" width="300" height="228"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gI6-4x-rOm" userLabel="brand_21">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gI6-4x-rOm" userLabel="brand_21">
                             <rect key="frame" x="24" y="55" width="253" height="118"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="118" id="A3b-09-9UV"/>
@@ -103,7 +103,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ymc-2g-zaV">
                     <rect key="frame" x="362" y="341" width="300" height="228"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JL8-NH-NIt" userLabel="brand_22">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JL8-NH-NIt" userLabel="brand_22">
                             <rect key="frame" x="0.0" y="70" width="300" height="88"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="88" id="RKG-Xh-HbV"/>

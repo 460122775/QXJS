@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol CollocationDetailDelegate
+protocol ProductDetailDelegate
 {
-    func goBackBtnClick()
+    func goBackToMainView()
 }
 
-class CollocationDetailView: UIView
+class ProductDetailView: UIView
 {
-    var collocationDetailDelegate : CollocationDetailDelegate?
+    var productDetailDelegate : ProductDetailDelegate?
     @IBOutlet var mainImgView: UIImageView!
     @IBOutlet var rightChoiceView: UIView!
     
@@ -33,7 +33,7 @@ class CollocationDetailView: UIView
 
     @IBAction func goBackBtnClick(sender: UIButton)
     {
-        collocationDetailDelegate?.goBackBtnClick()
+        productDetailDelegate?.goBackToMainView()
     }
     
     @IBAction func closeBtnClick(sender: UIButton)

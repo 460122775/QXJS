@@ -40,12 +40,11 @@ class StoreViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         mapView.showsUserLocation = true
         mapView.rotateEnabled = false
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest //设置为最高的精度
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         if ios8()
         {
             locationManager.requestWhenInUseAuthorization()
         }
-        
         locationManager.startUpdatingLocation()  //start updating location
     }
     
@@ -56,18 +55,17 @@ class StoreViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         let version = NSString(string: UIDevice.currentDevice().systemVersion.substringFromIndex(index))
         return version.doubleValue >= 8.0
     }
-    //重写这个方法获取位置
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location:CLLocation = locations[locations.count - 1] //得到数组中的最后一个元素
-        if location.horizontalAccuracy > 0 {
-            //            let latitude = location.coordinate.latitude
-            //            let longtitude = location.coordinate.longitude
+
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+        let location:CLLocation = locations[locations.count - 1]
+        if location.horizontalAccuracy > 0
+        {
             self.mapView.setCenterCoordinate(location.coordinate, animated: true)
             locationManager.stopUpdatingLocation() //stop updating location
         }
     }
     
-    //重写当发生错误时要调用的方法
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
     {
         print(error)

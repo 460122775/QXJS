@@ -67,14 +67,14 @@
 		01A575CC1C843E7000334190 /* CollocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575CA1C843E7000334190 /* CollocationViewController.xib */; };
 		01A575D21C84428A00334190 /* NewsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A575D01C84428A00334190 /* NewsMainView.swift */; };
 		01A575D31C84428A00334190 /* NewsMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575D11C84428A00334190 /* NewsMainView.xib */; };
-		01A575D71C846CB700334190 /* CollocationMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A575D51C846CB700334190 /* CollocationMainView.swift */; };
-		01A575D81C846CB700334190 /* CollocationMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575D61C846CB700334190 /* CollocationMainView.xib */; };
 		01A575DB1C8473FF00334190 /* CollocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A575D91C8473FF00334190 /* CollocationDetailView.swift */; };
 		01A575DC1C8473FF00334190 /* CollocationDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575DA1C8473FF00334190 /* CollocationDetailView.xib */; };
 		01A575E11C85434A00334190 /* BrandDetail12.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575DD1C85434A00334190 /* BrandDetail12.xib */; };
 		01A575E21C85434A00334190 /* BrandDetail13.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575DE1C85434A00334190 /* BrandDetail13.xib */; };
 		01A575E31C85434A00334190 /* BrandDetail21.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575DF1C85434A00334190 /* BrandDetail21.xib */; };
 		01A575E41C85434A00334190 /* BrandDetail22.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575E01C85434A00334190 /* BrandDetail22.xib */; };
+		01A575E71C858DE100334190 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A575E51C858DE100334190 /* ProductDetailView.swift */; };
+		01A575E81C858DE100334190 /* ProductDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575E61C858DE100334190 /* ProductDetailView.xib */; };
 		01F963141C7B06BB00FD7775 /* ContactInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F963131C7B06BB00FD7775 /* ContactInfoView.xib */; };
 /* End PBXBuildFile section */
 
@@ -142,14 +142,14 @@
 		01A575CA1C843E7000334190 /* CollocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollocationViewController.xib; path = class/controller/collocation/CollocationViewController.xib; sourceTree = "<group>"; };
 		01A575D01C84428A00334190 /* NewsMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsMainView.swift; path = class/view/news/NewsMainView.swift; sourceTree = "<group>"; };
 		01A575D11C84428A00334190 /* NewsMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewsMainView.xib; path = class/view/news/NewsMainView.xib; sourceTree = "<group>"; };
-		01A575D51C846CB700334190 /* CollocationMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollocationMainView.swift; path = class/view/collocation/CollocationMainView.swift; sourceTree = "<group>"; };
-		01A575D61C846CB700334190 /* CollocationMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollocationMainView.xib; path = class/view/collocation/CollocationMainView.xib; sourceTree = "<group>"; };
 		01A575D91C8473FF00334190 /* CollocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollocationDetailView.swift; path = class/view/collocation/CollocationDetailView.swift; sourceTree = "<group>"; };
 		01A575DA1C8473FF00334190 /* CollocationDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollocationDetailView.xib; path = class/view/collocation/CollocationDetailView.xib; sourceTree = "<group>"; };
 		01A575DD1C85434A00334190 /* BrandDetail12.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BrandDetail12.xib; path = class/view/companybrand/brand/BrandDetail12.xib; sourceTree = "<group>"; };
 		01A575DE1C85434A00334190 /* BrandDetail13.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BrandDetail13.xib; path = class/view/companybrand/brand/BrandDetail13.xib; sourceTree = "<group>"; };
 		01A575DF1C85434A00334190 /* BrandDetail21.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BrandDetail21.xib; path = class/view/companybrand/brand/BrandDetail21.xib; sourceTree = "<group>"; };
 		01A575E01C85434A00334190 /* BrandDetail22.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BrandDetail22.xib; path = class/view/companybrand/brand/BrandDetail22.xib; sourceTree = "<group>"; };
+		01A575E51C858DE100334190 /* ProductDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductDetailView.swift; path = class/view/productlist/ProductDetailView.swift; sourceTree = "<group>"; };
+		01A575E61C858DE100334190 /* ProductDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductDetailView.xib; path = class/view/productlist/ProductDetailView.xib; sourceTree = "<group>"; };
 		01F963131C7B06BB00FD7775 /* ContactInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContactInfoView.xib; path = class/view/companybrand/contact/ContactInfoView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,6 +212,8 @@
 		0118F3641C61CE83003C9EFD /* productlist */ = {
 			isa = PBXGroup;
 			children = (
+				01A575E51C858DE100334190 /* ProductDetailView.swift */,
+				01A575E61C858DE100334190 /* ProductDetailView.xib */,
 				0118F36E1C626B72003C9EFD /* ProductListMainView.swift */,
 				0118F3701C626B9A003C9EFD /* ProductListMainView.xib */,
 			);
@@ -475,8 +477,6 @@
 			children = (
 				01A575D91C8473FF00334190 /* CollocationDetailView.swift */,
 				01A575DA1C8473FF00334190 /* CollocationDetailView.xib */,
-				01A575D51C846CB700334190 /* CollocationMainView.swift */,
-				01A575D61C846CB700334190 /* CollocationMainView.xib */,
 			);
 			name = collocation;
 			sourceTree = "<group>";
@@ -567,7 +567,6 @@
 				01A575AC1C842F5800334190 /* TechnologyDetail11View.xib in Resources */,
 				0174D4191C82EE96009F366A /* HonourView.xib in Resources */,
 				01A575A01C83AFBF00334190 /* StoreViewController.xib in Resources */,
-				01A575D81C846CB700334190 /* CollocationMainView.xib in Resources */,
 				01F963141C7B06BB00FD7775 /* ContactInfoView.xib in Resources */,
 				0118F3631C61CA8B003C9EFD /* LoginViewController.xib in Resources */,
 				01A575CC1C843E7000334190 /* CollocationViewController.xib in Resources */,
@@ -592,6 +591,7 @@
 				01A575E11C85434A00334190 /* BrandDetail12.xib in Resources */,
 				01A575A51C83F18B00334190 /* TechnologyViewController.xib in Resources */,
 				01A575BE1C8434D500334190 /* TechnologyDetail5View.xib in Resources */,
+				01A575E81C858DE100334190 /* ProductDetailView.xib in Resources */,
 				01A575C01C8434D500334190 /* TechnologyDetail7View.xib in Resources */,
 				01A575BB1C8434D500334190 /* TechnologyDetail2View.xib in Resources */,
 				019B6D181C8026C500F90D1A /* SettingMainView.xib in Resources */,
@@ -607,6 +607,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01A5759F1C83AFBF00334190 /* StoreViewController.swift in Sources */,
+				01A575E71C858DE100334190 /* ProductDetailView.swift in Sources */,
 				0118F3621C61CA8B003C9EFD /* LoginViewController.swift in Sources */,
 				01A575C61C843DF600334190 /* NewsViewController.swift in Sources */,
 				0118F36F1C626B72003C9EFD /* ProductListMainView.swift in Sources */,
@@ -623,7 +624,6 @@
 				0118F35D1C61CA3C003C9EFD /* CompanyBrandViewController.swift in Sources */,
 				0174D41E1C82FB5A009F366A /* StuffView.swift in Sources */,
 				019B6CFB1C7E6D1800F90D1A /* ContactInfoView.swift in Sources */,
-				01A575D71C846CB700334190 /* CollocationMainView.swift in Sources */,
 				019B6D201C8053C600F90D1A /* CustomViewController.swift in Sources */,
 				019B6D171C8026C500F90D1A /* SettingMainView.swift in Sources */,
 				019B6D071C7FF21A00F90D1A /* CompanyProgressView.swift in Sources */,

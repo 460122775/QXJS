@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ProductListViewController: UIViewController
+class ProductListViewController: UIViewController, ProductListMainDelegate, ProductDetailDelegate
 {
 
     @IBOutlet var mainMenuContainer : UIView!
     @IBOutlet var mainContainer : UIView!
     
     var productListMainView : ProductListMainView!
+    var productDetailView : ProductDetailView?
     var mainMenuView : MainMenuView!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
@@ -34,8 +35,24 @@ class ProductListViewController: UIViewController
         mainMenuView.removeFromSuperview()
         mainMenuContainer.addSubview(mainMenuView)
         productListMainView = ((NSBundle.mainBundle().loadNibNamed("ProductListMainView", owner: self, options: nil) as NSArray).lastObject as? ProductListMainView)!
+        productListMainView.productListMainDelegate = self
         productListMainView.removeFromSuperview()
         mainContainer.addSubview(productListMainView)
+    }
+    
+    func showDetailView()
+    {
+        if productDetailView == nil
+        {
+            productDetailView = ((NSBundle.mainBundle().loadNibNamed("ProductDetailView", owner: self, options: nil) as NSArray).lastObject as? ProductDetailView)!
+            productDetailView?.productDetailDelegate = self
+        }
+        self.view.addSubview(productDetailView!)
+    }
+    
+    func goBackToMainView()
+    {
+        productDetailView?.removeFromSuperview()
     }
 
     override func didReceiveMemoryWarning()

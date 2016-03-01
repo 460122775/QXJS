@@ -19,6 +19,12 @@ class CompanyBrandNavView: UIView, CompanyBrandNavDelegate{
     @IBOutlet var navBtnView: UIView!
     @IBOutlet var selectedView: UIView!
     
+    @IBOutlet var cultureBtn: UIButton!
+    @IBOutlet var progressBtn: UIButton!
+    @IBOutlet var stuffBtn: UIButton!
+    @IBOutlet var honourBtn: UIButton!
+    @IBOutlet var brandBtn: UIButton!
+    @IBOutlet var contactBtn: UIButton!
     
     var companyBrandDelegate : CompanyBrandDelegate?
     var companyInfoView : CompanyInfoView?
@@ -51,7 +57,7 @@ class CompanyBrandNavView: UIView, CompanyBrandNavDelegate{
     
     @IBAction func cultureBtnClick(sender: UIButton)
     {
-        selectedView.frame.origin.x = sender.frame.origin.x
+        selectedView.frame.origin.x = cultureBtn.frame.origin.x
         self.mainView.subviews.map { $0.removeFromSuperview() }
         if companyInfoView == nil
         {
@@ -62,7 +68,7 @@ class CompanyBrandNavView: UIView, CompanyBrandNavDelegate{
     
     @IBAction func progressBtnClick(sender: UIButton)
     {
-        selectedView.frame.origin.x = sender.frame.origin.x
+        selectedView.frame.origin.x = progressBtn.frame.origin.x
         self.mainView.subviews.map { $0.removeFromSuperview() }
         if companyProgressView == nil
         {
@@ -73,7 +79,7 @@ class CompanyBrandNavView: UIView, CompanyBrandNavDelegate{
     
     @IBAction func stuffBtnClick(sender: UIButton)
     {
-        selectedView.frame.origin.x = sender.frame.origin.x
+        selectedView.frame.origin.x = stuffBtn.frame.origin.x
         self.mainView.subviews.map { $0.removeFromSuperview() }
         if stuffView == nil
         {
@@ -84,7 +90,7 @@ class CompanyBrandNavView: UIView, CompanyBrandNavDelegate{
     
     @IBAction func honourBtnClick(sender: UIButton)
     {
-        selectedView.frame.origin.x = sender.frame.origin.x
+        selectedView.frame.origin.x = honourBtn.frame.origin.x
         self.mainView.subviews.map { $0.removeFromSuperview() }
         if honourView == nil
         {
@@ -95,7 +101,7 @@ class CompanyBrandNavView: UIView, CompanyBrandNavDelegate{
     
     @IBAction func brandBtnClick(sender: UIButton)
     {
-        selectedView.frame.origin.x = sender.frame.origin.x
+        selectedView.frame.origin.x = brandBtn.frame.origin.x
         self.mainView.subviews.map { $0.removeFromSuperview() }
         if companyBrandView == nil
         {
@@ -107,7 +113,7 @@ class CompanyBrandNavView: UIView, CompanyBrandNavDelegate{
     
     @IBAction func contactBtnClick(sender: UIButton)
     {
-        selectedView.frame.origin.x = sender.frame.origin.x
+        selectedView.frame.origin.x = contactBtn.frame.origin.x
         self.mainView.subviews.map { $0.removeFromSuperview() }
         if contactInfoView == nil
         {

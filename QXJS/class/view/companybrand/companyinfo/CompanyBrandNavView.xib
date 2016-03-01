@@ -185,8 +185,8 @@
                                 <constraint firstItem="c2X-Hy-T8z" firstAttribute="leading" secondItem="zWr-t2-lBA" secondAttribute="leading" id="dNb-OH-G8X"/>
                                 <constraint firstItem="dan-fI-vYX" firstAttribute="leading" secondItem="TFE-nq-5YC" secondAttribute="trailing" constant="34" id="fSL-lT-0TM"/>
                                 <constraint firstItem="TFE-nq-5YC" firstAttribute="leading" secondItem="pg8-XP-5Um" secondAttribute="trailing" constant="34" id="gLx-qW-9mY"/>
-                                <constraint firstItem="0s8-WH-9Et" firstAttribute="leading" secondItem="c2X-Hy-T8z" secondAttribute="leading" id="gar-WP-p76"/>
                                 <constraint firstItem="eAi-aD-SwV" firstAttribute="height" secondItem="zWr-t2-lBA" secondAttribute="height" id="lkr-Su-ABb"/>
+                                <constraint firstItem="0s8-WH-9Et" firstAttribute="leading" secondItem="c2X-Hy-T8z" secondAttribute="leading" id="obx-CN-Joy"/>
                                 <constraint firstItem="eAi-aD-SwV" firstAttribute="centerY" secondItem="zWr-t2-lBA" secondAttribute="centerY" id="qv9-pQ-3a9"/>
                                 <constraint firstItem="pg8-XP-5Um" firstAttribute="centerY" secondItem="zWr-t2-lBA" secondAttribute="centerY" id="r5U-SD-GMK"/>
                             </constraints>
@@ -227,10 +227,16 @@
                 </mask>
             </variation>
             <connections>
+                <outlet property="brandBtn" destination="cSZ-TB-cch" id="hdd-SZ-2JN"/>
+                <outlet property="contactBtn" destination="eAi-aD-SwV" id="KMf-0d-3MS"/>
+                <outlet property="cultureBtn" destination="c2X-Hy-T8z" id="Eqg-Cj-DCb"/>
+                <outlet property="honourBtn" destination="dan-fI-vYX" id="cnf-fn-sry"/>
                 <outlet property="mainView" destination="BOh-az-EAs" id="dGf-F9-ins"/>
                 <outlet property="navBtnView" destination="zWr-t2-lBA" id="iT2-AV-9wv"/>
                 <outlet property="navView" destination="5vI-iV-4Wg" id="pkC-Ro-8lm"/>
+                <outlet property="progressBtn" destination="pg8-XP-5Um" id="6bR-oy-tnO"/>
                 <outlet property="selectedView" destination="0s8-WH-9Et" id="3v7-u5-hRc"/>
+                <outlet property="stuffBtn" destination="TFE-nq-5YC" id="DuJ-vZ-5y1"/>
             </connections>
         </view>
     </objects>

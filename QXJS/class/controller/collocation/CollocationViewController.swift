@@ -8,13 +8,13 @@
 
 import UIKit
 
-class CollocationViewController: UIViewController
+class CollocationViewController: UIViewController, CollocationDetailDelegate
 {
 
     @IBOutlet var mainMenuContainer : UIView!
     @IBOutlet var mainContainer : UIView!
     
-    var productListMainView : ProductListMainView!
+    var collocationDetailView : CollocationDetailView!
     var mainMenuView : MainMenuView!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
@@ -33,14 +33,18 @@ class CollocationViewController: UIViewController
         mainMenuView = MainMenuView.sharedInstance()
         mainMenuView.removeFromSuperview()
         mainMenuContainer.addSubview(mainMenuView)
-//        productListMainView = ((NSBundle.mainBundle().loadNibNamed("ProductListMainView", owner: self, options: nil) as NSArray).lastObject as? ProductListMainView)!
-//        productListMainView.removeFromSuperview()
-//        mainContainer.addSubview(productListMainView)
     }
 
     @IBAction func detailBtnClick(sender: UIButton)
     {
-        
+        collocationDetailView = ((NSBundle.mainBundle().loadNibNamed("CollocationDetailView", owner: self, options: nil) as NSArray).lastObject as? CollocationDetailView)!
+        collocationDetailView.collocationDetailDelegate = self
+        self.view.addSubview(collocationDetailView)
+    }
+    
+    func goBackBtnClick()
+    {
+        collocationDetailView.removeFromSuperview()
     }
     
     override func didReceiveMemoryWarning()
