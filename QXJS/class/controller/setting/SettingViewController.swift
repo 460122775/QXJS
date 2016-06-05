@@ -65,6 +65,14 @@ class SettingViewController: UIViewController
 
     @IBAction func logoutBtnClick(sender: UIButton)
     {
+        CurrentUserId = 0
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("CurrentUserId")
+        CurrentUserName = ""
+        NSUserDefaults.standardUserDefaults().objectForKey("CurrentUserName")
+        CurrentStoreId = 0
+        NSUserDefaults.standardUserDefaults().objectForKey("CurrentStoreId")
+        CurrentUserRole = 0
+        NSUserDefaults.standardUserDefaults().objectForKey("CurrentUserRole")
         let loginViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
         (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController?.presentViewController(loginViewController, animated: false, completion: nil)
         (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController = loginViewController

@@ -9,7 +9,7 @@
 import UIKit
 
 class CustomMainView: UIView, UITableViewDelegate, UITableViewDataSource,
-    UITextFieldDelegate{
+    UITextFieldDelegate, CustomAddViewDelegate{
     @IBOutlet var customTableView: UITableView!
     @IBOutlet weak var searchTextField: UITextField!
 
@@ -18,6 +18,8 @@ class CustomMainView: UIView, UITableViewDelegate, UITableViewDataSource,
     var _selectCustomDataDic : NSMutableDictionary?
     let TableCellIndentifier : String = "CustomTableViewCell"
     var customDataArr : NSMutableArray?
+    var customAddView : CustomAddView?
+    
     
     override func drawRect(rect: CGRect)
     {
@@ -38,7 +40,19 @@ class CustomMainView: UIView, UITableViewDelegate, UITableViewDataSource,
     
     @IBAction func onAddCustomBtnClick(sender: UIButton)
     {
-        
+        if customAddView == nil
+        {
+            self.customAddView = NSBundle.mainBundle().loadNibNamed("CustomAddView", owner: nil, options: nil)[0] as? CustomAddView
+            self.customAddView!.delegate = self
+        }
+        self.addSubview(self.customAddView!)
+        self.customAddView?.initViewControl()
+    }
+    
+    func customAddSuccess()
+    {
+        // Update data.
+        self.customDataArr = CustomModel.getCustomData()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int

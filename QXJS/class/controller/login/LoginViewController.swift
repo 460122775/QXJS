@@ -39,7 +39,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate
             CurrentUserName = NSUserDefaults.standardUserDefaults().objectForKey("CurrentUserName") as? String
             CurrentStoreId = (NSUserDefaults.standardUserDefaults().objectForKey("CurrentStoreId") as! NSNumber).intValue
             CurrentUserRole = (NSUserDefaults.standardUserDefaults().objectForKey("CurrentUserRole") as! NSNumber).intValue
-//            SettingModel.downloadDataControl()
+//            SettingModel.downloadDataControl(), 
             MainMenuView.sharedInstance().companyBrandBtnClick(nil)
             self.view.makeToast(message: "登录成功，正在初始化数据，请耐心等待。。。", duration: 120, position: HRToastPositionCenter)
         }else{
