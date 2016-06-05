@@ -1,0 +1,13 @@
+PODS:
+  - Alamofire (3.4.0)
+  - SQLite.swift (0.10.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - SQLite.swift (~> 0.10.1)
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  SQLite.swift: 6a6e4b034efc317ce4e203b6af2d3024fee2b570
+
+COCOAPODS: 0.39.0

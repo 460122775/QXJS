@@ -13,6 +13,11 @@ protocol CompanyBrandDelegate
     func navBtnClick(navBtn : UIButton)
 }
 
+protocol ShowImgDelegate
+{
+    func showImgOnView(image: UIImage, imageSize : CGSize)
+}
+
 class CompanyBrandMainView: UIView {
     
     var companyBrandDelegate : CompanyBrandDelegate?

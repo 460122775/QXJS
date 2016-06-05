@@ -33,7 +33,7 @@ class CompanyInfoView: UIView ,UIScrollViewDelegate{
         imgContainer.pagingEnabled = true
         //添加页面到滚动面板里
         let size = imgContainer.bounds.size
-        for var seq = 0; seq < pageImages.count; seq++
+        for seq in 0 ..< pageImages.count
         {
             pageImages[seq]?.frame = CGRect(x: CGFloat(seq) * size.width, y: 0,
                 width: size.width, height: size.height)
@@ -44,7 +44,7 @@ class CompanyInfoView: UIView ,UIScrollViewDelegate{
         pageControl.numberOfPages = pageImages.count
         pageControl.currentPage = 0
         //设置页控件点击事件
-        pageControl.addTarget(self, action: "pageChanged:", forControlEvents: UIControlEvents.ValueChanged)
+        pageControl.addTarget(self, action: #selector(CompanyInfoView.pageChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
     }
     
     //UIScrollViewDelegate方法，每次滚动结束后调用

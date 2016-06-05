@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CompanyBrandViewController: UIViewController, CompanyBrandDelegate
+class CompanyBrandViewController: UIViewController, CompanyBrandDelegate, ShowImgDelegate
 {
     
     @IBOutlet var mainMenuContainer : UIView!
@@ -53,6 +53,7 @@ class CompanyBrandViewController: UIViewController, CompanyBrandDelegate
         {
             companyBrandNavView = ((NSBundle.mainBundle().loadNibNamed("CompanyBrandNavView", owner: self, options: nil) as NSArray).lastObject as? CompanyBrandNavView)!
             companyBrandNavView?.companyBrandDelegate = self
+            companyBrandNavView!.showImgDelegate = self
         }
         
         if navBtn.tag == 0
@@ -73,6 +74,13 @@ class CompanyBrandViewController: UIViewController, CompanyBrandDelegate
             companyBrandNavView?.contactBtnClick(navBtn)
         }
         self.view.addSubview(companyBrandNavView!)
+    }
+    
+    // Show Img Delegate.
+    func showImgOnView(image: UIImage, imageSize : CGSize) {
+        let imgShowView = ImgShowView.getInstance()
+        self.view.addSubview(imgShowView)
+        imgShowView.showImg(image, imageSize: imageSize)
     }
     
     override func didReceiveMemoryWarning()

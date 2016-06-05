@@ -10,9 +10,6 @@ import UIKit
 
 class SettingMainView: UIView {
 
-    
-    
-    
     override func drawRect(rect: CGRect)
     {
         // Drawing code

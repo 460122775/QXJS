@@ -40,7 +40,7 @@ class ProductListViewController: UIViewController, ProductListMainDelegate, Prod
         mainContainer.addSubview(productListMainView)
     }
     
-    func showDetailView()
+    func showDetailView(selectGroupDic : NSMutableDictionary)
     {
         if productDetailView == nil
         {
@@ -48,6 +48,7 @@ class ProductListViewController: UIViewController, ProductListMainDelegate, Prod
             productDetailView?.productDetailDelegate = self
         }
         self.view.addSubview(productDetailView!)
+        productDetailView!.initWithGroup(selectGroupDic)
     }
     
     func goBackToMainView()

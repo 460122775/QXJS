@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController" customModule="QXJS" customModuleProvider="target">
@@ -143,6 +143,9 @@
                                         <constraint firstAttribute="height" constant="72" id="8lN-UC-XJe"/>
                                     </constraints>
                                     <state key="normal" backgroundImage="update"/>
+                                    <connections>
+                                        <action selector="downloadDataBtnClick:" destination="-1" eventType="touchUpInside" id="Zms-NB-wkG"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReZ-ox-W30">
                                     <rect key="frame" x="745" y="62" width="72" height="72"/>
@@ -151,6 +154,9 @@
                                         <constraint firstAttribute="width" constant="72" id="yf7-19-ALB"/>
                                     </constraints>
                                     <state key="normal" backgroundImage="logout"/>
+                                    <connections>
+                                        <action selector="logoutBtnClick:" destination="-1" eventType="touchUpInside" id="WHf-bH-VGr"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="修改资料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6G-Ty-1fd">
                                     <rect key="frame" x="532" y="154" width="50" height="14"/>
@@ -246,7 +252,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EuQ-yZ-Oh6">
-                                    <rect key="frame" x="35" y="56" width="180" height="30"/>
+                                    <rect key="frame" x="30" y="56" width="180" height="30"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="sk5-BS-fAe"/>
@@ -282,7 +288,7 @@
                                 <constraint firstAttribute="width" constant="395" id="8Ei-8r-tTz"/>
                                 <constraint firstItem="SiG-rr-Oyp" firstAttribute="leading" secondItem="Aaj-l3-bHP" secondAttribute="leading" constant="35" id="PvW-2G-Ptb"/>
                                 <constraint firstItem="JxC-uy-Kbp" firstAttribute="leading" secondItem="Aaj-l3-bHP" secondAttribute="leading" constant="35" id="YC5-lm-Z9p"/>
-                                <constraint firstItem="EuQ-yZ-Oh6" firstAttribute="leading" secondItem="Aaj-l3-bHP" secondAttribute="leading" constant="35" id="ok4-rq-DBE"/>
+                                <constraint firstItem="EuQ-yZ-Oh6" firstAttribute="leading" secondItem="Aaj-l3-bHP" secondAttribute="leading" constant="30" id="ok4-rq-DBE"/>
                                 <constraint firstAttribute="height" constant="156" id="qHm-TC-zMK"/>
                                 <constraint firstItem="gBx-BV-5S6" firstAttribute="height" secondItem="Aaj-l3-bHP" secondAttribute="height" id="rK1-qH-oCC"/>
                                 <constraint firstAttribute="trailing" secondItem="gBx-BV-5S6" secondAttribute="trailing" id="xgL-ur-1Mf"/>
@@ -304,7 +310,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Meg-Il-R3P">
-                                    <rect key="frame" x="35" y="56" width="330" height="30"/>
+                                    <rect key="frame" x="31" y="56" width="330" height="30"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="330" id="8uu-Fu-zeS"/>
@@ -337,7 +343,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="156" id="1A4-dy-M3y"/>
                                 <constraint firstItem="Onw-WY-nf1" firstAttribute="top" secondItem="Meg-Il-R3P" secondAttribute="bottom" constant="23" id="IEh-Fp-XbM"/>
-                                <constraint firstItem="Meg-Il-R3P" firstAttribute="leading" secondItem="T5C-4g-ZHC" secondAttribute="leading" constant="35" id="KzE-JF-yvH"/>
+                                <constraint firstItem="Meg-Il-R3P" firstAttribute="leading" secondItem="T5C-4g-ZHC" secondAttribute="leading" constant="31" id="KzE-JF-yvH"/>
                                 <constraint firstItem="Meg-Il-R3P" firstAttribute="top" secondItem="Xgz-n5-zvd" secondAttribute="bottom" constant="20" id="aDB-sg-Qz9"/>
                                 <constraint firstItem="Xgz-n5-zvd" firstAttribute="leading" secondItem="T5C-4g-ZHC" secondAttribute="leading" constant="35" id="cWK-gr-A0Q"/>
                                 <constraint firstItem="Onw-WY-nf1" firstAttribute="leading" secondItem="T5C-4g-ZHC" secondAttribute="leading" constant="35" id="iFN-aD-tMi"/>
@@ -359,7 +365,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3T6-zK-Zdr">
-                                    <rect key="frame" x="35" y="56" width="180" height="30"/>
+                                    <rect key="frame" x="31" y="56" width="180" height="30"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="v80-JV-4g1"/>
@@ -399,7 +405,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="156" id="7N1-4c-Jd2"/>
                                 <constraint firstItem="k17-mg-s5S" firstAttribute="top" secondItem="3T6-zK-Zdr" secondAttribute="bottom" constant="23" id="KQG-nz-VOe"/>
-                                <constraint firstItem="3T6-zK-Zdr" firstAttribute="leading" secondItem="Mr1-YD-AAZ" secondAttribute="leading" constant="35" id="OnV-wN-Gb7"/>
+                                <constraint firstItem="3T6-zK-Zdr" firstAttribute="leading" secondItem="Mr1-YD-AAZ" secondAttribute="leading" constant="31" id="OnV-wN-Gb7"/>
                                 <constraint firstItem="3T6-zK-Zdr" firstAttribute="top" secondItem="P5P-Nv-1V5" secondAttribute="bottom" constant="19" id="OrH-V0-ryN"/>
                                 <constraint firstAttribute="trailing" secondItem="jb2-6n-9lY" secondAttribute="trailing" id="Vrv-DY-7GY"/>
                                 <constraint firstItem="P5P-Nv-1V5" firstAttribute="leading" secondItem="Mr1-YD-AAZ" secondAttribute="leading" constant="35" id="WAJ-ZB-NhG"/>

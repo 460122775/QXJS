@@ -40,7 +40,7 @@ class TechnologyViewController: UIViewController, TechnologyViewDelegate
         technologyMainView.removeFromSuperview()
         mainContainer.addSubview(technologyMainView)
         
-        let tapDetailViewRecognizer = UITapGestureRecognizer(target: self, action: "onDetailViewTapped")
+        let tapDetailViewRecognizer = UITapGestureRecognizer(target: self, action: #selector(TechnologyViewController.onDetailViewTapped))
         detailViewContainer.addGestureRecognizer(tapDetailViewRecognizer)
 
     }

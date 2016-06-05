@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="StoreTableViewCell" rowHeight="305" id="KGk-i7-Jjw" customClass="StoreTableViewCell" customModule="QXJS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="220" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="220" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNo-JC-ZUz">
+                        <rect key="frame" x="0.0" y="0.0" width="220" height="87"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ping" translatesAutoresizingMaskIntoConstraints="NO" id="Oko-ye-yIp">
+                                <rect key="frame" x="-1" y="8" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="bas-Kd-8lE"/>
+                                    <constraint firstAttribute="height" constant="25" id="wRw-aD-O9q"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="千禧家私新北店" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgF-a4-pPW">
+                                <rect key="frame" x="31" y="9" width="131" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="GS1-YP-XtK"/>
+                                    <constraint firstAttribute="width" constant="131" id="cdL-Og-sNe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成都市武侯区新乐路175号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXw-0L-hp2">
+                                <rect key="frame" x="31" y="36" width="131" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="FGW-UE-QvS"/>
+                                    <constraint firstAttribute="width" constant="131" id="NqC-GJ-MBK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电话 : 028 - 123456789" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8m-rB-lSW">
+                                <rect key="frame" x="31" y="58" width="131" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="pxg-pm-VTz"/>
+                                    <constraint firstAttribute="width" constant="131" id="vdo-t9-TqD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sotre_test" translatesAutoresizingMaskIntoConstraints="NO" id="SQB-ep-B2p">
+                                <rect key="frame" x="159" y="9" width="60" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="KsK-0S-X6w"/>
+                                    <constraint firstAttribute="height" constant="45" id="gtH-sH-Pjq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X8m-rB-lSW" firstAttribute="leading" secondItem="Oko-ye-yIp" secondAttribute="trailing" constant="7" id="ALD-yO-mD1"/>
+                            <constraint firstItem="SQB-ep-B2p" firstAttribute="top" secondItem="gNo-JC-ZUz" secondAttribute="top" constant="9" id="KMA-UM-hNv"/>
+                            <constraint firstItem="SQB-ep-B2p" firstAttribute="leading" secondItem="gNo-JC-ZUz" secondAttribute="leading" constant="159" id="Kbo-p3-Ic8"/>
+                            <constraint firstItem="X8m-rB-lSW" firstAttribute="top" secondItem="pXw-0L-hp2" secondAttribute="bottom" constant="6" id="RqU-l0-Ehe"/>
+                            <constraint firstItem="qgF-a4-pPW" firstAttribute="leading" secondItem="Oko-ye-yIp" secondAttribute="trailing" constant="7" id="ZMM-DD-wr9"/>
+                            <constraint firstItem="pXw-0L-hp2" firstAttribute="top" secondItem="qgF-a4-pPW" secondAttribute="bottom" constant="6" id="ewx-n7-Uxh"/>
+                            <constraint firstItem="Oko-ye-yIp" firstAttribute="leading" secondItem="gNo-JC-ZUz" secondAttribute="leading" constant="-1" id="r9S-0w-NkZ"/>
+                            <constraint firstItem="pXw-0L-hp2" firstAttribute="leading" secondItem="Oko-ye-yIp" secondAttribute="trailing" constant="7" id="x6h-Gn-Lfd"/>
+                            <constraint firstItem="qgF-a4-pPW" firstAttribute="top" secondItem="gNo-JC-ZUz" secondAttribute="top" constant="9" id="xMd-W3-6Dr"/>
+                            <constraint firstItem="Oko-ye-yIp" firstAttribute="top" secondItem="gNo-JC-ZUz" secondAttribute="top" constant="8" id="yRn-VG-K2X"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="gNo-JC-ZUz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KI9-oj-zAx"/>
+                    <constraint firstItem="gNo-JC-ZUz" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="XIX-3h-x9q"/>
+                    <constraint firstItem="gNo-JC-ZUz" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="hi5-Ip-sPr"/>
+                    <constraint firstItem="gNo-JC-ZUz" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="tzb-pB-shh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addressLabel" destination="pXw-0L-hp2" id="vIT-RN-dy4"/>
+                <outlet property="nameLabel" destination="qgF-a4-pPW" id="KvR-9w-Dm3"/>
+                <outlet property="phoneLabel" destination="X8m-rB-lSW" id="Hki-Sx-XYn"/>
+                <outlet property="storeImgView" destination="SQB-ep-B2p" id="UTs-ZD-YmR"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ping" width="14" height="14"/>
+        <image name="sotre_test" width="102" height="76"/>
+    </resources>
+</document>

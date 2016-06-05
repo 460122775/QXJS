@@ -26,10 +26,10 @@ class TechnologyMainView: UIView {
     override func drawRect(rect: CGRect)
     {
         // Drawing code
-        let tapNormalImgRecognizer = UITapGestureRecognizer(target: self, action: "onNormalImgTapped:")
+        let tapNormalImgRecognizer = UITapGestureRecognizer(target: self, action: #selector(TechnologyMainView.onNormalImgTapped(_:)))
         sofaNormalImg.addGestureRecognizer(tapNormalImgRecognizer)
         
-        let tapDetailImgRecognizer = UITapGestureRecognizer(target: self, action: "onDetailImgTapped:")
+        let tapDetailImgRecognizer = UITapGestureRecognizer(target: self, action: #selector(TechnologyMainView.onDetailImgTapped(_:)))
         sofaDetailImgView.addGestureRecognizer(tapDetailImgRecognizer)
     }
 

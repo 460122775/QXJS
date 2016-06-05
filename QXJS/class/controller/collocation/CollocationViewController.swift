@@ -34,12 +34,18 @@ class CollocationViewController: UIViewController, CollocationDetailDelegate
         mainMenuView.removeFromSuperview()
         mainMenuContainer.addSubview(mainMenuView)
     }
+    
+    override func viewDidAppear(animated: Bool)
+    {
+        super.viewDidAppear(animated)
+    }
 
     @IBAction func detailBtnClick(sender: UIButton)
     {
         collocationDetailView = ((NSBundle.mainBundle().loadNibNamed("CollocationDetailView", owner: self, options: nil) as NSArray).lastObject as? CollocationDetailView)!
         collocationDetailView.collocationDetailDelegate = self
         self.view.addSubview(collocationDetailView)
+        collocationDetailView.initByData(CollocationModel.getCollocationData()!)
     }
     
     func goBackBtnClick()

@@ -28,6 +28,7 @@
                             </variation>
                         </imageView>
                     </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="lq0-Bk-t7g" secondAttribute="trailing" id="6j0-rP-MEa"/>
                         <constraint firstAttribute="bottom" secondItem="lq0-Bk-t7g" secondAttribute="bottom" id="Sza-dZ-7Tc"/>
@@ -36,7 +37,7 @@
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="jm8-mg-wPI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DpL-cz-tzo"/>
                 <constraint firstItem="jm8-mg-wPI" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="bh4-SE-lU2"/>

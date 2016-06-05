@@ -208,7 +208,7 @@
                         <constraint firstAttribute="width" constant="100" id="LSK-04-KIT"/>
                         <constraint firstAttribute="height" constant="30" id="LrS-vI-5M4"/>
                     </constraints>
-                    <state key="normal" title="售后电话">
+                    <state key="normal" title="销售助理">
                         <color key="titleColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
@@ -229,7 +229,7 @@
                         <constraint firstAttribute="width" constant="100" id="74W-sA-ISe"/>
                         <constraint firstAttribute="height" constant="30" id="Pxv-ST-Xsv"/>
                     </constraints>
-                    <state key="normal" title="售后电话">
+                    <state key="normal" title="办公室经理">
                         <color key="titleColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>

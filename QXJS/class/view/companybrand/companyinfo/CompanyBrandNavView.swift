@@ -18,6 +18,7 @@ class CompanyBrandNavView: UIView, CompanyBrandNavDelegate{
     @IBOutlet var navView: UIView!
     @IBOutlet var navBtnView: UIView!
     @IBOutlet var selectedView: UIView!
+    @IBOutlet weak var selectedViewLeading: NSLayoutConstraint!
     
     @IBOutlet var cultureBtn: UIButton!
     @IBOutlet var progressBtn: UIButton!
@@ -27,6 +28,7 @@ class CompanyBrandNavView: UIView, CompanyBrandNavDelegate{
     @IBOutlet var contactBtn: UIButton!
     
     var companyBrandDelegate : CompanyBrandDelegate?
+    var showImgDelegate : ShowImgDelegate?
     var companyInfoView : CompanyInfoView?
     var companyProgressView : CompanyProgressView?
     var contactInfoView : ContactInfoView?
@@ -42,7 +44,6 @@ class CompanyBrandNavView: UIView, CompanyBrandNavDelegate{
         // Drawing code
     }
     
-    
     @IBAction func backBtnClick(sender: UIButton)
     {
         if thirdClassView != nil
@@ -57,7 +58,7 @@ class CompanyBrandNavView: UIView, CompanyBrandNavDelegate{
     
     @IBAction func cultureBtnClick(sender: UIButton)
     {
-        selectedView.frame.origin.x = cultureBtn.frame.origin.x
+        selectedViewLeading.constant = cultureBtn.frame.origin.x
         self.mainView.subviews.map { $0.removeFromSuperview() }
         if companyInfoView == nil
         {
@@ -68,7 +69,7 @@ class CompanyBrandNavView: UIView, CompanyBrandNavDelegate{
     
     @IBAction func progressBtnClick(sender: UIButton)
     {
-        selectedView.frame.origin.x = progressBtn.frame.origin.x
+        selectedViewLeading.constant = progressBtn.frame.origin.x
         self.mainView.subviews.map { $0.removeFromSuperview() }
         if companyProgressView == nil
         {
@@ -79,7 +80,7 @@ class CompanyBrandNavView: UIView, CompanyBrandNavDelegate{
     
     @IBAction func stuffBtnClick(sender: UIButton)
     {
-        selectedView.frame.origin.x = stuffBtn.frame.origin.x
+        selectedViewLeading.constant = stuffBtn.frame.origin.x
         self.mainView.subviews.map { $0.removeFromSuperview() }
         if stuffView == nil
         {
@@ -90,30 +91,32 @@ class CompanyBrandNavView: UIView, CompanyBrandNavDelegate{
     
     @IBAction func honourBtnClick(sender: UIButton)
     {
-        selectedView.frame.origin.x = honourBtn.frame.origin.x
+        selectedViewLeading.constant = honourBtn.frame.origin.x
         self.mainView.subviews.map { $0.removeFromSuperview() }
         if honourView == nil
         {
             honourView = ((NSBundle.mainBundle().loadNibNamed("HonourView", owner: self, options: nil) as NSArray).lastObject as? HonourView)!
+            honourView?.showImgDelegate = self.showImgDelegate
         }
         self.mainView.addSubview(honourView!)
     }
     
     @IBAction func brandBtnClick(sender: UIButton)
     {
-        selectedView.frame.origin.x = brandBtn.frame.origin.x
+        selectedViewLeading.constant = brandBtn.frame.origin.x
         self.mainView.subviews.map { $0.removeFromSuperview() }
         if companyBrandView == nil
         {
             companyBrandView = ((NSBundle.mainBundle().loadNibNamed("CompanyBrandView", owner: self, options: nil) as NSArray).lastObject as? CompanyBrandView)!
             companyBrandView?.companyBrandNavDelegate = self
+            companyBrandView?.showImgDelegate = self.showImgDelegate
         }
         self.mainView.addSubview(companyBrandView!)
     }
     
     @IBAction func contactBtnClick(sender: UIButton)
     {
-        selectedView.frame.origin.x = contactBtn.frame.origin.x
+        selectedViewLeading.constant = contactBtn.frame.origin.x
         self.mainView.subviews.map { $0.removeFromSuperview() }
         if contactInfoView == nil
         {
