@@ -14,10 +14,6 @@ class SettingViewController: UIViewController
     @IBOutlet var mainMenuContainer : UIView!
     @IBOutlet var mainContainer : UIView!
     
-    @IBOutlet var clauseDetailBtn: UIButton!
-    @IBOutlet var lawDetailBtn: UIButton!
-    @IBOutlet var aboutusDetailBtn: UIButton!
-    
     var mainMenuView : MainMenuView!
     var delegate = DownloadSessionDelegate.sharedInstance
     
@@ -37,16 +33,6 @@ class SettingViewController: UIViewController
         mainMenuView = MainMenuView.sharedInstance()
         mainMenuView.removeFromSuperview()
         mainMenuContainer.addSubview(mainMenuView)
-        
-        clauseDetailBtn.layer.borderWidth = 1
-        clauseDetailBtn.layer.cornerRadius = 4
-        clauseDetailBtn.layer.borderColor = UIColor(red: 240 / 255, green: 240 / 255, blue: 240 / 255, alpha: 1).CGColor
-        lawDetailBtn.layer.borderWidth = 1
-        lawDetailBtn.layer.cornerRadius = 4
-        lawDetailBtn.layer.borderColor = UIColor(red: 240 / 255, green: 240 / 255, blue: 240 / 255, alpha: 1).CGColor
-        aboutusDetailBtn.layer.borderWidth = 1
-        aboutusDetailBtn.layer.cornerRadius = 4
-        aboutusDetailBtn.layer.borderColor = UIColor(red: 240 / 255, green: 240 / 255, blue: 240 / 255, alpha: 1).CGColor
     }
     
     var firstClick : Bool = true

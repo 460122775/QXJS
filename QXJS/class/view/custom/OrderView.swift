@@ -63,6 +63,15 @@ class OrderView: UIView, UITableViewDelegate, UITableViewDataSource {
         });
     }
     
+    @IBAction func deleteOrderBtnClick(sender: UIButton)
+    {
+        
+    }
+    
+    @IBAction func addOrderBtnClick(sender: UIButton) {
+    }
+    
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         if orderDataArr != nil

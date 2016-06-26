@@ -24,38 +24,25 @@
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="custom_delete" translatesAutoresizingMaskIntoConstraints="NO" id="ivX-xc-abD">
-                            <rect key="frame" x="795" y="36" width="21" height="21"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="21" id="gF7-jd-8YY"/>
-                                <constraint firstAttribute="height" constant="21" id="hrJ-ml-N50"/>
-                            </constraints>
-                        </imageView>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoM-2S-sIg">
-                            <rect key="frame" x="795" y="31" width="89" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoM-2S-sIg">
+                            <rect key="frame" x="705" y="31" width="89" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="4rv-fz-wD8"/>
                                 <constraint firstAttribute="width" constant="89" id="8eI-n1-N1C"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <state key="normal" title="      删除用户">
+                            <state key="normal" title=" 删除客户" image="custom_delete">
                                 <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="custom_add" translatesAutoresizingMaskIntoConstraints="NO" id="TO0-M2-knK">
-                            <rect key="frame" x="795" y="36" width="21" height="21"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="21" id="T8j-uO-FSP"/>
-                                <constraint firstAttribute="height" constant="21" id="aH5-BT-Qc4"/>
-                            </constraints>
-                        </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbf-sR-ONU" userLabel="添加用户">
-                            <rect key="frame" x="795" y="31" width="89" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbf-sR-ONU" userLabel="添加用户">
+                            <rect key="frame" x="820" y="31" width="89" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="dvz-Xb-1P3"/>
                                 <constraint firstAttribute="width" constant="89" id="qni-9E-F6r"/>
                             </constraints>
-                            <state key="normal" title="       添加客户 ">
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title=" 添加客户" image="custom_add">
                                 <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
@@ -65,30 +52,22 @@
                     </subviews>
                     <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="ivX-xc-abD" firstAttribute="leading" secondItem="kdz-Uc-WhP" secondAttribute="leading" constant="795" id="0TF-Pg-xWJ"/>
                         <constraint firstItem="nbf-sR-ONU" firstAttribute="leading" secondItem="kdz-Uc-WhP" secondAttribute="leading" constant="680" id="1oP-Or-dKk"/>
                         <constraint firstItem="nbf-sR-ONU" firstAttribute="top" secondItem="kdz-Uc-WhP" secondAttribute="top" constant="31" id="8Z6-fA-Efh"/>
-                        <constraint firstItem="RoM-2S-sIg" firstAttribute="leading" secondItem="ivX-xc-abD" secondAttribute="trailing" constant="-21" id="IdL-rS-Jdx"/>
                         <constraint firstAttribute="height" constant="65" id="Q9W-7K-HUp"/>
-                        <constraint firstItem="ivX-xc-abD" firstAttribute="top" secondItem="RoM-2S-sIg" secondAttribute="bottom" constant="-25" id="SVV-sx-fh6"/>
                         <constraint firstItem="4gj-bN-8dj" firstAttribute="leading" secondItem="kdz-Uc-WhP" secondAttribute="leading" constant="25" id="UmW-nX-d4A"/>
                         <constraint firstAttribute="bottom" secondItem="4gj-bN-8dj" secondAttribute="bottom" constant="8" id="V39-qA-uUS"/>
                         <constraint firstItem="RoM-2S-sIg" firstAttribute="top" secondItem="kdz-Uc-WhP" secondAttribute="top" constant="31" id="YMi-Gy-Y6e"/>
-                        <constraint firstItem="TO0-M2-knK" firstAttribute="leading" secondItem="nbf-sR-ONU" secondAttribute="leading" id="ZTb-61-cII"/>
                         <constraint firstAttribute="trailing" secondItem="RoM-2S-sIg" secondAttribute="trailing" constant="50" id="ZXc-SS-PlQ"/>
                         <constraint firstItem="RoM-2S-sIg" firstAttribute="leading" secondItem="kdz-Uc-WhP" secondAttribute="leading" constant="795" id="gC5-bL-wOy"/>
-                        <constraint firstAttribute="trailing" secondItem="nbf-sR-ONU" secondAttribute="trailing" constant="50" id="inV-HI-ngp"/>
-                        <constraint firstItem="ivX-xc-abD" firstAttribute="leading" secondItem="RoM-2S-sIg" secondAttribute="leading" id="mJ9-E3-Uwz"/>
-                        <constraint firstItem="TO0-M2-knK" firstAttribute="top" secondItem="ivX-xc-abD" secondAttribute="top" id="n7C-vI-sG5"/>
-                        <constraint firstItem="ivX-xc-abD" firstAttribute="top" secondItem="kdz-Uc-WhP" secondAttribute="top" constant="36" id="vfc-OG-fZD"/>
+                        <constraint firstAttribute="trailing" secondItem="nbf-sR-ONU" secondAttribute="trailing" constant="25" id="inV-HI-ngp"/>
+                        <constraint firstItem="nbf-sR-ONU" firstAttribute="leading" secondItem="RoM-2S-sIg" secondAttribute="trailing" constant="26" id="r94-SY-7y0"/>
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="1oP-Or-dKk"/>
-                            <exclude reference="IdL-rS-Jdx"/>
+                            <exclude reference="ZXc-SS-PlQ"/>
                             <exclude reference="gC5-bL-wOy"/>
-                            <exclude reference="0TF-Pg-xWJ"/>
-                            <exclude reference="SVV-sx-fh6"/>
+                            <exclude reference="1oP-Or-dKk"/>
                         </mask>
                     </variation>
                 </view>
@@ -149,10 +128,16 @@
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="rCd-IM-mOX"/>
+                                </mask>
+                            </variation>
                         </label>
                     </subviews>
                     <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="fHY-zT-2si" secondAttribute="trailing" id="3A0-Hk-LuX"/>
                         <constraint firstItem="cOf-fE-x8P" firstAttribute="leading" secondItem="4Ej-QP-8uE" secondAttribute="trailing" constant="1" id="DVn-DP-LUW"/>
                         <constraint firstAttribute="height" constant="45" id="EvQ-6W-Dcq"/>
                         <constraint firstAttribute="width" constant="885" id="J4g-Sm-ZDh"/>
@@ -166,6 +151,11 @@
                         <constraint firstItem="4Ej-QP-8uE" firstAttribute="leading" secondItem="9A7-TU-8QN" secondAttribute="trailing" constant="1" id="g4W-8e-ajt"/>
                         <constraint firstItem="4Ej-QP-8uE" firstAttribute="baseline" secondItem="9A7-TU-8QN" secondAttribute="baseline" id="p68-hY-ybN"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="J4g-Sm-ZDh"/>
+                        </mask>
+                    </variation>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="40" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="EJr-up-mkm">
                     <rect key="frame" x="25" y="134" width="885" height="634"/>
@@ -179,14 +169,17 @@
             </subviews>
             <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="vdZ-Yf-sts" firstAttribute="width" secondItem="L2a-ov-2h9" secondAttribute="width" constant="-49" id="4dc-Do-Kta"/>
                 <constraint firstItem="EJr-up-mkm" firstAttribute="width" secondItem="vdZ-Yf-sts" secondAttribute="width" id="5wD-cf-tga"/>
                 <constraint firstItem="kdz-Uc-WhP" firstAttribute="leading" secondItem="L2a-ov-2h9" secondAttribute="leading" id="5ym-7r-q6V"/>
                 <constraint firstItem="EJr-up-mkm" firstAttribute="leading" secondItem="L2a-ov-2h9" secondAttribute="leading" constant="25" id="CwK-J0-WI3"/>
                 <constraint firstItem="vdZ-Yf-sts" firstAttribute="leading" secondItem="L2a-ov-2h9" secondAttribute="leading" constant="25" id="NKk-vU-cGn"/>
+                <constraint firstItem="EJr-up-mkm" firstAttribute="centerX" secondItem="vdZ-Yf-sts" secondAttribute="centerX" id="PBQ-7L-uXF"/>
                 <constraint firstItem="EJr-up-mkm" firstAttribute="top" secondItem="vdZ-Yf-sts" secondAttribute="top" constant="1" id="Ssh-dW-JxH"/>
                 <constraint firstItem="kdz-Uc-WhP" firstAttribute="top" secondItem="L2a-ov-2h9" secondAttribute="top" id="Sss-eM-YlC"/>
                 <constraint firstItem="kdz-Uc-WhP" firstAttribute="width" secondItem="L2a-ov-2h9" secondAttribute="width" id="d5B-UX-5Ba"/>
                 <constraint firstItem="EJr-up-mkm" firstAttribute="top" secondItem="vdZ-Yf-sts" secondAttribute="bottom" constant="1" id="hF1-Th-x7p"/>
+                <constraint firstItem="vdZ-Yf-sts" firstAttribute="centerX" secondItem="L2a-ov-2h9" secondAttribute="centerX" id="qis-cn-fRQ"/>
                 <constraint firstItem="EJr-up-mkm" firstAttribute="top" secondItem="kdz-Uc-WhP" secondAttribute="bottom" constant="68" id="wj7-e9-wys"/>
                 <constraint firstItem="vdZ-Yf-sts" firstAttribute="top" secondItem="L2a-ov-2h9" secondAttribute="top" constant="88" id="zpp-Ap-hn4"/>
             </constraints>
@@ -197,6 +190,8 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="NKk-vU-cGn"/>
+                    <exclude reference="CwK-J0-WI3"/>
                     <exclude reference="Ssh-dW-JxH"/>
                     <exclude reference="wj7-e9-wys"/>
                 </mask>

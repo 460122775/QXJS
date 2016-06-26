@@ -117,6 +117,8 @@
 		01A575E41C85434A00334190 /* BrandDetail22.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575E01C85434A00334190 /* BrandDetail22.xib */; };
 		01A575E71C858DE100334190 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A575E51C858DE100334190 /* ProductDetailView.swift */; };
 		01A575E81C858DE100334190 /* ProductDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575E61C858DE100334190 /* ProductDetailView.xib */; };
+		01CA78301D208C580071B282 /* OrderAddView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CA782F1D208C580071B282 /* OrderAddView.xib */; };
+		01CA78321D208C730071B282 /* OrderAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA78311D208C730071B282 /* OrderAddView.swift */; };
 		01DC85C61CB9F4FC008086F5 /* NewsBigTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DC85C21CB9F4FC008086F5 /* NewsBigTableViewCell.swift */; };
 		01DC85C71CB9F4FC008086F5 /* NewsBigTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DC85C31CB9F4FC008086F5 /* NewsBigTableViewCell.xib */; };
 		01DC85C81CB9F4FC008086F5 /* NewsSmallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DC85C41CB9F4FC008086F5 /* NewsSmallTableViewCell.swift */; };
@@ -245,6 +247,8 @@
 		01A575E01C85434A00334190 /* BrandDetail22.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BrandDetail22.xib; path = class/view/companybrand/brand/BrandDetail22.xib; sourceTree = "<group>"; };
 		01A575E51C858DE100334190 /* ProductDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductDetailView.swift; path = class/view/productlist/ProductDetailView.swift; sourceTree = "<group>"; };
 		01A575E61C858DE100334190 /* ProductDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductDetailView.xib; path = class/view/productlist/ProductDetailView.xib; sourceTree = "<group>"; };
+		01CA782F1D208C580071B282 /* OrderAddView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OrderAddView.xib; path = class/view/custom/OrderAddView.xib; sourceTree = "<group>"; };
+		01CA78311D208C730071B282 /* OrderAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderAddView.swift; path = class/view/custom/OrderAddView.swift; sourceTree = "<group>"; };
 		01DC85C21CB9F4FC008086F5 /* NewsBigTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsBigTableViewCell.swift; path = class/view/news/NewsBigTableViewCell.swift; sourceTree = "<group>"; };
 		01DC85C31CB9F4FC008086F5 /* NewsBigTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewsBigTableViewCell.xib; path = class/view/news/NewsBigTableViewCell.xib; sourceTree = "<group>"; };
 		01DC85C41CB9F4FC008086F5 /* NewsSmallTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsSmallTableViewCell.swift; path = class/view/news/NewsSmallTableViewCell.swift; sourceTree = "<group>"; };
@@ -772,16 +776,18 @@
 		01B793231CB6A62D00D0285B /* custom */ = {
 			isa = PBXGroup;
 			children = (
-				017B346E1CBA5F780099E782 /* OrderTableViewCell.swift */,
-				017B346F1CBA5F780099E782 /* OrderTableViewCell.xib */,
-				017B34701CBA5F780099E782 /* OrderView.swift */,
-				017B34711CBA5F780099E782 /* OrderView.xib */,
 				01DC85CA1CBA06F0008086F5 /* CustomMainView.swift */,
 				01DC85CB1CBA06F0008086F5 /* CustomMainView.xib */,
 				01DC85CC1CBA06F0008086F5 /* CustomTableViewCell.swift */,
 				01DC85CD1CBA06F0008086F5 /* CustomTableViewCell.xib */,
 				017A23C31D03C51C00307615 /* CustomAddView.swift */,
 				017A23C51D03C54000307615 /* CustomAddView.xib */,
+				017B34701CBA5F780099E782 /* OrderView.swift */,
+				017B34711CBA5F780099E782 /* OrderView.xib */,
+				017B346E1CBA5F780099E782 /* OrderTableViewCell.swift */,
+				017B346F1CBA5F780099E782 /* OrderTableViewCell.xib */,
+				01CA78311D208C730071B282 /* OrderAddView.swift */,
+				01CA782F1D208C580071B282 /* OrderAddView.xib */,
 			);
 			name = custom;
 			sourceTree = "<group>";
@@ -908,6 +914,7 @@
 				01A575AE1C84305100334190 /* TechnologyDetail9View.xib in Resources */,
 				01A575C21C8434D500334190 /* TechnologyDetail10View.xib in Resources */,
 				019B6D021C7F4DD300F90D1A /* CompanyInfoView.xib in Resources */,
+				01CA78301D208C580071B282 /* OrderAddView.xib in Resources */,
 				017B34751CBA5F790099E782 /* OrderView.xib in Resources */,
 				019B6D2A1C82C7C100F90D1A /* Images.xcassets in Resources */,
 				017B34731CBA5F790099E782 /* OrderTableViewCell.xib in Resources */,
@@ -994,6 +1001,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CA78321D208C730071B282 /* OrderAddView.swift in Sources */,
 				017B346D1CBA08F60099E782 /* NewsModel.swift in Sources */,
 				016631911CB67B460092E83E /* SettingModel.swift in Sources */,
 				017AD8CB1CAA14090058D480 /* NameSpace.swift in Sources */,
