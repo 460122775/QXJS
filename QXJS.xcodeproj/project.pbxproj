@@ -119,10 +119,6 @@
 		01A575E81C858DE100334190 /* ProductDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A575E61C858DE100334190 /* ProductDetailView.xib */; };
 		01CA78301D208C580071B282 /* OrderAddView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CA782F1D208C580071B282 /* OrderAddView.xib */; };
 		01CA78321D208C730071B282 /* OrderAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA78311D208C730071B282 /* OrderAddView.swift */; };
-		01DC85C61CB9F4FC008086F5 /* NewsBigTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DC85C21CB9F4FC008086F5 /* NewsBigTableViewCell.swift */; };
-		01DC85C71CB9F4FC008086F5 /* NewsBigTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DC85C31CB9F4FC008086F5 /* NewsBigTableViewCell.xib */; };
-		01DC85C81CB9F4FC008086F5 /* NewsSmallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DC85C41CB9F4FC008086F5 /* NewsSmallTableViewCell.swift */; };
-		01DC85C91CB9F4FC008086F5 /* NewsSmallTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DC85C51CB9F4FC008086F5 /* NewsSmallTableViewCell.xib */; };
 		01DC85CE1CBA06F0008086F5 /* CustomMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DC85CA1CBA06F0008086F5 /* CustomMainView.swift */; };
 		01DC85CF1CBA06F0008086F5 /* CustomMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DC85CB1CBA06F0008086F5 /* CustomMainView.xib */; };
 		01DC85D01CBA06F0008086F5 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DC85CC1CBA06F0008086F5 /* CustomTableViewCell.swift */; };
@@ -249,10 +245,6 @@
 		01A575E61C858DE100334190 /* ProductDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductDetailView.xib; path = class/view/productlist/ProductDetailView.xib; sourceTree = "<group>"; };
 		01CA782F1D208C580071B282 /* OrderAddView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OrderAddView.xib; path = class/view/custom/OrderAddView.xib; sourceTree = "<group>"; };
 		01CA78311D208C730071B282 /* OrderAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderAddView.swift; path = class/view/custom/OrderAddView.swift; sourceTree = "<group>"; };
-		01DC85C21CB9F4FC008086F5 /* NewsBigTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsBigTableViewCell.swift; path = class/view/news/NewsBigTableViewCell.swift; sourceTree = "<group>"; };
-		01DC85C31CB9F4FC008086F5 /* NewsBigTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewsBigTableViewCell.xib; path = class/view/news/NewsBigTableViewCell.xib; sourceTree = "<group>"; };
-		01DC85C41CB9F4FC008086F5 /* NewsSmallTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsSmallTableViewCell.swift; path = class/view/news/NewsSmallTableViewCell.swift; sourceTree = "<group>"; };
-		01DC85C51CB9F4FC008086F5 /* NewsSmallTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewsSmallTableViewCell.xib; path = class/view/news/NewsSmallTableViewCell.xib; sourceTree = "<group>"; };
 		01DC85CA1CBA06F0008086F5 /* CustomMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomMainView.swift; path = class/view/custom/CustomMainView.swift; sourceTree = "<group>"; };
 		01DC85CB1CBA06F0008086F5 /* CustomMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomMainView.xib; path = class/view/custom/CustomMainView.xib; sourceTree = "<group>"; };
 		01DC85CC1CBA06F0008086F5 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = class/view/custom/CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -754,10 +746,6 @@
 		01A575CD1C84426000334190 /* news */ = {
 			isa = PBXGroup;
 			children = (
-				01DC85C21CB9F4FC008086F5 /* NewsBigTableViewCell.swift */,
-				01DC85C31CB9F4FC008086F5 /* NewsBigTableViewCell.xib */,
-				01DC85C41CB9F4FC008086F5 /* NewsSmallTableViewCell.swift */,
-				01DC85C51CB9F4FC008086F5 /* NewsSmallTableViewCell.xib */,
 				01A575D01C84428A00334190 /* NewsMainView.swift */,
 				01A575D11C84428A00334190 /* NewsMainView.xib */,
 			);
@@ -906,7 +894,6 @@
 				01DC85CF1CBA06F0008086F5 /* CustomMainView.xib in Resources */,
 				01F963141C7B06BB00FD7775 /* ContactInfoView.xib in Resources */,
 				0118F3631C61CA8B003C9EFD /* LoginViewController.xib in Resources */,
-				01DC85C91CB9F4FC008086F5 /* NewsSmallTableViewCell.xib in Resources */,
 				01A575CC1C843E7000334190 /* CollocationViewController.xib in Resources */,
 				01A575C11C8434D500334190 /* TechnologyDetail8View.xib in Resources */,
 				01A575BF1C8434D500334190 /* TechnologyDetail6View.xib in Resources */,
@@ -919,7 +906,6 @@
 				019B6D2A1C82C7C100F90D1A /* Images.xcassets in Resources */,
 				017B34731CBA5F790099E782 /* OrderTableViewCell.xib in Resources */,
 				01A575E31C85434A00334190 /* BrandDetail21.xib in Resources */,
-				01DC85C71CB9F4FC008086F5 /* NewsBigTableViewCell.xib in Resources */,
 				0118F3711C626B9A003C9EFD /* ProductListMainView.xib in Resources */,
 				01438A4B1C51224E00B0ECEF /* LaunchScreen.storyboard in Resources */,
 				0118F35E1C61CA3C003C9EFD /* CompanyBrandViewController.xib in Resources */,
@@ -1043,7 +1029,6 @@
 				0118F35D1C61CA3C003C9EFD /* CompanyBrandViewController.swift in Sources */,
 				017AD8B31CAA10050058D480 /* Bool.swift in Sources */,
 				017AD8D91CAA7C930058D480 /* ProductModel.swift in Sources */,
-				01DC85C61CB9F4FC008086F5 /* NewsBigTableViewCell.swift in Sources */,
 				017A23C21D033BEC00307615 /* HRToast+UIView.swift in Sources */,
 				0174D41E1C82FB5A009F366A /* StuffView.swift in Sources */,
 				017AD89A1CAA0F830058D480 /* CacheManageModel.swift in Sources */,
@@ -1059,7 +1044,6 @@
 				017AD8BF1CAA10270058D480 /* SwiftNotice.swift in Sources */,
 				017AD8981CAA0F720058D480 /* DBModel.swift in Sources */,
 				017AD8B41CAA10050058D480 /* Dictionary.swift in Sources */,
-				01DC85C81CB9F4FC008086F5 /* NewsSmallTableViewCell.swift in Sources */,
 				017AD8961CAA0F720058D480 /* DBInitData.swift in Sources */,
 				019B6D041C7F4DF400F90D1A /* CompanyInfoView.swift in Sources */,
 				01438A3E1C51224E00B0ECEF /* AppDelegate.swift in Sources */,
