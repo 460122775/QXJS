@@ -46,7 +46,7 @@ class CustomViewController: UIViewController, CustomViewDelegate, OrderViewDeleg
     
     override func viewDidAppear(animated: Bool)
     {
-        self.customDataArr = CustomModel.getCustomData()
+        self.customDataArr = CustomModel.getCustomData(-1)
         if customDataArr == nil || customDataArr?.count == 0
         {
             
@@ -57,7 +57,7 @@ class CustomViewController: UIViewController, CustomViewDelegate, OrderViewDeleg
     
     func showCustomDetail(dataDic: NSMutableDictionary)
     {
-        let orderDataArr = CustomModel.getOrderData((dataDic.objectForKey("customId") as! NSNumber).longLongValue)
+        let orderDataArr = CustomModel.getOrderData((dataDic.objectForKey("customId") as! NSNumber).longLongValue, state: -1)
         if self.orderView == nil
         {
             self.orderView = ((NSBundle.mainBundle().loadNibNamed("OrderView", owner: self, options: nil) as NSArray).lastObject as? OrderView)!

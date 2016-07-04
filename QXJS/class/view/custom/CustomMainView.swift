@@ -52,7 +52,7 @@ class CustomMainView: UIView, UITableViewDelegate, UITableViewDataSource,
     func customAddSuccess()
     {
         // Update data.
-        self.customDataArr = CustomModel.getCustomData()
+        self.customDataArr = CustomModel.getCustomData(-1)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int

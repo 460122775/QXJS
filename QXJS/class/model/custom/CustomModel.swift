@@ -20,7 +20,8 @@ class CustomModel: NSObject {
                 let customTable = Table("custom")
                 
                 let insert = customTable.insert(
-                    Expression<Int64>("customId") <- (NSNumber(longLong: Int64(NSDate().timeIntervalSinceReferenceDate))).longLongValue,
+                    Expression<Int64>("customId") <- (NSNumber(longLong:
+                        Int64(NSDate().timeIntervalSinceReferenceDate))).longLongValue,
                     Expression<Int64>("storeId") <- (NSNumber(int: CurrentStoreId)).longLongValue,
                     Expression<Int64>("sex") <- (customData.objectForKey("sex") as! NSNumber).longLongValue,
                     Expression<Int64>("age") <- (customData.objectForKey("age") as! NSNumber).longLongValue,
@@ -33,7 +34,7 @@ class CustomModel: NSObject {
                     try db.run(insert)
                 return true
             }catch let error as NSError{
-                print("ProductModel: Database Error. [err:\(error)]")
+                print("CustomModel: Database Error. [err:\(error)]")
                 return false
             }
         }else{
@@ -41,28 +42,28 @@ class CustomModel: NSObject {
         }
     }
 
-    class func insertOrderData(customData : NSMutableDictionary!) -> Bool?
+    class func insertOrderData(data : NSMutableDictionary!) -> Bool?
     {
         if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE) != nil
         {
             do{
                 let db = try Connection("\(PATH_DATABASE)\(DATABASE_NAME)")
-                let customTable = Table("custom")
+                let customTable = Table("t_order")
                 
                 let insert = customTable.insert(
                     Expression<Int64>("orderId") <- (NSNumber(longLong: Int64(NSDate().timeIntervalSinceReferenceDate))).longLongValue,
-                    Expression<Int64>("customId") <- (customData.objectForKey("customId") as! NSNumber).longLongValue,
-                    Expression<Int64>("time") <- (customData.objectForKey("time") as! NSNumber).longLongValue,
+                    Expression<Int64>("customId") <- (data.objectForKey("customId") as! NSNumber).longLongValue,
+                    Expression<Int64>("time") <- (data.objectForKey("time") as! NSNumber).longLongValue,
                     Expression<Int64>("state") <- 1,
-                    Expression<String?>("content") <- (customData.objectForKey("content") as! String),
-                    Expression<String?>("comment") <- (customData.objectForKey("comment") as! String),
-                    Expression<String?>("address") <- (customData.objectForKey("address") as! String)
+                    Expression<String?>("content") <- (data.objectForKey("content") as! String),
+                    Expression<String?>("comment") <- (data.objectForKey("comment") as! String),
+                    Expression<String?>("address") <- (data.objectForKey("address") as! String)
                 )
 //                let rowid = 
                     try db.run(insert)
                 return true
             }catch let error as NSError{
-                print("ProductModel: Database Error. [err:\(error)]")
+                print("CustomModel: Database Error. [err:\(error)]")
                 return false
             }
         }else{
@@ -70,7 +71,75 @@ class CustomModel: NSObject {
         }
     }
     
-    class func getCustomData() -> NSMutableArray?
+    class func deleteCustomData(data : NSMutableDictionary!) -> Bool?
+    {
+        data.setObject(-1, forKey: "state")
+        return CustomModel .updateCustomData(data)
+    }
+    
+    class func deleteOrderData(data : NSMutableDictionary!) -> Bool?
+    {
+        data.setObject(-1, forKey: "state")
+        return CustomModel .updateOrderData(data)
+    }
+    
+    class func updateCustomData(customData : NSMutableDictionary!) -> Bool?
+    {
+        if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE) != nil
+        {
+            do{
+                let db = try Connection("\(PATH_DATABASE)\(DATABASE_NAME)")
+                let customTable = Table("custom")
+                let alice = customTable.filter(Expression<Int64>("customId") ==
+                    (customData.objectForKey("customId") as! NSNumber).longLongValue)
+                try db.run(
+                    alice.update(
+                        Expression<Int64>("sex") <- (customData.objectForKey("sex") as! NSNumber).longLongValue,
+                        Expression<Int64>("age") <- (customData.objectForKey("age") as! NSNumber).longLongValue,
+                        Expression<Int64>("state") <- (customData.objectForKey("state") as! NSNumber).longLongValue,
+                        Expression<String?>("customName") <- (customData.objectForKey("customName") as! String),
+                        Expression<String?>("phone") <- (customData.objectForKey("phone") as! String),
+                        Expression<String?>("address") <- (customData.objectForKey("address") as! String)
+                    )
+                )
+                return true
+            }catch let error as NSError{
+                print("CustomModel: Database Error. [err:\(error)]")
+                return false
+            }
+        }else{
+            return false
+        }
+    }
+    
+    class func updateOrderData(data : NSMutableDictionary!) -> Bool?
+    {
+        if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE) != nil
+        {
+            do{
+                let db = try Connection("\(PATH_DATABASE)\(DATABASE_NAME)")
+                let orderTable = Table("t_order")
+                let alice = orderTable.filter(Expression<Int64>("orderId") ==
+                    (data.objectForKey("orderId") as! NSNumber).longLongValue)
+                try db.run(
+                    alice.update(
+                        Expression<Int64>("state") <- (data.objectForKey("state") as! NSNumber).longLongValue,
+                        Expression<String?>("content") <- (data.objectForKey("content") as! String),
+                        Expression<String?>("comment") <- (data.objectForKey("comment") as! String),
+                        Expression<String?>("address") <- (data.objectForKey("address") as! String)
+                    )
+                )
+                return true
+            }catch let error as NSError{
+                print("CustomModel: Database Error. [err:\(error)]")
+                return false
+            }
+        }else{
+            return false
+        }
+    }
+    
+    class func getCustomData(state : Int64) -> NSMutableArray?
     {
         if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE) != nil
         {
@@ -84,7 +153,7 @@ class CustomModel: NSObject {
                 // Fetch custom data from db.
                 for custom in try db.prepare(customTable)
                 {
-                    if NSNumber(longLong: custom[Expression<Int64>("state")]) == -1
+                    if custom[Expression<Int64>("state")] == state
                     {
                         continue
                     }
@@ -106,7 +175,7 @@ class CustomModel: NSObject {
                 print("Get custom infos from database : \(customArr)")
                 return customArr
             }catch let error as NSError{
-                print("ProductModel: Database Error. [err:\(error)]")
+                print("CustomModel: Database Error. [err:\(error)]")
                 return nil
             }
         }else{
@@ -114,7 +183,7 @@ class CustomModel: NSObject {
         }
     }
     
-    class func getOrderData(customId : Int64) -> NSMutableArray?
+    class func getOrderData(customId : Int64, state : Int64) -> NSMutableArray?
     {
         if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE) != nil
         {
@@ -131,7 +200,7 @@ class CustomModel: NSObject {
                 for order in try db.prepare(orderTable.filter(
                     Expression<Int64>("customId") == customId))
                 {
-                    if NSNumber(longLong: order[Expression<Int64>("state")]) == -1
+                    if order[Expression<Int64>("state")] == state
                     {
                         continue
                     }
@@ -151,7 +220,7 @@ class CustomModel: NSObject {
                 print("Get order infos from database : \(orderArr)")
                 return orderArr
             }catch let error as NSError{
-                print("ProductModel: Database Error. [err:\(error)]")
+                print("CustomModel: Database Error. [err:\(error)]")
                 return nil
             }
         }else{

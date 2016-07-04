@@ -28,6 +28,7 @@ var CurrentUserRole : Int32 = 0
 var ZeroValue : UInt32 = 0
 var BYTE_ZERO : UInt8 = 0
 
+let REMOTEUPDATE : String = "RemoteUpdate"
 let INITDATABASE : String = "InitDatabase"
 let DOWNLOADDATA : String = "DownLoadData"
 let DOWNLOADSOURCE : String = "DownLoadSource"

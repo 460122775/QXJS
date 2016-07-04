@@ -18,6 +18,155 @@ var imgPathArr : [String] = []
 
 class SettingModel: NSObject
 {
+    class func UpdateDataControl() -> Bool
+    {
+        NSUserDefaults.standardUserDefaults().removeObjectForKey(REMOTEUPDATE + CUSTOM)
+        NSUserDefaults.standardUserDefaults().removeObjectForKey(REMOTEUPDATE + ORDER)
+        return updateData()
+    }
+    
+    class func updateData() -> Bool
+    {
+        if NSUserDefaults.standardUserDefaults().objectForKey(REMOTEUPDATE + CUSTOM) == nil
+        {
+            dispatch_async(dispatch_get_main_queue()) {
+                SettingModel.updateCustomData()
+            }
+        }else if NSUserDefaults.standardUserDefaults().objectForKey(REMOTEUPDATE + ORDER) == nil{
+            dispatch_async(dispatch_get_main_queue()) {
+                SettingModel.updateOrderData()
+            }
+        }else{
+            SettingModel.downloadData()
+        }
+        return true
+    }
+    
+    class func updateCustomData()  -> Bool
+    {
+        var customIdStr : String = ""
+        do{
+            let db = try Connection("\(PATH_DATABASE)\(DATABASE_NAME)")
+            let customTable = Table("custom")
+            // Fetch custom data from db.
+            for custom in try db.prepare(customTable)
+            {
+                if NSNumber(longLong: custom[Expression<Int64>("state")]) != 0
+                {
+                    if customIdStr.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0
+                    {
+                        customIdStr = customIdStr.stringByAppendingString(",")
+                    }
+                    customIdStr = customIdStr.stringByAppendingString(String(custom[Expression<Int64>("customId")]))
+                }
+            }
+        }catch let error as NSError{
+            print("CustomModel: Database Error. [err:\(error)]")
+            return false
+        }
+        if customIdStr.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 0
+        {
+            NSUserDefaults.standardUserDefaults().setObject(REMOTEUPDATE, forKey: REMOTEUPDATE + CUSTOM)
+            SettingModel.updateData()
+        }else{
+            // Update data.
+            let urlStr : NSString = "\(URL_Server)/custom/deleteControl?customId=\(customIdStr)"
+            print("\(urlStr)")
+            let url = NSURL(string: urlStr.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)!
+            let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+                if response == nil || data == nil
+                {
+                    return
+                }
+                print(String(data: data!, encoding: NSUTF8StringEncoding)!)
+                let resultDic : NSDictionary = (try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)) as! NSDictionary
+                let resultStr : String = resultDic.valueForKey("result") as! String
+                if resultStr == FAIL
+                {
+                    // Tell reason of FAIL.
+                    print("服务端删除custom数据失败，请重试!")
+                }else{
+                    let customArr : NSMutableArray? = CustomModel.getCustomData(0)
+                    if customArr == nil
+                    {
+                        return
+                    }
+                    for custom in customArr!
+                    {
+                        let urlStr : NSString = "\(URL_Server)/custom/insertControl?customId=\((custom.objectForKey("customId") as! NSNumber).longLongValue)&storeId=\((custom.objectForKey("storeId") as! NSNumber).longLongValue)&sex=\(((custom.objectForKey("sex") as! String) == "男") ? 1 : 0)&age=\((custom.objectForKey("age") as! NSNumber).longLongValue)&customName=\((custom.objectForKey("customName") as! String))&phone=\((custom.objectForKey("phone") as! String))&address=\((custom.objectForKey("address") as! String))"
+                        let url = NSURL(string: urlStr.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)!
+                        let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+                            if response == nil || data == nil
+                            {
+                                return
+                            }
+                            print(String(data: data!, encoding: NSUTF8StringEncoding)!)
+                            let resultDic : NSDictionary = (try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)) as! NSDictionary
+                            let resultStr : String = resultDic.valueForKey("result") as! String
+                        })
+                        task.resume()
+                    }
+                    NSUserDefaults.standardUserDefaults().setObject(REMOTEUPDATE, forKey: REMOTEUPDATE + CUSTOM)
+                    SettingModel.updateData()
+                }
+            })
+            task.resume()
+        }
+        return true
+    }
+    
+    class func updateOrderData()  -> Bool
+    {
+        var orderIdStr : String = ""
+        do{
+            let db = try Connection("\(PATH_DATABASE)\(DATABASE_NAME)")
+            let orderTable = Table("t_order")
+            // Fetch order data from db.
+            for order in try db.prepare(orderTable)
+            {
+                if NSNumber(longLong: order[Expression<Int64>("state")]) != 0
+                {
+                    if orderIdStr.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0
+                    {
+                        orderIdStr = orderIdStr.stringByAppendingString(",")
+                    }
+                    orderIdStr = orderIdStr.stringByAppendingString(String(order[Expression<Int64>("orderId")]))
+                }
+            }
+        }catch let error as NSError{
+            print("CustomModel: Database Error. [err:\(error)]")
+            return false
+        }
+        if orderIdStr.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0
+        {
+            NSUserDefaults.standardUserDefaults().setObject(REMOTEUPDATE, forKey: REMOTEUPDATE + ORDER)
+            SettingModel.updateData()
+        }else{
+            // Update data.
+            let urlStr : NSString = "\(URL_Server)/order/deleteControl?orderId=\(orderIdStr)"
+            print("\(urlStr)")
+            let url = NSURL(string: urlStr.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)!
+            let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+                if response == nil || data == nil
+                {
+                    return
+                }
+                print(String(data: data!, encoding: NSUTF8StringEncoding)!)
+                let resultDic : NSDictionary = (try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)) as! NSDictionary
+                let resultStr : String = resultDic.valueForKey("result") as! String
+                if resultStr == FAIL
+                {
+                    // Tell reason of FAIL.
+                    print("服务端删除order数据失败，请重试!")
+                }else{
+                    NSUserDefaults.standardUserDefaults().setObject(REMOTEUPDATE, forKey: REMOTEUPDATE + ORDER)
+                    SettingModel.updateData()
+                }
+            })
+            task.resume()
+        }
+        return true
+    }
     
     class func downloadDataControl() -> Bool
     {

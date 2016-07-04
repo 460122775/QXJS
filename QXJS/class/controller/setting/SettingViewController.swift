@@ -41,12 +41,14 @@ class SettingViewController: UIViewController
         if firstClick
         {
             firstClick = false
-            SettingModel.downloadDataControl()
-        }else{
-            let configuration = NSURLSessionConfiguration.backgroundSessionConfigurationWithIdentifier(SessionProperties.identifier)
-            let backgroundSession = NSURLSession(configuration: configuration, delegate: self.delegate, delegateQueue: nil)
-            SettingModel.cacheFile(configuration, backgroundSession: backgroundSession)
+            SettingModel.UpdateDataControl()
+            firstClick = true
         }
+//        else{
+//            let configuration = NSURLSessionConfiguration.backgroundSessionConfigurationWithIdentifier(SessionProperties.identifier)
+//            let backgroundSession = NSURLSession(configuration: configuration, delegate: self.delegate, delegateQueue: nil)
+//            SettingModel.cacheFile(configuration, backgroundSession: backgroundSession)
+//        }
     }
 
     @IBAction func logoutBtnClick(sender: UIButton)
