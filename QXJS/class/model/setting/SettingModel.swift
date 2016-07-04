@@ -122,9 +122,9 @@ class SettingModel: NSObject
         
         // Download data.
         Alamofire.request(.GET, url.stringByAppendingString(fileName)).responseData { response in
-            if let httpError = response.result.error
+            if response.result.error != nil
             {
-                let statusCode = httpError.code
+//                let statusCode = httpError.code
                 SwiftNotice.showText("数据文件下载失败，请检查网络后重试！")
             } else { //no errors
                 let statusCode = (response.response?.statusCode)!
