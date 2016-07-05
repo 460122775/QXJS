@@ -198,9 +198,9 @@ class CustomModel: NSObject {
                 dateFormatter.dateFormat = "yyyy-MM-dd  h:mm"
                 // Fetch order data from db.
                 for order in try db.prepare(orderTable.filter(
-                    Expression<Int64>("customId") == customId))
+                    Expression<Int64>("state") != state))
                 {
-                    if order[Expression<Int64>("state")] == state
+                    if order[Expression<Int64>("customId")] != customId && state == -1
                     {
                         continue
                     }

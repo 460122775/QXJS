@@ -37,7 +37,7 @@ class SettingModel: NSObject
                 SettingModel.updateOrderData()
             }
         }else{
-            SettingModel.downloadData()
+            SettingModel.downloadDataControl()
         }
         return true
     }
@@ -101,8 +101,6 @@ class SettingModel: NSObject
                                 return
                             }
                             print(String(data: data!, encoding: NSUTF8StringEncoding)!)
-                            let resultDic : NSDictionary = (try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)) as! NSDictionary
-                            let resultStr : String = resultDic.valueForKey("result") as! String
                         })
                         task.resume()
                     }
@@ -137,7 +135,7 @@ class SettingModel: NSObject
             print("CustomModel: Database Error. [err:\(error)]")
             return false
         }
-        if orderIdStr.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0
+        if orderIdStr.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 0
         {
             NSUserDefaults.standardUserDefaults().setObject(REMOTEUPDATE, forKey: REMOTEUPDATE + ORDER)
             SettingModel.updateData()
@@ -159,6 +157,24 @@ class SettingModel: NSObject
                     // Tell reason of FAIL.
                     print("服务端删除order数据失败，请重试!")
                 }else{
+                    let orderArray : NSMutableArray? = CustomModel.getOrderData(-1, state:0)
+                    if orderArray == nil
+                    {
+                        return
+                    }
+                    for order in orderArray!
+                    {
+                        let urlStr : NSString = "\(URL_Server)/order/insertControl?orderId=\((order.objectForKey("orderId") as! NSNumber).longLongValue)&customId=\((order.objectForKey("customId") as! NSNumber).longLongValue)&time=\(order.objectForKey("time") as! String)&comment=\((order.objectForKey("comment") as! String))&content=\((order.objectForKey("content") as! String))&address=\((order.objectForKey("address") as! String))"
+                        let url = NSURL(string: urlStr.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)!
+                        let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+                            if response == nil || data == nil
+                            {
+                                return
+                            }
+                            print(String(data: data!, encoding: NSUTF8StringEncoding)!)
+                        })
+                        task.resume()
+                    }
                     NSUserDefaults.standardUserDefaults().setObject(REMOTEUPDATE, forKey: REMOTEUPDATE + ORDER)
                     SettingModel.updateData()
                 }
@@ -181,9 +197,7 @@ class SettingModel: NSObject
         NSUserDefaults.standardUserDefaults().removeObjectForKey(INITDATABASE + PARAM)
         NSUserDefaults.standardUserDefaults().removeObjectForKey(INITDATABASE + STORE)
         NSUserDefaults.standardUserDefaults().removeObjectForKey(INITDATABASE + USER)
-        dispatch_async(dispatch_get_main_queue()) { 
-            downloadData()
-        }
+        downloadData()
         return true
     }
     
