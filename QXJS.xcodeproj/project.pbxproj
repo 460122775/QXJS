@@ -29,6 +29,8 @@
 		01438A461C51224E00B0ECEF /* QXJS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01438A441C51224E00B0ECEF /* QXJS.xcdatamodeld */; };
 		01438A4B1C51224E00B0ECEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01438A491C51224E00B0ECEF /* LaunchScreen.storyboard */; };
 		01438A5D1C51264400B0ECEF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01438A5C1C51264400B0ECEF /* MapKit.framework */; };
+		0145AF5D1D2C7D5500087D56 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0145AF5C1D2C7D5500087D56 /* ProgressView.swift */; };
+		0145AF5F1D2C7D7300087D56 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0145AF5E1D2C7D7300087D56 /* ProgressView.xib */; };
 		016631911CB67B460092E83E /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016631901CB67B460092E83E /* SettingModel.swift */; };
 		0174D4171C82EE66009F366A /* HonourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174D4161C82EE66009F366A /* HonourView.swift */; };
 		0174D4191C82EE96009F366A /* HonourView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0174D4181C82EE96009F366A /* HonourView.xib */; };
@@ -153,6 +155,8 @@
 		01438A4C1C51224E00B0ECEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01438A531C5122B200B0ECEF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		01438A5C1C51264400B0ECEF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0145AF5C1D2C7D5500087D56 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressView.swift; path = class/view/setting/ProgressView.swift; sourceTree = "<group>"; };
+		0145AF5E1D2C7D7300087D56 /* ProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProgressView.xib; path = class/view/setting/ProgressView.xib; sourceTree = "<group>"; };
 		016631901CB67B460092E83E /* SettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingModel.swift; path = class/model/setting/SettingModel.swift; sourceTree = "<group>"; };
 		0174D4161C82EE66009F366A /* HonourView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HonourView.swift; path = class/view/companybrand/honour/HonourView.swift; sourceTree = "<group>"; };
 		0174D4181C82EE96009F366A /* HonourView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HonourView.xib; path = class/view/companybrand/honour/HonourView.xib; sourceTree = "<group>"; };
@@ -663,6 +667,8 @@
 			children = (
 				019B6D151C8026C500F90D1A /* SettingMainView.swift */,
 				019B6D161C8026C500F90D1A /* SettingMainView.xib */,
+				0145AF5C1D2C7D5500087D56 /* ProgressView.swift */,
+				0145AF5E1D2C7D7300087D56 /* ProgressView.xib */,
 			);
 			name = setting;
 			sourceTree = "<group>";
@@ -903,6 +909,7 @@
 				019B6D021C7F4DD300F90D1A /* CompanyInfoView.xib in Resources */,
 				01CA78301D208C580071B282 /* OrderAddView.xib in Resources */,
 				017B34751CBA5F790099E782 /* OrderView.xib in Resources */,
+				0145AF5F1D2C7D7300087D56 /* ProgressView.xib in Resources */,
 				019B6D2A1C82C7C100F90D1A /* Images.xcassets in Resources */,
 				017B34731CBA5F790099E782 /* OrderTableViewCell.xib in Resources */,
 				01A575E31C85434A00334190 /* BrandDetail21.xib in Resources */,
@@ -1016,6 +1023,7 @@
 				019B6D0E1C7FFD7E00F90D1A /* CompanyBrandView.swift in Sources */,
 				0174D4171C82EE66009F366A /* HonourView.swift in Sources */,
 				01A575CB1C843E7000334190 /* CollocationViewController.swift in Sources */,
+				0145AF5D1D2C7D5500087D56 /* ProgressView.swift in Sources */,
 				01438A461C51224E00B0ECEF /* QXJS.xcdatamodeld in Sources */,
 				0118F36C1C62697E003C9EFD /* ProductListViewController.swift in Sources */,
 				01A575A91C83F1CF00334190 /* TechnologyMainView.swift in Sources */,

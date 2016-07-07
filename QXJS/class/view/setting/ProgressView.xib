@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProgressView" customModule="QXJS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAM-BA-Nqh" customClass="ProgressView" customModule="QXJS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在同步，可能需要几分钟时间，请耐心等待" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kU-Pf-Zx2">
+                    <rect key="frame" x="0.0" y="351" width="1024" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" red="0.97254901959999995" green="0.3411764706" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请不要退出程序或断开网络" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9b-yS-1QB">
+                    <rect key="frame" x="0.0" y="393" width="1024" height="23"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <color key="textColor" red="0.97254901959999995" green="0.3411764706" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSB-1w-bvg">
+                    <rect key="frame" x="490" y="436" width="44" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="ICr-be-jbD"/>
+                        <constraint firstAttribute="width" constant="44" id="uHn-sz-mbe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.97254901959999995" green="0.3411764706" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="8kU-Pf-Zx2" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="8SQ-PV-0nz"/>
+                <constraint firstItem="8kU-Pf-Zx2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-20" id="AMq-Gh-URF"/>
+                <constraint firstItem="t9b-yS-1QB" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="IzD-jO-dms"/>
+                <constraint firstItem="t9b-yS-1QB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="20" id="TWV-aI-4KE"/>
+                <constraint firstItem="iAM-BA-Nqh" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="aty-P5-wh4"/>
+                <constraint firstItem="iAM-BA-Nqh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="blx-8z-iXt"/>
+                <constraint firstItem="iAM-BA-Nqh" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="btV-Ie-Owv"/>
+                <constraint firstItem="bSB-1w-bvg" firstAttribute="top" secondItem="t9b-yS-1QB" secondAttribute="bottom" constant="20" id="c4B-W3-Cbn"/>
+                <constraint firstItem="8kU-Pf-Zx2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="epf-30-mk4"/>
+                <constraint firstItem="iAM-BA-Nqh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hzR-CH-CG8"/>
+                <constraint firstItem="t9b-yS-1QB" firstAttribute="centerX" secondItem="iAM-BA-Nqh" secondAttribute="centerX" id="p9o-UG-8BG"/>
+                <constraint firstItem="t9b-yS-1QB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="qw1-Ni-pJe"/>
+                <constraint firstItem="bSB-1w-bvg" firstAttribute="centerX" secondItem="t9b-yS-1QB" secondAttribute="centerX" id="uxP-Rq-7EM"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+            <connections>
+                <outlet property="progressValueLb" destination="bSB-1w-bvg" id="dDp-4r-00f"/>
+            </connections>
+        </view>
+    </objects>
+</document>

@@ -32,6 +32,7 @@ let REMOTEUPDATE : String = "RemoteUpdate"
 let INITDATABASE : String = "InitDatabase"
 let DOWNLOADDATA : String = "DownLoadData"
 let DOWNLOADSOURCE : String = "DownLoadSource"
+let UPDATEPROCESS : String = "UpdateProcess"
 
 let HTTP : String = "Http"
 let LOGIN : String = "Login"

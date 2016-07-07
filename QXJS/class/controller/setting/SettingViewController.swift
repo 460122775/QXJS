@@ -41,6 +41,8 @@ class SettingViewController: UIViewController
         if firstClick
         {
             firstClick = false
+            let progressView : ProgressView! = NSBundle.mainBundle().loadNibNamed("ProgressView", owner: nil, options: nil)[0] as? ProgressView
+            self.view.window?.addSubview(progressView)
             SettingModel.UpdateDataControl()
             firstClick = true
         }

@@ -15,11 +15,13 @@ struct SessionProperties {
 }
 
 var imgPathArr : [String] = []
+var updateProgress : Int32 = 0
 
 class SettingModel: NSObject
 {
     class func UpdateDataControl() -> Bool
     {
+        updateProgress = 0
         NSUserDefaults.standardUserDefaults().removeObjectForKey(REMOTEUPDATE + CUSTOM)
         NSUserDefaults.standardUserDefaults().removeObjectForKey(REMOTEUPDATE + ORDER)
         return updateData()
@@ -37,6 +39,8 @@ class SettingModel: NSObject
                 SettingModel.updateOrderData()
             }
         }else{
+            updateProgress = 20
+            NSNotificationCenter.defaultCenter().postNotificationName(UPDATEPROCESS, object: nil)
             SettingModel.downloadDataControl()
         }
         return true
@@ -203,6 +207,7 @@ class SettingModel: NSObject
     
     class func downloadData() -> Bool
     {
+        updateProgress = 30
         do{
             let db = try Connection("\(PATH_DATABASE)\(DATABASE_NAME)")
             if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE + ACTIVITY) == nil
@@ -252,6 +257,8 @@ class SettingModel: NSObject
                 }
             }
             else{
+                updateProgress = 50
+                NSNotificationCenter.defaultCenter().postNotificationName(UPDATEPROCESS, object: nil)
                 dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), {
                     print("This is run on the background queue")
                     let _configuration = NSURLSessionConfiguration.backgroundSessionConfigurationWithIdentifier(SessionProperties.identifier)
@@ -274,6 +281,8 @@ class SettingModel: NSObject
     {
         if imgPathArr.count == 0
         {
+            updateProgress = 100
+            NSNotificationCenter.defaultCenter().postNotificationName(UPDATEPROCESS, object: nil)
             return
         }
         let pathArr = imgPathArr.removeAtIndex(0).componentsSeparatedByString("+")
@@ -323,6 +332,8 @@ class SettingModel: NSObject
                 })
                 
             }else{
+                updateProgress = 100
+                NSNotificationCenter.defaultCenter().postNotificationName(UPDATEPROCESS, object: nil)
                 let filemanager:NSFileManager = NSFileManager()
                 let files = filemanager.enumeratorAtPath(cachePath)
                 while let file = files?.nextObject() {
