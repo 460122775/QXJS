@@ -144,7 +144,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="1Rc-S7-4PB" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="9i0-tM-Mfk"/>
-                <constraint firstItem="ltv-ii-g34" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-62.5" id="FRa-T6-asD"/>
+                <constraint firstItem="ltv-ii-g34" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-62" id="FRa-T6-asD"/>
                 <constraint firstItem="1Rc-S7-4PB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UW5-hv-J6v"/>
                 <constraint firstItem="ltv-ii-g34" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WGa-Sa-U0Y"/>
                 <constraint firstItem="1Rc-S7-4PB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="c4R-Ty-owm"/>

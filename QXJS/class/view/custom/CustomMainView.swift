@@ -53,6 +53,7 @@ class CustomMainView: UIView, UITableViewDelegate, UITableViewDataSource,
     {
         // Update data.
         self.customDataArr = CustomModel.getCustomData(-1)
+        self.initViewByData(self.customDataArr!)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int

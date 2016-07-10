@@ -11,18 +11,17 @@ import UIKit
 protocol OrderViewDelegate
 {
     func orderMainViewReturnBack()
+    func updateCustomData()
 }
 
-class OrderView: UIView, UITableViewDelegate, UITableViewDataSource {
+class OrderView: UIView, UITableViewDelegate, UITableViewDataSource, OrderAddDelegate {
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var sexLabel: UILabel!
-    @IBOutlet var ageLabel: UILabel!
-    @IBOutlet var phoneLabel: UILabel!
-    @IBOutlet var addressLabel: UILabel!
     
+    @IBOutlet var returnBackBtn: UIButton!
     @IBOutlet var orderTableView: UITableView!
 
     var orderViewDelegate : OrderViewDelegate?
+    var orderAddView : OrderAddView?
     
     var _selectOrderDataDic : NSMutableDictionary?
     let TableCellIndentifier : String = "OrderTableViewCell"
@@ -48,29 +47,97 @@ class OrderView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.orderViewDelegate?.orderMainViewReturnBack()
     }
     
+    @IBAction func updateCustomBtnClick(sender: AnyObject)
+    {
+        
+    }
+    
     func initViewByData(_orderDataArr : NSMutableArray?, _customData : NSMutableDictionary)
     {
-        self.orderDataArr = _orderDataArr
+//        self.orderDataArr = _orderDataArr
         self.customData = _customData
         self.nameLabel.text = (_customData.objectForKey("customName") as? String)! + "    " + (_customData.objectForKey("phone") as? String)! + "    " +
             (_customData.objectForKey("address") as? String)!
-//        self.sexLabel.text = _customData.objectForKey("sex") as? String
-//        self.ageLabel.text =  String(format: "%i", (_customData.objectForKey("age") as! NSNumber).longLongValue)
-        
+        self.orderDataArr = CustomModel.getOrderData((self.customData!.objectForKey("customId") as! NSNumber).longLongValue, state: -1)
         // Must reload data in main queue, or maybe crashed.
         dispatch_async(dispatch_get_main_queue(), {
             self.orderTableView.reloadData()
         });
+        self._selectOrderDataDic = nil
+    }
+    
+    @IBAction func deleteCustomControl(sender: AnyObject)
+    {
+        // create the alert
+        let alert = UIAlertController(title: "请确认", message: "确认要删除该客户信息吗？", preferredStyle: UIAlertControllerStyle.Alert)
+
+        // add the actions (buttons)
+        alert.addAction(UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "确认", style: UIAlertActionStyle.Default, handler: { action in
+            let result : Bool = CustomModel.deleteCustomData(self.customData)!
+            if result == true
+            {
+                SwiftNotice.showText("删除成功")
+                self.orderViewDelegate?.updateCustomData()
+                self.returnBackBtnClick(self.returnBackBtn)
+            }else{
+                SwiftNotice.showText("删除失败")
+            }
+        }))
+        
+        // show the alert
+        let appDelegate  = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.window!.rootViewController!.presentViewController(alert, animated: true, completion: nil)
     }
     
     @IBAction func deleteOrderBtnClick(sender: UIButton)
     {
+        if self._selectOrderDataDic == nil
+        {
+            SwiftNotice.showText("请选择需要删除的订单")
+        }else{
+            // create the alert
+            let alert = UIAlertController(title: "请确认", message: "确认要删除选中的订单吗？", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            // add the actions (buttons)
+            alert.addAction(UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "确认", style: UIAlertActionStyle.Default, handler: { action in
+                let result : Bool = CustomModel.deleteOrderData(NSMutableDictionary(dictionary: self._selectOrderDataDic!))!
+                if result == true
+                {
+                    SwiftNotice.showText("删除成功")
+                    self.updateOrderData()
+                }else{
+                    SwiftNotice.showText("删除失败")
+                }
+            }))
+            // show the alert
+            let appDelegate  = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.window!.rootViewController!.presentViewController(alert, animated: true, completion: nil)
         
+        }
     }
     
-    @IBAction func addOrderBtnClick(sender: UIButton) {
+    @IBAction func addOrderBtnClick(sender: UIButton)
+    {
+        if self.orderAddView == nil
+        {
+            self.orderAddView = NSBundle.mainBundle().loadNibNamed("OrderAddView", owner: nil, options: nil)[0] as? OrderAddView
+            self.orderAddView!.orderAddDelegate = self
+        }
+        self.orderAddView?.customDataDic = self.customData
+        self.addSubview(self.orderAddView!)
+        self.orderAddView?.initViewControl()
     }
     
+    // OrderAddDelegate
+    func updateOrderData()
+    {
+        self.orderDataArr = CustomModel.getOrderData((self.customData?.objectForKey("customId") as! NSNumber).longLongValue, state: -1)
+        dispatch_async(dispatch_get_main_queue(), {
+            self.orderTableView.reloadData()
+        });
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {

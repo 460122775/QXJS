@@ -36,10 +36,10 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ois-Qy-wuE">
-                            <rect key="frame" x="367" y="28" width="200" height="30"/>
+                            <rect key="frame" x="317" y="28" width="300" height="30"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="200" id="EAe-HC-a03"/>
+                                <constraint firstAttribute="width" constant="300" id="EAe-HC-a03"/>
                                 <constraint firstAttribute="height" constant="45" id="M1i-qM-1Fq"/>
                                 <constraint firstAttribute="height" constant="30" id="auU-Ol-pHE"/>
                                 <constraint firstAttribute="width" constant="519" id="mZa-bT-jNZ"/>
@@ -62,7 +62,7 @@
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" title=" 删除订单" image="custom_delete">
-                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
                                 <action selector="deleteOrderBtnClick:" destination="L2a-ov-2h9" eventType="touchUpInside" id="0x4-Zi-w74"/>
@@ -82,19 +82,59 @@
                                 <action selector="addOrderBtnClick:" destination="L2a-ov-2h9" eventType="touchUpInside" id="zxE-1B-hf9"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="en7-gH-g9X">
+                            <rect key="frame" x="100" y="28" width="89" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Kdy-Ui-byc"/>
+                                <constraint firstAttribute="width" constant="89" id="g9e-h2-2ez"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title=" 删除客户" image="custom_delete">
+                                <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="deleteCustomControl:" destination="L2a-ov-2h9" eventType="touchUpInside" id="rjA-Y7-fLT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXB-yk-Xdo">
+                            <rect key="frame" x="209" y="28" width="89" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="auE-1v-chb"/>
+                                <constraint firstAttribute="width" constant="89" id="tIs-3N-pvn"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title=" 修改信息" image="custom_direct">
+                                <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="updateCustomBtnClick:" destination="L2a-ov-2h9" eventType="touchUpInside" id="aib-UV-aih"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="UbL-zm-U2Q" firstAttribute="centerY" secondItem="ois-Qy-wuE" secondAttribute="centerY" id="0A8-G9-Lob"/>
                         <constraint firstItem="UbL-zm-U2Q" firstAttribute="leading" secondItem="Zkf-yp-9Xr" secondAttribute="trailing" constant="15" id="83v-Z3-nLb"/>
+                        <constraint firstItem="FXB-yk-Xdo" firstAttribute="centerY" secondItem="en7-gH-g9X" secondAttribute="centerY" id="8nF-Zo-jyq"/>
                         <constraint firstAttribute="trailing" secondItem="UbL-zm-U2Q" secondAttribute="trailing" constant="25" id="CBc-Qw-Bb2"/>
                         <constraint firstItem="Zkf-yp-9Xr" firstAttribute="centerY" secondItem="ois-Qy-wuE" secondAttribute="centerY" id="CKq-0p-cNR"/>
                         <constraint firstAttribute="height" constant="65" id="Q9W-7K-HUp"/>
+                        <constraint firstItem="Zkf-yp-9Xr" firstAttribute="leading" secondItem="en7-gH-g9X" secondAttribute="trailing" constant="18" id="R0d-ah-tkq"/>
                         <constraint firstItem="oS7-MI-8lz" firstAttribute="top" secondItem="kdz-Uc-WhP" secondAttribute="top" constant="30" id="UME-R1-FBd"/>
                         <constraint firstItem="ois-Qy-wuE" firstAttribute="centerX" secondItem="kdz-Uc-WhP" secondAttribute="centerX" id="byh-DF-7wT"/>
                         <constraint firstItem="ois-Qy-wuE" firstAttribute="centerY" secondItem="oS7-MI-8lz" secondAttribute="centerY" id="cGw-M0-0et"/>
                         <constraint firstItem="oS7-MI-8lz" firstAttribute="leading" secondItem="kdz-Uc-WhP" secondAttribute="leading" constant="10" id="fqf-Os-fXJ"/>
+                        <constraint firstItem="FXB-yk-Xdo" firstAttribute="leading" secondItem="en7-gH-g9X" secondAttribute="trailing" constant="20" id="pAC-IT-1h1"/>
+                        <constraint firstItem="en7-gH-g9X" firstAttribute="leading" secondItem="oS7-MI-8lz" secondAttribute="trailing" constant="30" id="sEj-9B-GU8"/>
+                        <constraint firstItem="en7-gH-g9X" firstAttribute="centerY" secondItem="Zkf-yp-9Xr" secondAttribute="centerY" id="uVK-22-cQ0"/>
+                        <constraint firstItem="en7-gH-g9X" firstAttribute="centerY" secondItem="oS7-MI-8lz" secondAttribute="centerY" id="vCR-B1-rCA"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="uVK-22-cQ0"/>
+                            <exclude reference="R0d-ah-tkq"/>
+                        </mask>
+                    </variation>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdZ-Yf-sts">
                     <rect key="frame" x="25" y="88" width="885" height="45"/>
@@ -207,6 +247,7 @@
             <connections>
                 <outlet property="nameLabel" destination="ois-Qy-wuE" id="q1y-5k-GPN"/>
                 <outlet property="orderTableView" destination="EJr-up-mkm" id="boe-Ny-sZe"/>
+                <outlet property="returnBackBtn" destination="oS7-MI-8lz" id="fWf-E4-4Jm"/>
             </connections>
         </view>
     </objects>
@@ -214,5 +255,6 @@
         <image name="custom_add" width="14" height="14"/>
         <image name="custom_back" width="14" height="14"/>
         <image name="custom_delete" width="14" height="14"/>
+        <image name="custom_direct" width="14" height="14"/>
     </resources>
 </document>

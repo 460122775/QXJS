@@ -46,13 +46,7 @@ class CustomViewController: UIViewController, CustomViewDelegate, OrderViewDeleg
     
     override func viewDidAppear(animated: Bool)
     {
-        self.customDataArr = CustomModel.getCustomData(-1)
-        if customDataArr == nil || customDataArr?.count == 0
-        {
-            
-        }else{
-            self.customMainView.initViewByData(self.customDataArr!)
-        }
+        self.updateCustomData()
     }
     
     func showCustomDetail(dataDic: NSMutableDictionary)
@@ -68,8 +62,20 @@ class CustomViewController: UIViewController, CustomViewDelegate, OrderViewDeleg
     }
 
     // Order main view delegate.
-    func orderMainViewReturnBack() {
+    func orderMainViewReturnBack()
+    {
         self.orderView?.removeFromSuperview()
+    }
+    
+    func updateCustomData()
+    {
+        self.customDataArr = CustomModel.getCustomData(-1)
+        if customDataArr == nil || customDataArr?.count == 0
+        {
+            
+        }else{
+            self.customMainView.initViewByData(self.customDataArr!)
+        }
     }
     
     override func didReceiveMemoryWarning()

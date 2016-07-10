@@ -74,7 +74,20 @@ class CustomModel: NSObject {
     class func deleteCustomData(data : NSMutableDictionary!) -> Bool?
     {
         data.setObject(-1, forKey: "state")
-        return CustomModel .updateCustomData(data)
+        if data.objectForKey("sex") as! String == "男"
+        {
+            data.setObject(NSNumber(longLong:1), forKey: "sex")
+        }else{
+            data.setObject(NSNumber(longLong:0), forKey: "sex")
+        }
+        let result : Bool = CustomModel.updateCustomData(data)!
+        if (data.objectForKey("sex") as! NSNumber).longLongValue == 1
+        {
+            data!.setValue(String("男"), forKey: "sex")
+        }else{
+            data!.setValue(String("女"), forKey: "sex")
+        }
+        return result
     }
     
     class func deleteOrderData(data : NSMutableDictionary!) -> Bool?

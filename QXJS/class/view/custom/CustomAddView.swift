@@ -27,6 +27,7 @@ class CustomAddView: UIView, UITextFieldDelegate {
     @IBOutlet var addressTextfield: UITextField!
     
     var delegate : CustomAddViewDelegate?
+    var sexValue : Int32 = 1
     
     override func drawRect(rect: CGRect)
     {
@@ -51,16 +52,23 @@ class CustomAddView: UIView, UITextFieldDelegate {
             self.sexMaleBtn.titleLabel?.textColor = UIColor.whiteColor()
             self.sexFamaleBtn.backgroundColor = UIColor.whiteColor()
             self.sexFamaleBtn.titleLabel?.textColor = UIColor.darkGrayColor()
+            self.sexValue = 1
         }else{
             self.sexFamaleBtn.backgroundColor = UIColor(red: 248/255, green: 87/255, blue: 9/255, alpha: 1)
             self.sexFamaleBtn.titleLabel?.textColor = UIColor.whiteColor()
             self.sexMaleBtn.backgroundColor = UIColor.whiteColor()
             self.sexMaleBtn.titleLabel?.textColor = UIColor.darkGrayColor()
+            self.sexValue = 0
         }
     }
 
     @IBAction func onReturnBtnClick(sender: AnyObject)
     {
+        self.nameTextField.text = ""
+        self.addressTextfield.text = ""
+        self.phoneTextField.text = ""
+        self.ageTextFile.text = ""
+        
         self.removeFromSuperview()
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
@@ -68,11 +76,35 @@ class CustomAddView: UIView, UITextFieldDelegate {
     
     @IBAction func onSubmitBtnClick(sender: AnyObject)
     {
-        if self.delegate != nil
+        // Judge nil.
+        if self.nameTextField.text == nil || self.nameTextField.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 0
         {
-            delegate?.customAddSuccess()
+            SwiftNotice.showText("客户名称不能为空")
+            return
+        }else if self.addressTextfield.text == nil || self.addressTextfield.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 0{
+            SwiftNotice.showText("客户地址不能为空")
+            return
+        }else if self.phoneTextField.text == nil || self.phoneTextField.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 0{
+            SwiftNotice.showText("联系电话不能为空")
+            return
+        }else if self.delegate != nil{
+            let customData : NSMutableDictionary = NSMutableDictionary()
+            customData.setObject(NSNumber(int: self.sexValue), forKey: "sex")
+            if self.ageTextFile.text != nil && Int32(self.ageTextFile.text!) != nil
+            {
+                customData.setObject(NSNumber(int:Int32(self.ageTextFile.text!)!), forKey: "age")
+            }else{
+                customData.setObject(NSNumber(int:0), forKey: "age")
+            }
+            customData.setObject(self.nameTextField.text!, forKey: "customName")
+            customData.setObject(self.phoneTextField.text!, forKey: "phone")
+            customData.setObject(self.addressTextfield.text!, forKey: "address")
+            if CustomModel.insertCustomData(customData) == true
+            {
+                delegate?.customAddSuccess()
+                self.removeFromSuperview()
+            }
         }
-        self.onReturnBtnClick(self.sexFamaleBtn)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool
