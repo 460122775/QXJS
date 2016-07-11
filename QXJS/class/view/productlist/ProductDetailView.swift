@@ -127,7 +127,7 @@ class ProductDetailView: UIView
         if currentProductDic!.objectForKey("paramJson") != nil
         {
             let paramJson = currentProductDic!.objectForKey("paramJson") as! String
-            let paramArr = paramJson.componentsSeparatedByString("::")
+            let paramArr = paramJson.componentsSeparatedByString("@#")
             for _paramStr in paramArr
             {
                 paramTextView.text = paramTextView.text + "\n" + self.cutCommentChars(_paramStr)
