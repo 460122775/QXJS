@@ -46,10 +46,10 @@ class CustomMainView: UIView, UITableViewDelegate, UITableViewDataSource,
             self.customAddView!.delegate = self
         }
         self.addSubview(self.customAddView!)
-        self.customAddView?.initViewControl()
+        self.customAddView?.initViewControl(true)
     }
     
-    func customAddSuccess()
+    func customAddSuccess(_customData : NSMutableDictionary)
     {
         // Update data.
         self.customDataArr = CustomModel.getCustomData(-1)

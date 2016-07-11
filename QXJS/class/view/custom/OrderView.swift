@@ -14,7 +14,7 @@ protocol OrderViewDelegate
     func updateCustomData()
 }
 
-class OrderView: UIView, UITableViewDelegate, UITableViewDataSource, OrderAddDelegate {
+class OrderView: UIView, UITableViewDelegate, UITableViewDataSource, CustomAddViewDelegate, OrderAddDelegate {
     @IBOutlet var nameLabel: UILabel!
     
     @IBOutlet var returnBackBtn: UIButton!
@@ -27,6 +27,7 @@ class OrderView: UIView, UITableViewDelegate, UITableViewDataSource, OrderAddDel
     let TableCellIndentifier : String = "OrderTableViewCell"
     var orderDataArr : NSMutableArray?
     var customData : NSMutableDictionary?
+    var customAddView : CustomAddView?
     
     override func drawRect(rect: CGRect)
     {
@@ -49,15 +50,28 @@ class OrderView: UIView, UITableViewDelegate, UITableViewDataSource, OrderAddDel
     
     @IBAction func updateCustomBtnClick(sender: AnyObject)
     {
-        
+        if customAddView == nil
+        {
+            self.customAddView = NSBundle.mainBundle().loadNibNamed("CustomAddView", owner: nil, options: nil)[0] as? CustomAddView
+            self.customAddView!.delegate = self
+        }
+        self.addSubview(self.customAddView!)
+        self.customAddView!.customData = self.customData
+        self.customAddView?.initViewControl(false)
+    }
+    
+    func customAddSuccess(_customData : NSMutableDictionary)
+    {
+        self.customData = _customData
+        self.orderViewDelegate?.updateCustomData()
+        self.nameLabel.text = (self.customData!.objectForKey("customName") as? String)! + "    " + (self.customData!.objectForKey("phone") as? String)!
     }
     
     func initViewByData(_orderDataArr : NSMutableArray?, _customData : NSMutableDictionary)
     {
 //        self.orderDataArr = _orderDataArr
         self.customData = _customData
-        self.nameLabel.text = (_customData.objectForKey("customName") as? String)! + "    " + (_customData.objectForKey("phone") as? String)! + "    " +
-            (_customData.objectForKey("address") as? String)!
+        self.nameLabel.text = (_customData.objectForKey("customName") as? String)! + "    " + (_customData.objectForKey("phone") as? String)!
         self.orderDataArr = CustomModel.getOrderData((self.customData!.objectForKey("customId") as! NSNumber).longLongValue, state: -1)
         // Must reload data in main queue, or maybe crashed.
         dispatch_async(dispatch_get_main_queue(), {

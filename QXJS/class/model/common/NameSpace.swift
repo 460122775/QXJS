@@ -24,6 +24,9 @@ var CurrentUserId : Int32 = 0
 var CurrentUserName : String?
 var CurrentStoreId : Int32 = 0
 var CurrentUserRole : Int32 = 0
+var CurrentStoreName : String?
+var CurrentStoreAddress : String?
+var CurrentStorePhone : String?
 
 var ZeroValue : UInt32 = 0
 var BYTE_ZERO : UInt8 = 0

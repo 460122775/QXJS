@@ -39,7 +39,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate
             CurrentUserName = NSUserDefaults.standardUserDefaults().objectForKey("CurrentUserName") as? String
             CurrentStoreId = (NSUserDefaults.standardUserDefaults().objectForKey("CurrentStoreId") as! NSNumber).intValue
             CurrentUserRole = (NSUserDefaults.standardUserDefaults().objectForKey("CurrentUserRole") as! NSNumber).intValue
-//            SettingModel.downloadDataControl(), 
+            CurrentStoreName = NSUserDefaults.standardUserDefaults().objectForKey("CurrentStoreName") as? String
+            CurrentStoreAddress = NSUserDefaults.standardUserDefaults().objectForKey("CurrentStoreAddress") as? String
+            CurrentStorePhone = NSUserDefaults.standardUserDefaults().objectForKey("CurrentStorePhone") as? String
+//            SettingModel.downloadDataControl(),
             MainMenuView.sharedInstance().companyBrandBtnClick(nil)
             self.view.makeToast(message: "登录成功，正在初始化数据，请耐心等待。。。", duration: 120, position: HRToastPositionCenter)
         }else{
@@ -98,10 +101,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate
                 CurrentUserName = dataDic?.valueForKey("username") as? String
                 CurrentStoreId = (dataDic?.valueForKey("storeId") as! NSNumber).intValue
                 CurrentUserRole = (dataDic?.valueForKey("role") as! NSNumber).intValue
+                CurrentStoreName = dataDic?.valueForKey("storeName") as? String
+                CurrentStoreAddress = dataDic?.valueForKey("address") as? String
+                CurrentStorePhone = dataDic?.valueForKey("phone") as? String
+                
                 NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("userId") as! NSNumber, forKey: "CurrentUserId")
                 NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("username") as! String, forKey: "CurrentUserName")
                 NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("storeId") as! NSNumber, forKey: "CurrentStoreId")
                 NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("role") as! NSNumber, forKey: "CurrentUserRole")
+                NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("storeName") as! String, forKey: "CurrentStoreName")
+                NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("address") as! String, forKey: "CurrentStoreAddress")
+                NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("phone") as! String, forKey: "CurrentStorePhone")
                 NSNotificationCenter.defaultCenter().postNotificationName(LOGIN, object: SUCCESS)
             }
         })

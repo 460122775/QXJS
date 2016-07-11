@@ -9,6 +9,11 @@
             <connections>
                 <outlet property="mainContainer" destination="0AE-7R-ljl" id="pTa-oI-Hk4"/>
                 <outlet property="mainMenuContainer" destination="Og6-1R-a1x" id="lz1-zE-FRO"/>
+                <outlet property="phoneLabel" destination="iMY-HP-xUa" id="uXR-Vf-StG"/>
+                <outlet property="storeAddressLabel" destination="ZAC-vK-eOF" id="rMU-k4-VzW"/>
+                <outlet property="storeNameLabel" destination="OGt-ML-awu" id="TfH-e6-ClS"/>
+                <outlet property="userRoleLabel" destination="SPl-dV-3bV" id="MnS-7q-vpn"/>
+                <outlet property="usernameLabel" destination="cMd-7V-7Tv" id="pPt-uB-z7b"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="rHy-J7-Qax"/>
             </connections>
         </placeholder>
@@ -44,7 +49,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="suo-hB-5cb" userLabel="infoView">
                             <rect key="frame" x="25" y="115" width="884" height="250"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admin（管理员）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMd-7V-7Tv">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMd-7V-7Tv">
                                     <rect key="frame" x="284" y="76" width="200" height="16"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="200" id="2eQ-tr-26b"/>
@@ -105,21 +110,11 @@
                                         <constraint firstAttribute="height" constant="124" id="e94-oh-61c"/>
                                     </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址 : 成都市双流区朝阳路280号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPl-dV-3bV">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户权限：管理员" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPl-dV-3bV">
                                     <rect key="frame" x="284" y="120" width="200" height="14"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="200" id="UYX-Gv-HXo"/>
                                         <constraint firstAttribute="height" constant="14" id="uc3-ud-4ef"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电话 : 028－12345678" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7Z-jp-nun">
-                                    <rect key="frame" x="284" y="149" width="200" height="14"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="200" id="c14-1O-0Pt"/>
-                                        <constraint firstAttribute="height" constant="14" id="dvd-39-H40"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -217,9 +212,7 @@
                                 <constraint firstItem="noT-Vr-0kD" firstAttribute="leading" secondItem="suo-hB-5cb" secondAttribute="leading" constant="28" id="hgp-JA-OWI"/>
                                 <constraint firstItem="aLD-1r-DFn" firstAttribute="top" secondItem="ReZ-ox-W30" secondAttribute="bottom" constant="20" id="iQb-DK-Qvb"/>
                                 <constraint firstItem="0Kd-JL-DCQ" firstAttribute="top" secondItem="noT-Vr-0kD" secondAttribute="bottom" constant="12" id="jYd-8b-cfe"/>
-                                <constraint firstItem="W7Z-jp-nun" firstAttribute="top" secondItem="SPl-dV-3bV" secondAttribute="bottom" constant="15" id="lKh-4u-aNs"/>
                                 <constraint firstItem="ReZ-ox-W30" firstAttribute="leading" secondItem="sp3-uO-MMw" secondAttribute="trailing" constant="40" id="nbh-em-MFf"/>
-                                <constraint firstItem="W7Z-jp-nun" firstAttribute="leading" secondItem="RAK-h1-dxL" secondAttribute="trailing" constant="24" id="pdD-ly-BBH"/>
                                 <constraint firstItem="cMd-7V-7Tv" firstAttribute="top" secondItem="suo-hB-5cb" secondAttribute="top" constant="76" id="rqI-1Z-xyR"/>
                                 <constraint firstItem="RAK-h1-dxL" firstAttribute="top" secondItem="suo-hB-5cb" secondAttribute="top" constant="74" id="vpq-2K-u71"/>
                             </constraints>

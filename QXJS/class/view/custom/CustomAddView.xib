@@ -161,6 +161,7 @@
                 <outlet property="phoneTextField" destination="5zu-db-qMH" id="g3a-Lq-6Rj"/>
                 <outlet property="sexFamaleBtn" destination="sND-KS-333" id="ehV-oR-5ER"/>
                 <outlet property="sexMaleBtn" destination="iBe-SA-6hN" id="NVr-Wq-Qey"/>
+                <outlet property="titleLabel" destination="Mo8-UH-7vR" id="B9B-gQ-qan"/>
             </connections>
         </view>
     </objects>

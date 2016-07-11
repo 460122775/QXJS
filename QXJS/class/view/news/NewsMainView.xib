@@ -89,6 +89,10 @@
                     <exclude reference="fUt-9R-hO0"/>
                 </mask>
             </variation>
+            <connections>
+                <outlet property="tableView" destination="e55-lB-efy" id="cnd-EW-zOf"/>
+                <outlet property="webView" destination="pC4-CX-LhE" id="x1v-cR-izg"/>
+            </connections>
         </view>
     </objects>
 </document>

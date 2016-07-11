@@ -13,6 +13,11 @@ class SettingViewController: UIViewController
 
     @IBOutlet var mainMenuContainer : UIView!
     @IBOutlet var mainContainer : UIView!
+    @IBOutlet var usernameLabel: UILabel!
+    @IBOutlet var userRoleLabel: UILabel!
+    @IBOutlet var storeNameLabel: UILabel!
+    @IBOutlet var storeAddressLabel: UILabel!
+    @IBOutlet var phoneLabel: UILabel!
     
     var mainMenuView : MainMenuView!
     var delegate = DownloadSessionDelegate.sharedInstance
@@ -33,6 +38,24 @@ class SettingViewController: UIViewController
         mainMenuView = MainMenuView.sharedInstance()
         mainMenuView.removeFromSuperview()
         mainMenuContainer.addSubview(mainMenuView)
+    }
+    
+    override func viewWillAppear(animated: Bool)
+    {
+        self.usernameLabel.text = "用 户 名：" + CurrentUserName!
+        if CurrentUserRole == 4
+        {
+            self.userRoleLabel.text = "用户角色：超级管理员"
+        }else if CurrentUserRole == 3{
+            self.userRoleLabel.text = "用户角色：管理员"
+        }else if CurrentUserRole == 2{
+            self.userRoleLabel.text = "用户角色：店长"
+        }else if CurrentUserRole == 1{
+            self.userRoleLabel.text = "用户角色：店员"
+        }
+        self.storeNameLabel.text = CurrentStoreName
+        self.storeAddressLabel.text = CurrentStoreAddress
+        self.phoneLabel.text = CurrentStorePhone
     }
     
     var firstClick : Bool = true

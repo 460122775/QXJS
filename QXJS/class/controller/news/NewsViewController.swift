@@ -45,6 +45,8 @@ class NewsViewController: UIViewController
         if sender.selectedSegmentIndex == 0
         {
             
+        }else if CurrentUserRole <= 1{
+            SwiftNotice.showText("请使用店长及以上权限的账户登录")
         }else{
             
         }
