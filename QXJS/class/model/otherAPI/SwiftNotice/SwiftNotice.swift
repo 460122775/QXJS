@@ -276,8 +276,9 @@ class SwiftNotice: NSObject {
 //        if UIApplication.sharedApplication().statusBarOrientation.hashValue >= 3 {
 //            return CGPoint(x: rv.center.y, y: rv.center.x)
 //        } else {
-            return rv.center
+//            return rv.center
 //        }
+        return CGPoint(x: rv.center.x, y: rv.center.y - 30)
     }
 }
 

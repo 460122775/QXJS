@@ -19,6 +19,8 @@
 		0118F36D1C62697E003C9EFD /* ProductListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0118F36B1C62697E003C9EFD /* ProductListViewController.xib */; };
 		0118F36F1C626B72003C9EFD /* ProductListMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0118F36E1C626B72003C9EFD /* ProductListMainView.swift */; };
 		0118F3711C626B9A003C9EFD /* ProductListMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0118F3701C626B9A003C9EFD /* ProductListMainView.xib */; };
+		013CC4131D3531D600606F1F /* UpdateInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013CC4121D3531D600606F1F /* UpdateInfoView.xib */; };
+		013CC4151D35358E00606F1F /* UpdateInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013CC4141D35358E00606F1F /* UpdateInfoView.swift */; };
 		0140926D1CBE3B710049016E /* DownloadSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0140926C1CBE3B710049016E /* DownloadSessionDelegate.swift */; };
 		0140926F1CBF33180049016E /* ImgShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0140926E1CBF33180049016E /* ImgShowView.swift */; };
 		014092711CBF33360049016E /* ImgShowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 014092701CBF33360049016E /* ImgShowView.xib */; };
@@ -142,6 +144,8 @@
 		0118F36B1C62697E003C9EFD /* ProductListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductListViewController.xib; path = class/controller/productlist/ProductListViewController.xib; sourceTree = "<group>"; };
 		0118F36E1C626B72003C9EFD /* ProductListMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductListMainView.swift; path = class/view/productlist/ProductListMainView.swift; sourceTree = "<group>"; };
 		0118F3701C626B9A003C9EFD /* ProductListMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductListMainView.xib; path = class/view/productlist/ProductListMainView.xib; sourceTree = "<group>"; };
+		013CC4121D3531D600606F1F /* UpdateInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UpdateInfoView.xib; path = class/view/setting/UpdateInfoView.xib; sourceTree = "<group>"; };
+		013CC4141D35358E00606F1F /* UpdateInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateInfoView.swift; path = class/view/setting/UpdateInfoView.swift; sourceTree = "<group>"; };
 		0140926C1CBE3B710049016E /* DownloadSessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DownloadSessionDelegate.swift; path = class/model/setting/DownloadSessionDelegate.swift; sourceTree = "<group>"; };
 		0140926E1CBF33180049016E /* ImgShowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImgShowView.swift; path = class/view/common/ImgShowView.swift; sourceTree = "<group>"; };
 		014092701CBF33360049016E /* ImgShowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImgShowView.xib; path = class/view/common/ImgShowView.xib; sourceTree = "<group>"; };
@@ -669,6 +673,8 @@
 				019B6D161C8026C500F90D1A /* SettingMainView.xib */,
 				0145AF5C1D2C7D5500087D56 /* ProgressView.swift */,
 				0145AF5E1D2C7D7300087D56 /* ProgressView.xib */,
+				013CC4121D3531D600606F1F /* UpdateInfoView.xib */,
+				013CC4141D35358E00606F1F /* UpdateInfoView.swift */,
 			);
 			name = setting;
 			sourceTree = "<group>";
@@ -922,6 +928,7 @@
 				01A575BA1C8434D500334190 /* TechnologyDetail1View.xib in Resources */,
 				01DC85D11CBA06F0008086F5 /* CustomTableViewCell.xib in Resources */,
 				0174D41C1C82FB3F009F366A /* StuffView.xib in Resources */,
+				013CC4131D3531D600606F1F /* UpdateInfoView.xib in Resources */,
 				019B6D211C8053C600F90D1A /* CustomViewController.xib in Resources */,
 				01A575BC1C8434D500334190 /* TechnologyDetail3View.xib in Resources */,
 				01A575E11C85434A00334190 /* BrandDetail12.xib in Resources */,
@@ -1029,6 +1036,7 @@
 				01A575A91C83F1CF00334190 /* TechnologyMainView.swift in Sources */,
 				017AD8BB1CAA10050058D480 /* Range.swift in Sources */,
 				017B34721CBA5F790099E782 /* OrderTableViewCell.swift in Sources */,
+				013CC4151D35358E00606F1F /* UpdateInfoView.swift in Sources */,
 				01A575D21C84428A00334190 /* NewsMainView.swift in Sources */,
 				019B6CFE1C7E8F1000F90D1A /* CompanyBrandNavView.swift in Sources */,
 				017AD8B81CAA10050058D480 /* Int.swift in Sources */,

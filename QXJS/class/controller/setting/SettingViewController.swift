@@ -58,6 +58,18 @@ class SettingViewController: UIViewController
         self.phoneLabel.text = CurrentStorePhone
     }
     
+    @IBAction func updateInfoBtnClick(sender: AnyObject)
+    {
+        let updateInfoView : UpdateInfoView! = NSBundle.mainBundle().loadNibNamed("UpdateInfoView", owner: nil, options: nil)[0] as? UpdateInfoView
+//        updateInfoView!.delegate = self
+        self.view.addSubview(updateInfoView)
+    }
+    
+    @IBAction func updateStoreInfoBtnClick(sender: AnyObject)
+    {
+        
+    }
+    
     var firstClick : Bool = true
     @IBAction func downloadDataBtnClick(sender: UIButton)
     {

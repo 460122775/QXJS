@@ -127,6 +127,9 @@
                                         <constraint firstAttribute="height" constant="72" id="oMs-mF-yjJ"/>
                                     </constraints>
                                     <state key="normal" backgroundImage="edit"/>
+                                    <connections>
+                                        <action selector="updateInfoBtnClick:" destination="-1" eventType="touchUpInside" id="fsN-e7-nW0"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sp3-uO-MMw">
                                     <rect key="frame" x="633" y="62" width="72" height="72"/>
@@ -314,6 +317,9 @@
                                         <constraint firstAttribute="width" constant="72" id="weI-cq-Abl"/>
                                     </constraints>
                                     <state key="normal" backgroundImage="edit"/>
+                                    <connections>
+                                        <action selector="updateStoreInfoBtnClick:" destination="-1" eventType="touchUpInside" id="ITT-qG-jgA"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="修改资料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5G-qq-St3">
                                     <rect key="frame" x="532" y="154" width="50" height="14"/>
