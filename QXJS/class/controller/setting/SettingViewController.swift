@@ -61,13 +61,13 @@ class SettingViewController: UIViewController
     @IBAction func updateInfoBtnClick(sender: AnyObject)
     {
         let updateInfoView : UpdateInfoView! = NSBundle.mainBundle().loadNibNamed("UpdateInfoView", owner: nil, options: nil)[0] as? UpdateInfoView
-//        updateInfoView!.delegate = self
         self.view.addSubview(updateInfoView)
     }
     
     @IBAction func updateStoreInfoBtnClick(sender: AnyObject)
     {
-        
+        let updateStoreInfoView : UpdateStoreInfoView! = NSBundle.mainBundle().loadNibNamed("UpdateStoreInfoView", owner: nil, options: nil)[0] as? UpdateStoreInfoView
+        self.view.addSubview(updateStoreInfoView)
     }
     
     var firstClick : Bool = true

@@ -21,6 +21,8 @@
 		0118F3711C626B9A003C9EFD /* ProductListMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0118F3701C626B9A003C9EFD /* ProductListMainView.xib */; };
 		013CC4131D3531D600606F1F /* UpdateInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013CC4121D3531D600606F1F /* UpdateInfoView.xib */; };
 		013CC4151D35358E00606F1F /* UpdateInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013CC4141D35358E00606F1F /* UpdateInfoView.swift */; };
+		013CC4181D35B76D00606F1F /* UpdateStoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013CC4161D35B76D00606F1F /* UpdateStoreInfoView.swift */; };
+		013CC4191D35B76D00606F1F /* UpdateStoreInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013CC4171D35B76D00606F1F /* UpdateStoreInfoView.xib */; };
 		0140926D1CBE3B710049016E /* DownloadSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0140926C1CBE3B710049016E /* DownloadSessionDelegate.swift */; };
 		0140926F1CBF33180049016E /* ImgShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0140926E1CBF33180049016E /* ImgShowView.swift */; };
 		014092711CBF33360049016E /* ImgShowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 014092701CBF33360049016E /* ImgShowView.xib */; };
@@ -146,6 +148,8 @@
 		0118F3701C626B9A003C9EFD /* ProductListMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductListMainView.xib; path = class/view/productlist/ProductListMainView.xib; sourceTree = "<group>"; };
 		013CC4121D3531D600606F1F /* UpdateInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UpdateInfoView.xib; path = class/view/setting/UpdateInfoView.xib; sourceTree = "<group>"; };
 		013CC4141D35358E00606F1F /* UpdateInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateInfoView.swift; path = class/view/setting/UpdateInfoView.swift; sourceTree = "<group>"; };
+		013CC4161D35B76D00606F1F /* UpdateStoreInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateStoreInfoView.swift; path = class/view/setting/UpdateStoreInfoView.swift; sourceTree = "<group>"; };
+		013CC4171D35B76D00606F1F /* UpdateStoreInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UpdateStoreInfoView.xib; path = class/view/setting/UpdateStoreInfoView.xib; sourceTree = "<group>"; };
 		0140926C1CBE3B710049016E /* DownloadSessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DownloadSessionDelegate.swift; path = class/model/setting/DownloadSessionDelegate.swift; sourceTree = "<group>"; };
 		0140926E1CBF33180049016E /* ImgShowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImgShowView.swift; path = class/view/common/ImgShowView.swift; sourceTree = "<group>"; };
 		014092701CBF33360049016E /* ImgShowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImgShowView.xib; path = class/view/common/ImgShowView.xib; sourceTree = "<group>"; };
@@ -675,6 +679,8 @@
 				0145AF5E1D2C7D7300087D56 /* ProgressView.xib */,
 				013CC4121D3531D600606F1F /* UpdateInfoView.xib */,
 				013CC4141D35358E00606F1F /* UpdateInfoView.swift */,
+				013CC4161D35B76D00606F1F /* UpdateStoreInfoView.swift */,
+				013CC4171D35B76D00606F1F /* UpdateStoreInfoView.xib */,
 			);
 			name = setting;
 			sourceTree = "<group>";
@@ -927,6 +933,7 @@
 				01A575D31C84428A00334190 /* NewsMainView.xib in Resources */,
 				01A575BA1C8434D500334190 /* TechnologyDetail1View.xib in Resources */,
 				01DC85D11CBA06F0008086F5 /* CustomTableViewCell.xib in Resources */,
+				013CC4191D35B76D00606F1F /* UpdateStoreInfoView.xib in Resources */,
 				0174D41C1C82FB3F009F366A /* StuffView.xib in Resources */,
 				013CC4131D3531D600606F1F /* UpdateInfoView.xib in Resources */,
 				019B6D211C8053C600F90D1A /* CustomViewController.xib in Resources */,
@@ -1062,6 +1069,7 @@
 				017AD8B41CAA10050058D480 /* Dictionary.swift in Sources */,
 				017AD8961CAA0F720058D480 /* DBInitData.swift in Sources */,
 				019B6D041C7F4DF400F90D1A /* CompanyInfoView.swift in Sources */,
+				013CC4181D35B76D00606F1F /* UpdateStoreInfoView.swift in Sources */,
 				01438A3E1C51224E00B0ECEF /* AppDelegate.swift in Sources */,
 				0118F3661C61CED8003C9EFD /* CompanyBrandMainView.swift in Sources */,
 				017AD8971CAA0F720058D480 /* DBInitTables.swift in Sources */,

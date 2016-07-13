@@ -56,6 +56,7 @@ class UpdateInfoView: UIView, UITextFieldDelegate {
                 SwiftNotice.showText("修改密码失败，请重试!")
             }else{
                 SwiftNotice.showText("密码修改成功！")
+                self.removeFromSuperview()
             }
         })
         task.resume()
