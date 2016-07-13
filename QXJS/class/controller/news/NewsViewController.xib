@@ -29,14 +29,14 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iwj-CA-onl">
                             <rect key="frame" x="0.0" y="0.0" width="934" height="65"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news_btn_camara" translatesAutoresizingMaskIntoConstraints="NO" id="6FQ-kk-bBd">
+                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news_btn_camara" translatesAutoresizingMaskIntoConstraints="NO" id="6FQ-kk-bBd">
                                     <rect key="frame" x="776" y="32" width="23" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="23" id="8jS-ob-GXO"/>
                                         <constraint firstAttribute="height" constant="24" id="skt-pc-ixe"/>
                                     </constraints>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDl-Eb-Qxt">
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDl-Eb-Qxt">
                                     <rect key="frame" x="776" y="34" width="130" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="4E6-Me-fnc"/>

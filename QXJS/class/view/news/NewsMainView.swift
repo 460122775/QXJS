@@ -26,6 +26,9 @@ class NewsMainView: UIView, UITableViewDelegate, UITableViewDataSource {
         
         dateFormatter.dateFormat = "yyyy - MM - dd"
         dateFormatter.timeZone = NSTimeZone(name: "UTC")
+        
+        self.webView.layer.borderWidth = 1
+        self.webView.layer.borderColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1).CGColor
     }
     
     func showNewsData()
@@ -78,6 +81,7 @@ class NewsMainView: UIView, UITableViewDelegate, UITableViewDataSource {
                 dispatch_async(dispatch_get_main_queue())
                 {
                     self.tableView.reloadData()
+                    self.showContentView(0)
                 }
             }
         })
@@ -135,6 +139,7 @@ class NewsMainView: UIView, UITableViewDelegate, UITableViewDataSource {
                 dispatch_async(dispatch_get_main_queue())
                 {
                     self.tableView.reloadData()
+                    self.showContentView(0)
                 }
             }
         })
@@ -201,17 +206,28 @@ class NewsMainView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        if isNewsState
+        self.showContentView(indexPath.row)
+        let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        selectedCell.contentView.backgroundColor = UIColor.lightGrayColor()
+    }
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        let cellToDeSelect:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        cellToDeSelect.contentView.backgroundColor = UIColor.whiteColor()
+    }
+    
+    func showContentView(index : Int)
+    {
+        if isNewsState && self.newsArr != nil && index < self.newsArr?.count
         {
-            let dataDic = self.newsArr?.objectAtIndex(indexPath.row) as! NSMutableDictionary
-            let urlStr : String = "\(URL_Server)/manage/temple/news/newsdetaile.html?newsId=\((String)((dataDic.objectForKey("time") as! NSNumber).longLongValue))"
+            let dataDic = self.newsArr?.objectAtIndex(index) as! NSMutableDictionary
+            let urlStr : String = "\(URL_Server)/websrc/temple/news/newsdetaile.html?newsId=\((String)((dataDic.objectForKey("newsId") as! NSNumber).longLongValue))"
             self.webView.loadRequest(NSURLRequest(URL: NSURL(string: urlStr)!))
-        }else{
-            let dataDic = self.activityArr?.objectAtIndex(indexPath.row) as! NSMutableDictionary
-            let urlStr : String = "\(URL_Server)/manage/temple/news/activitydetaile.html?activityId=\((String)((dataDic.objectForKey("time") as! NSNumber).longLongValue))"
+        }else if isNewsState == false && self.activityArr != nil && index < self.activityArr?.count{
+            let dataDic = self.activityArr?.objectAtIndex(index) as! NSMutableDictionary
+            let urlStr : String = "\(URL_Server)/websrc/temple/news/activitydetaile.html?activityId=\((String)((dataDic.objectForKey("activityId") as! NSNumber).longLongValue))"
             self.webView.loadRequest(NSURLRequest(URL: NSURL(string: urlStr)!))
         }
-        
-        
     }
 }

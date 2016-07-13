@@ -110,10 +110,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate
                 NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("username") as! String, forKey: "CurrentUserName")
                 NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("storeId") as! NSNumber, forKey: "CurrentStoreId")
                 NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("role") as! NSNumber, forKey: "CurrentUserRole")
+                NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("password") as! String, forKey: "CurrentUserPwd")
                 NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("storeName") as! String, forKey: "CurrentStoreName")
                 NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("address") as! String, forKey: "CurrentStoreAddress")
                 NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("phone") as! String, forKey: "CurrentStorePhone")
-                NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("password") as! String, forKey: "CurrentUserPwd")
                 NSNotificationCenter.defaultCenter().postNotificationName(LOGIN, object: SUCCESS)
             }
         })

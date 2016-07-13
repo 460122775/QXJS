@@ -8,9 +8,16 @@
 
 import UIKit
 
+protocol InputPasseordViewDelegate {
+    func inputPwdRight()
+    func inputPwdWrong()
+}
+
 class InputPasswordView: UIView {
 
     @IBOutlet var pwdTextField: UITextField!
+    
+    var delegate : InputPasseordViewDelegate?
     
     override func drawRect(rect: CGRect)
     {
@@ -22,6 +29,7 @@ class InputPasswordView: UIView {
         NSOperationQueue.mainQueue().addOperationWithBlock {
             self.removeFromSuperview()
         }
+        self.delegate?.inputPwdWrong()
     }
     
     @IBAction func saveBtnClick(sender: AnyObject)
@@ -39,6 +47,7 @@ class InputPasswordView: UIView {
         NSOperationQueue.mainQueue().addOperationWithBlock {
             self.removeFromSuperview()
         }
+        self.delegate?.inputPwdRight()
     }
     
 }
