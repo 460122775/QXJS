@@ -22,6 +22,7 @@ var MAX_PRODUCTCACHE : Int = 30
 
 var CurrentUserId : Int32 = 0
 var CurrentUserName : String?
+var CurrentUserPwd : String?
 var CurrentStoreId : Int32 = 0
 var CurrentUserRole : Int32 = 0
 var CurrentStoreName : String?

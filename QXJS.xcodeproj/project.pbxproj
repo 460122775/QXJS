@@ -130,6 +130,8 @@
 		01DC85D01CBA06F0008086F5 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DC85CC1CBA06F0008086F5 /* CustomTableViewCell.swift */; };
 		01DC85D11CBA06F0008086F5 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DC85CD1CBA06F0008086F5 /* CustomTableViewCell.xib */; };
 		01F963141C7B06BB00FD7775 /* ContactInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F963131C7B06BB00FD7775 /* ContactInfoView.xib */; };
+		BACFA2E21D35F71300822B66 /* InputPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACFA2E11D35F71300822B66 /* InputPasswordView.swift */; };
+		BACFA2E41D35F72F00822B66 /* InputPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BACFA2E31D35F72F00822B66 /* InputPasswordView.xib */; };
 		BC211641EE7BBCC287235FA6 /* Pods_QXJS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0AE8298718FA177FE59EB4 /* Pods_QXJS.framework */; };
 /* End PBXBuildFile section */
 
@@ -264,6 +266,8 @@
 		01F963131C7B06BB00FD7775 /* ContactInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContactInfoView.xib; path = class/view/companybrand/contact/ContactInfoView.xib; sourceTree = "<group>"; };
 		2C0AE8298718FA177FE59EB4 /* Pods_QXJS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QXJS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A3E67C237969B1D398C03B /* Pods-QXJS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QXJS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QXJS/Pods-QXJS.debug.xcconfig"; sourceTree = "<group>"; };
+		BACFA2E11D35F71300822B66 /* InputPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputPasswordView.swift; path = class/view/news/InputPasswordView.swift; sourceTree = "<group>"; };
+		BACFA2E31D35F72F00822B66 /* InputPasswordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InputPasswordView.xib; path = class/view/news/InputPasswordView.xib; sourceTree = "<group>"; };
 		D4C9AFFD520C82350C974470 /* Pods-QXJS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QXJS.release.xcconfig"; path = "Pods/Target Support Files/Pods-QXJS/Pods-QXJS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -766,6 +770,8 @@
 			children = (
 				01A575D01C84428A00334190 /* NewsMainView.swift */,
 				01A575D11C84428A00334190 /* NewsMainView.xib */,
+				BACFA2E11D35F71300822B66 /* InputPasswordView.swift */,
+				BACFA2E31D35F72F00822B66 /* InputPasswordView.xib */,
 			);
 			name = news;
 			sourceTree = "<group>";
@@ -909,6 +915,7 @@
 				0174D4191C82EE96009F366A /* HonourView.xib in Resources */,
 				01A575A01C83AFBF00334190 /* StoreViewController.xib in Resources */,
 				017AD8D01CAA1C560058D480 /* qxjsDB.sqlite3 in Resources */,
+				BACFA2E41D35F72F00822B66 /* InputPasswordView.xib in Resources */,
 				01DC85CF1CBA06F0008086F5 /* CustomMainView.xib in Resources */,
 				01F963141C7B06BB00FD7775 /* ContactInfoView.xib in Resources */,
 				0118F3631C61CA8B003C9EFD /* LoginViewController.xib in Resources */,
@@ -1068,6 +1075,7 @@
 				017AD8981CAA0F720058D480 /* DBModel.swift in Sources */,
 				017AD8B41CAA10050058D480 /* Dictionary.swift in Sources */,
 				017AD8961CAA0F720058D480 /* DBInitData.swift in Sources */,
+				BACFA2E21D35F71300822B66 /* InputPasswordView.swift in Sources */,
 				019B6D041C7F4DF400F90D1A /* CompanyInfoView.swift in Sources */,
 				013CC4181D35B76D00606F1F /* UpdateStoreInfoView.swift in Sources */,
 				01438A3E1C51224E00B0ECEF /* AppDelegate.swift in Sources */,

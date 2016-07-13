@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol UpdateInfoViewDelegate {
+    func updateInfoSuccess()
+}
+
 class UpdateInfoView: UIView, UITextFieldDelegate {
 
     @IBOutlet var pwdTextField1: UITextField!
     
     @IBOutlet var pwdTextField2: UITextField!
+    
+    var delegate : UpdateInfoViewDelegate?
     
     override func drawRect(rect: CGRect)
     {
@@ -55,8 +61,12 @@ class UpdateInfoView: UIView, UITextFieldDelegate {
                 // Tell reason of FAIL.
                 SwiftNotice.showText("修改密码失败，请重试!")
             }else{
-                SwiftNotice.showText("密码修改成功！")
-                self.removeFromSuperview()
+                SwiftNotice.showText("密码修改成功，请重新登录！")
+                NSOperationQueue.mainQueue().addOperationWithBlock {
+                    self.removeFromSuperview()
+                    self.delegate?.updateInfoSuccess()
+                    SwiftNotice.showText("密码修改成功，请重新登录！")
+                }
             }
         })
         task.resume()

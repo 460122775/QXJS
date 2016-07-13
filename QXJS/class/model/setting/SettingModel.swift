@@ -210,16 +210,17 @@ class SettingModel: NSObject
         updateProgress = 30
         do{
             let db = try Connection("\(PATH_DATABASE)\(DATABASE_NAME)")
-            if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE + ACTIVITY) == nil
-            {
-                dispatch_async(dispatch_get_main_queue()) {
-                    SettingModel.downloadActivityData(db)
-                }
-            }else if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE + NEWS) == nil{
-                dispatch_async(dispatch_get_main_queue()) {
-                    SettingModel.downloadNewsData(db)
-                }
-            }else if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE + COLLOCATION) == nil{
+//            if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE + ACTIVITY) == nil
+//            {
+//                dispatch_async(dispatch_get_main_queue()) {
+//                    SettingModel.downloadActivityData(db)
+//                }
+//            }else if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE + NEWS) == nil{
+//                dispatch_async(dispatch_get_main_queue()) {
+//                    SettingModel.downloadNewsData(db)
+//                }
+//            }else
+            if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE + COLLOCATION) == nil{
                 dispatch_async(dispatch_get_main_queue()) {
                     SettingModel.downloadCollocationData(db)
                 }

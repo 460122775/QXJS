@@ -20,8 +20,8 @@
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="g4j-v6-JGw"/>
                             <exclude reference="Kh3-qo-EOt"/>
+                            <exclude reference="g4j-v6-JGw"/>
                         </mask>
                     </variation>
                 </view>

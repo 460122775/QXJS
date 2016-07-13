@@ -13,11 +13,11 @@ class NewsViewController: UIViewController
 
     @IBOutlet var mainMenuContainer : UIView!
     @IBOutlet var mainContainer : UIView!
+    @IBOutlet var titleSeg: UISegmentedControl!
     
     @IBOutlet var subViewContainer: UIView!
     var newsMainView : NewsMainView!
     var mainMenuView : MainMenuView!
-    var currentView : UIView?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
     {
@@ -36,19 +36,20 @@ class NewsViewController: UIViewController
         mainMenuView.removeFromSuperview()
         mainMenuContainer.addSubview(mainMenuView)
         newsMainView = ((NSBundle.mainBundle().loadNibNamed("NewsMainView", owner: self, options: nil) as NSArray).lastObject as? NewsMainView)!
-        currentView = newsMainView
         subViewContainer.addSubview(newsMainView)
+        self.titleSeg.selectedSegmentIndex = 0
+        self.segValueChanged(self.titleSeg)
     }
 
     @IBAction func segValueChanged(sender: UISegmentedControl)
     {
         if sender.selectedSegmentIndex == 0
         {
-            
+            newsMainView.showNewsData()
         }else if CurrentUserRole <= 1{
             SwiftNotice.showText("请使用店长及以上权限的账户登录")
         }else{
-            
+            newsMainView.showActivityData()
         }
     }
     override func didReceiveMemoryWarning()

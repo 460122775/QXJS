@@ -10,6 +10,7 @@
                 <outlet property="mainContainer" destination="0AE-7R-ljl" id="mow-c7-SXH"/>
                 <outlet property="mainMenuContainer" destination="Og6-1R-a1x" id="TkS-IC-rJS"/>
                 <outlet property="subViewContainer" destination="ic6-ru-4dQ" id="gj5-AZ-LmN"/>
+                <outlet property="titleSeg" destination="aco-qb-T0P" id="SiV-c4-84a"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

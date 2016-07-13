@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingViewController: UIViewController
+class SettingViewController: UIViewController,UpdateInfoViewDelegate
 {
 
     @IBOutlet var mainMenuContainer : UIView!
@@ -18,6 +18,7 @@ class SettingViewController: UIViewController
     @IBOutlet var storeNameLabel: UILabel!
     @IBOutlet var storeAddressLabel: UILabel!
     @IBOutlet var phoneLabel: UILabel!
+    @IBOutlet var logoutBtn: UIButton!
     
     var mainMenuView : MainMenuView!
     var delegate = DownloadSessionDelegate.sharedInstance
@@ -61,7 +62,13 @@ class SettingViewController: UIViewController
     @IBAction func updateInfoBtnClick(sender: AnyObject)
     {
         let updateInfoView : UpdateInfoView! = NSBundle.mainBundle().loadNibNamed("UpdateInfoView", owner: nil, options: nil)[0] as? UpdateInfoView
+        updateInfoView.delegate = self
         self.view.addSubview(updateInfoView)
+    }
+    
+    func updateInfoSuccess()
+    {
+        self.logoutBtnClick(self.logoutBtn)
     }
     
     @IBAction func updateStoreInfoBtnClick(sender: AnyObject)
@@ -93,11 +100,20 @@ class SettingViewController: UIViewController
         CurrentUserId = 0
         NSUserDefaults.standardUserDefaults().removeObjectForKey("CurrentUserId")
         CurrentUserName = ""
-        NSUserDefaults.standardUserDefaults().objectForKey("CurrentUserName")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("CurrentUserName")
+        CurrentUserPwd = ""
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("CurrentUserPwd")
         CurrentStoreId = 0
-        NSUserDefaults.standardUserDefaults().objectForKey("CurrentStoreId")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("CurrentStoreId")
         CurrentUserRole = 0
-        NSUserDefaults.standardUserDefaults().objectForKey("CurrentUserRole")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("CurrentUserRole")
+        CurrentStoreName = ""
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("CurrentStoreName")
+        CurrentStoreAddress = ""
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("CurrentStoreAddress")
+        CurrentStorePhone = ""
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("CurrentStorePhone")
+        
         let loginViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
         (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController?.presentViewController(loginViewController, animated: false, completion: nil)
         (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController = loginViewController

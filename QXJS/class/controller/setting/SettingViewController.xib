@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController" customModule="QXJS" customModuleProvider="target">
             <connections>
+                <outlet property="logoutBtn" destination="ReZ-ox-W30" id="XGw-Ak-fYx"/>
                 <outlet property="mainContainer" destination="0AE-7R-ljl" id="pTa-oI-Hk4"/>
                 <outlet property="mainMenuContainer" destination="Og6-1R-a1x" id="lz1-zE-FRO"/>
                 <outlet property="phoneLabel" destination="iMY-HP-xUa" id="uXR-Vf-StG"/>

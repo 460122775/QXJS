@@ -64,10 +64,11 @@ class UpdateStoreInfoView: UIView, UITextFieldDelegate {
                 SwiftNotice.showText("修改店铺信息失败，请重试!")
             }else{
                 SwiftNotice.showText("店铺信息修改成功！")
-                self.removeFromSuperview()
+                NSOperationQueue.mainQueue().addOperationWithBlock {
+                    self.removeFromSuperview()
+                }
             }
         })
         task.resume()
     }
-    
 }

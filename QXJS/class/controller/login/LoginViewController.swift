@@ -40,6 +40,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate
             CurrentStoreId = (NSUserDefaults.standardUserDefaults().objectForKey("CurrentStoreId") as! NSNumber).intValue
             CurrentUserRole = (NSUserDefaults.standardUserDefaults().objectForKey("CurrentUserRole") as! NSNumber).intValue
             CurrentStoreName = NSUserDefaults.standardUserDefaults().objectForKey("CurrentStoreName") as? String
+            CurrentUserPwd = NSUserDefaults.standardUserDefaults().objectForKey("CurrentUserPwd") as? String
             CurrentStoreAddress = NSUserDefaults.standardUserDefaults().objectForKey("CurrentStoreAddress") as? String
             CurrentStorePhone = NSUserDefaults.standardUserDefaults().objectForKey("CurrentStorePhone") as? String
 //            SettingModel.downloadDataControl(),
@@ -104,7 +105,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate
                 CurrentStoreName = dataDic?.valueForKey("storeName") as? String
                 CurrentStoreAddress = dataDic?.valueForKey("address") as? String
                 CurrentStorePhone = dataDic?.valueForKey("phone") as? String
-                
+                CurrentUserPwd = dataDic?.valueForKey("password") as? String
                 NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("userId") as! NSNumber, forKey: "CurrentUserId")
                 NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("username") as! String, forKey: "CurrentUserName")
                 NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("storeId") as! NSNumber, forKey: "CurrentStoreId")
@@ -112,6 +113,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate
                 NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("storeName") as! String, forKey: "CurrentStoreName")
                 NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("address") as! String, forKey: "CurrentStoreAddress")
                 NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("phone") as! String, forKey: "CurrentStorePhone")
+                NSUserDefaults.standardUserDefaults().setObject(dataDic?.valueForKey("password") as! String, forKey: "CurrentUserPwd")
                 NSNotificationCenter.defaultCenter().postNotificationName(LOGIN, object: SUCCESS)
             }
         })
