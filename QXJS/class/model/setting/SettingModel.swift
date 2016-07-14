@@ -39,7 +39,7 @@ class SettingModel: NSObject
                 SettingModel.updateOrderData()
             }
         }else{
-            updateProgress = 20
+            updateProgress = 5
             NSNotificationCenter.defaultCenter().postNotificationName(UPDATEPROCESS, object: nil)
             SettingModel.downloadDataControl()
         }
@@ -207,7 +207,6 @@ class SettingModel: NSObject
     
     class func downloadData() -> Bool
     {
-        updateProgress = 30
         do{
             let db = try Connection("\(PATH_DATABASE)\(DATABASE_NAME)")
 //            if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE + ACTIVITY) == nil
@@ -222,6 +221,8 @@ class SettingModel: NSObject
 //            }else
             if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE + COLLOCATION) == nil{
                 dispatch_async(dispatch_get_main_queue()) {
+                    updateProgress = 8
+                    NSNotificationCenter.defaultCenter().postNotificationName(UPDATEPROCESS, object: nil)
                     SettingModel.downloadCollocationData(db)
                 }
             }else if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE + CUSTOM) == nil{
@@ -234,6 +235,8 @@ class SettingModel: NSObject
                 }
             }else if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE + PHOTO) == nil{
                 dispatch_async(dispatch_get_main_queue()) {
+                    updateProgress = 10
+                    NSNotificationCenter.defaultCenter().postNotificationName(UPDATEPROCESS, object: nil)
                     SettingModel.downloadPhotoData(db)
                 }
             }else if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE + GROUP) == nil{
@@ -246,6 +249,8 @@ class SettingModel: NSObject
                 }
             }else if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE + PARAM) == nil{
                 dispatch_async(dispatch_get_main_queue()) {
+                    updateProgress = 15
+                    NSNotificationCenter.defaultCenter().postNotificationName(UPDATEPROCESS, object: nil)
                     SettingModel.downloadParamData(db)
                 }
             }else if NSUserDefaults.standardUserDefaults().objectForKey(INITDATABASE + STORE) == nil{
@@ -258,7 +263,7 @@ class SettingModel: NSObject
                 }
             }
             else{
-                updateProgress = 50
+                updateProgress = 20
                 NSNotificationCenter.defaultCenter().postNotificationName(UPDATEPROCESS, object: nil)
                 dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), {
                     print("This is run on the background queue")
@@ -286,6 +291,13 @@ class SettingModel: NSObject
             NSNotificationCenter.defaultCenter().postNotificationName(UPDATEPROCESS, object: nil)
             return
         }
+        
+        if updateProgress + 1 < 95
+        {
+            updateProgress = updateProgress + 1
+            NSNotificationCenter.defaultCenter().postNotificationName(UPDATEPROCESS, object: nil)
+        }
+        print(imgPathArr.count, updateProgress)
         let pathArr = imgPathArr.removeAtIndex(0).componentsSeparatedByString("+")
         var url = "\(URL_Server)/source/" + pathArr[0]
         let fileName = "/" + pathArr[2]

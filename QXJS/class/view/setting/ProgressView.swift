@@ -37,7 +37,9 @@ class ProgressView: UIView {
         {
             return
         }
-        self.progressValueLb.text = "\(String(self.progressValue)) %"
+        dispatch_async(dispatch_get_main_queue()) {
+            self.progressValueLb.text = "\(String(self.progressValue)) %"
+        }
         if progressValue == 100
         {
             NSNotificationCenter.defaultCenter().removeObserver(foregroundNotification)
