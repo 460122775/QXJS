@@ -26,7 +26,7 @@
                         </label>
                         <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pC4-CX-LhE">
                             <rect key="frame" x="25" y="102" width="493" height="576"/>
-                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </webView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyC-YM-dd0" userLabel="line">
                             <rect key="frame" x="538" y="25" width="1" height="653"/>

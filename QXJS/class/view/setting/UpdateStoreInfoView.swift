@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol UpdateStoreViewDelegate {
+    func updateStoreSuccess()
+}
+
 class UpdateStoreInfoView: UIView, UITextFieldDelegate {
 
     @IBOutlet var storeNameTextField: UITextField!
     @IBOutlet var phoneTextField: UITextField!
     @IBOutlet var addressTextField: UITextField!
+    var delegate : UpdateStoreViewDelegate?
     
     override func drawRect(rect: CGRect)
     {
@@ -64,8 +69,13 @@ class UpdateStoreInfoView: UIView, UITextFieldDelegate {
                 SwiftNotice.showText("修改店铺信息失败，请重试!")
             }else{
                 SwiftNotice.showText("店铺信息修改成功！")
+                CurrentStorePhone = self.phoneTextField.text
+                CurrentStoreAddress = self.addressTextField.text
+                CurrentStoreName = self.storeNameTextField.text
                 NSOperationQueue.mainQueue().addOperationWithBlock {
+                    self.delegate?.updateStoreSuccess()
                     self.removeFromSuperview()
+                    SwiftNotice.showText("店铺信息修改成功！")
                 }
             }
         })

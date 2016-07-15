@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingViewController: UIViewController,UpdateInfoViewDelegate
+class SettingViewController: UIViewController,UpdateInfoViewDelegate, UpdateStoreViewDelegate
 {
 
     @IBOutlet var mainMenuContainer : UIView!
@@ -54,9 +54,25 @@ class SettingViewController: UIViewController,UpdateInfoViewDelegate
         }else if CurrentUserRole == 1{
             self.userRoleLabel.text = "用户角色：店员"
         }
+        self.updateStoreSuccess()
+    }
+    
+    func updateStoreSuccess()
+    {
         self.storeNameLabel.text = CurrentStoreName
-        self.storeAddressLabel.text = CurrentStoreAddress
-        self.phoneLabel.text = CurrentStorePhone
+        if CurrentStoreAddress != nil
+        {
+            self.storeAddressLabel.text = "地址：" + CurrentStoreAddress!
+        }else{
+            self.storeAddressLabel.text = "地址：--"
+        }
+        if CurrentStorePhone != nil
+        {
+            self.phoneLabel.text = "电话：" + CurrentStorePhone!
+        }else{
+            self.phoneLabel.text = "电话：--"
+        }
+        
     }
     
     @IBAction func updateInfoBtnClick(sender: AnyObject)
@@ -74,6 +90,7 @@ class SettingViewController: UIViewController,UpdateInfoViewDelegate
     @IBAction func updateStoreInfoBtnClick(sender: AnyObject)
     {
         let updateStoreInfoView : UpdateStoreInfoView! = NSBundle.mainBundle().loadNibNamed("UpdateStoreInfoView", owner: nil, options: nil)[0] as? UpdateStoreInfoView
+        updateStoreInfoView.delegate = self
         self.view.addSubview(updateStoreInfoView)
     }
     
